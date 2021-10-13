@@ -1,0 +1,365 @@
+.logo{
+
+  margin-top: 250px;
+  align-items: center;
+}
+
+.aboutus{
+
+padding-top: 220px;
+}
+
+.IlustrationTitle1{
+
+  color: #0D3475;
+  font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 37px;
+}
+
+.IlustrationParagraph1{
+
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 27px;
+/* or 169% */
+
+letter-spacing: 0.01em;
+color: #000C2D;
+position: static;
+width: 381px;
+height: 135px;
+left: 0px;
+top: 98px;
+
+}
+
+.IlustrationTitle2{
+
+  color: #0D3475;
+  font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 37px;
+}
+
+.IlustrationParagraph2{
+
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 27px;
+/* or 169% */
+
+letter-spacing: 0.01em;
+color: #000C2D;
+position: static;
+width: 381px;
+height: 135px;
+left: 0px;
+top: 98px;
+
+}
+
+
+.IlustrationTitle3{
+
+  margin-top: 200px;
+
+  color: #0D3475;
+  font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 37px;
+}
+
+.IlustrationParagraph3{
+
+  margin-top: 30px;
+
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 27px;
+/* or 169% */
+
+letter-spacing: 0.01em;
+color: #000C2D;
+position: static;
+width: 381px;
+height: 135px;
+left: 0px;
+top: 98px;
+
+}
+
+.IlustrationTitle4{
+
+  margin-top: 200px;
+
+  color: #0D3475;
+  font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 37px;
+}
+
+.IlustrationParagraph4{
+
+  margin-top: 30px;
+
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 27px;
+/* or 169% */
+
+letter-spacing: 0.01em;
+color: #000C2D;
+position: static;
+width: 381px;
+height: 135px;
+left: 0px;
+top: 98px;
+
+}
+
+.container1{
+
+  height: 200px;
+  width: 200px;
+}
+
+.container2{
+
+  margin-top: 400px;
+  height: 200px;
+  width: 200px;
+}
+
+.container3{
+  margin-top: 600px;
+  height: 200px;
+  width: 200px;
+}
+
+.container4{
+  margin-top: 600px;
+  height: 200px;
+  width: 200px;
+}
+
+
+.Timetofly{
+
+  margin-top: 600px;
+}
+
+
+
+.container5{
+
+  position: absolute;
+  width: 100%;
+  height: 1801px;
+  left: 0px;
+  top: 5100px;
+  background-color: #134487;
+  align-items: center;
+
+}
+
+
+.HighTech{
+
+color:white;
+  margin-top: 500px;
+  font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 70px;
+line-height: 83px;
+}
+
+.HighT{
+  margin-top: 130px;
+
+width: 100%;
+height: 42px;
+left: -138px;
+top: 3802px;
+
+}
+
+.colorT{
+  margin-top: 500px;
+  font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 70px;
+line-height: 83px;
+  color:#E5954C;
+}
+
+
+.OurService{
+
+  margin-top: 250px;
+}
+
+.Rectangle{
+
+  margin-top: 50px;
+}
+
+
+.descriptionKampanos{
+
+  font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 49px;
+/* or 122% */
+
+
+/* Secundary/Main(500) */
+
+color: #0D3475;
+}
+
+.subdescriptionKampanos{
+
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 42px;
+width: 100px;
+height: 50px;
+/* or 190% */
+
+
+/* Secundary/Main(500) */
+
+color: #0D3475;
+
+}
+
+.Rectangle2{
+
+  margin-top: 750px;
+}
+
+
+.parafrase{
+
+  font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 49px;
+/* or 122% */
+
+
+/* Secundary/Main(400) */
+
+color: #134487;
+}
+
+
+.parafrase2{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 49px;
+  /* or 122% */
+  
+  
+  /* Secundary/Main(500) */
+  
+  color: #0D3475;
+  
+
+}
+
+
+
+
+.parafrase3{
+
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 42px;
+/* or 190% */
+
+
+/* Secundary/Main(500) */
+
+color: #0D3475;
+}
+
+.parafrase4{
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 43px;
+  /* or 126% */
+  
+  text-align: center;
+  
+  /* Secundary/Main(500) */
+  
+  color: #0D3475;
+  
+}
+
+
+.UxUiDesignPhrase{
+
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 27px;
+letter-spacing: 0.01em;
+color: #FAFAFA;
+
+}
+
+.FrontEndPhrase{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: 0.01em;
+  color: #FAFAFA;
+  
+
+}
+
+.InternalLinkLetsWorkTogether{
+
+  color:#D46918;
+}
+
+.paddinForVerticalOrangeLine{
+
+  padding-left: 50px;
+}
