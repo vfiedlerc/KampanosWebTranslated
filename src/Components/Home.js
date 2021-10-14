@@ -28,6 +28,9 @@ import { ReactComponent as ReadyToFly } from '../Assets/ReadyToFly.svg';
 import { ReactComponent as VerticalOrangeLine } from '../Assets/VerticalOrangeLine.svg';
 import { ReactComponent as WorkWithUs2 } from '../Assets/WorkWithUs2.svg';
 import { ReactComponent as Effect4 } from '../Assets/Effect4.svg';
+import Contact from './Contact';
+
+
 
 
 
@@ -317,6 +320,10 @@ const Home = () => {
         </div>
 
 
+
+<div>
+  <Contact/>
+</div>
 
 
 
