@@ -40,6 +40,7 @@ import Contact from './Contact';
 
 
 
+
 const Home = () => {
   return (
     <div>
@@ -327,6 +328,10 @@ const Home = () => {
 
 
 
+
+<div>
+  
+  </div>
 
 
 </div>
