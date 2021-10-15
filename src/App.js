@@ -1,29 +1,19 @@
-
 import React from 'react';
 import './App.css';
-import Footer from './Components/Footer';
-import Header from './Components/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './Components/Home';
-
-
-
-
-
-
+import Home from './pages/Home';
+import Contact from './pages/Contact';
 
 function App() {
   return (
     <div>
-       <BrowserRouter>
-        <Header/>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-        </Routes>/
-        <Footer />
-      </BrowserRouter> 
+          <Route path="/contact-form" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
-
 export default App;
