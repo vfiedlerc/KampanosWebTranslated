@@ -1,10 +1,11 @@
 import React from 'react';
+import { Box } from '@mui/material'
 
 const Header = () => {
   return (
-    <Section>
+    <Box>
       Header
-    </Section>
+    </Box>
   );
 }
 export default Header

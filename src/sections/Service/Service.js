@@ -1,10 +1,18 @@
 import React from 'react';
+import { Box, Typography } from '@mui/material';
 
-constService = () => {
+const Service = () => {
   return (
-    <Section>
-     Service
-    </Section>
+    <Box>
+      <Typography
+        variant="h5"
+        sx= {{
+          color: '#D46918'
+        }}
+      >
+        Service
+      </Typography>
+    </Box>
   );
 }
 export default Service

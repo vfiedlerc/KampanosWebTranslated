@@ -1,10 +1,11 @@
 import React from 'react';
+import { Box } from '@mui/material';
 
 const Story = () => {
   return (
-    <Section>
+    <Box>
       Story
-    </Section>
+    </Box>
   );
 }
 export default Story

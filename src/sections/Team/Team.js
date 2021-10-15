@@ -1,10 +1,11 @@
 import React from 'react';
+import { Box } from '@mui/material';
 
 const Team = () => {
   return (
-    <Section>
+    <Box>
       Team
-    </Section>
+    </Box>
   );
 }
 export default Team
