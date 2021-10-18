@@ -10,12 +10,12 @@ import { Box } from '@mui/material';
 function Home() {
     return (
         <Box>
-            {/* <Header />
-            <About /> */}
-            <Service />
-            {/* <Story />
+            <Header />
+            <About />
+            {/* <Service /> */}
+            <Story />
             <Team />
-            <Footer /> */}
+            <Footer />
         </Box>
     )
 }
