@@ -1,11 +1,32 @@
 import React from 'react';
 import './Footer.css';
-import { Box } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 
 const Footer = () => {
   return (    
       <Box>
-        Footer
+        <Grid container
+        
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          flexGrow: 1,
+          backgroundColor: '#4177B7',
+          width: '100%',
+          paddingY: '6rem'
+        }}
+        
+        >
+
+<Typography>
+  Kampanos.
+</Typography>
+
+
+
+
+
+        </Grid>
       </Box>
   )
 }

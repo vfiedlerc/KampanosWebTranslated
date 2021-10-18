@@ -3,10 +3,10 @@ import Header from '../sections/Header/Header.js'
 import About from '../sections/About/About.js'
 import { Service } from '../sections/Services/Service'
 import { Story } from '../sections/Stories/Story'
-//import Team from '../sections/Team/Team.js'
+import { Team } from '../sections/Teams/Team'
 import Footer from '../sections/Footer/Footer.js'
 import { Box } from '@mui/material';
-import {MediaCard} from '../components/Cards/MediaCard';
+import { MediaCard } from '../components/Cards/MediaCard';
 
 
 function Home() {
@@ -19,7 +19,7 @@ function Home() {
            
             <Footer /> */}
 
-            <MediaCard />
+            <Team />
         </Box>
     )
 }
