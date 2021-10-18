@@ -12,7 +12,7 @@ function Home() {
         <Box>
             <Header />
             <About />
-            <Service />
+            {/* <Service /> */}
             <Story />
             <Team />
             <Footer />
