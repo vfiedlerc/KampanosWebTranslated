@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import Header from '../sections/Header/Header.js'
 import About from '../sections/About/About.js'
-import Service from '../sections/Service/Service.js'
-import Story from '../sections/Story/Story.js'
+import { Service } from '../sections/Services/Service'
+import { Story } from '../sections/Stories/Story'
 import Team from '../sections/Team/Team.js'
 import Footer from '../sections/Footer/Footer.js'
 import { Box } from '@mui/material';
