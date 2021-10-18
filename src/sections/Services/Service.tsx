@@ -12,7 +12,10 @@ export const Service: FC<ServiceProps> = ({
   props
 }: ServiceProps) => {
   return (
-    <>
+    <Grid container
+      sx={{
+        backgroundColor: '#0D3475'
+      }}>
       <Grid container
         spacing={2}
         sx={{
@@ -26,7 +29,7 @@ export const Service: FC<ServiceProps> = ({
       >
         <Grid item
           xs={12}
-          sm={12}
+          sm={10}
           md={7}
           sx={{
             margin: 'auto',
@@ -74,12 +77,11 @@ export const Service: FC<ServiceProps> = ({
         }}
       >
         <Grid item
-          // xs={12}
-          // sm={12}
-          // md={4}
+          xs={12}
+          sm={12}
+          md={4}
           sx={{
             padding: 0,
-            //width: '100%',
             textAlign: 'center',
             transform: 'rotate(-90deg)',
             alignItems: 'center',
@@ -100,7 +102,7 @@ export const Service: FC<ServiceProps> = ({
                 sx={{
                   color: '#D46918',
                   minWidth: '407px',
-                  
+
                 }}
               >
                 OUR SERVICE
@@ -139,10 +141,6 @@ export const Service: FC<ServiceProps> = ({
                 <Grid item
                   xs={12}
                   md={6}
-                  sx={{
-                    width: '100%',
-                    alignSelf: 'center'
-                  }}
                 >
                   <Box
                     sx={{
@@ -302,7 +300,7 @@ export const Service: FC<ServiceProps> = ({
     </Grid> */}
 
       </Grid>
-    </>
+    </Grid>
   );
 }
 export type ServiceProps = {
