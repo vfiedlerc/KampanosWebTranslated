@@ -3,19 +3,23 @@ import Header from '../sections/Header/Header.js'
 import About from '../sections/About/About.js'
 import { Service } from '../sections/Services/Service'
 import { Story } from '../sections/Stories/Story'
-import Team from '../sections/Team/Team.js'
+//import Team from '../sections/Team/Team.js'
 import Footer from '../sections/Footer/Footer.js'
 import { Box } from '@mui/material';
+import {MediaCard} from '../components/Cards/MediaCard';
+
 
 function Home() {
     return (
         <Box>
-            <Header />
+            {/*<Header />
             <About />
-            {/* <Service /> */}
-            <Story />
-            <Team />
-            <Footer />
+            {/* <Service /> 
+            <Story /> 
+           
+            <Footer /> */}
+
+            <MediaCard />
         </Box>
     )
 }
@@ -23,34 +27,7 @@ export default Home;
 
 
 
-// import { KampanosLogo } from '../assets/KampanosLogo.svg';
-// import { FacebookIcon } from '../assets/FacebookIcon.svg';
-// import { LinkedinIcon } from '../assets/LinkedinIcon.svg';
-// import { InstagramIcon } from '../assets/InstagramIcon.svg';
-// import { CompanyEffect } from '../assets/CompanyEffect.svg';
 
-// import { Image1 } from '../assets/Image1.svg';
-// import { Image2 } from '../assets/Image2.svg';
-// import { Image3 } from '../assets/Image3.svg';
-// import { Image4 } from '../assets/Image4.svg';
-// import { TimeToFly } from '../assets/TimeToFly.svg';
-// import { HighTechnology } from '../assets/HighTechnology.svg';
-// import { OurService } from '../assets/OurService.svg';
-// import { UxUiDesign } from '../assets/UxUiDesign.svg';
-// import { UxUiDesign2 } from '../assets/UxUiDesign2.svg';
-// import { FrontEnd } from '../assets/FrontEnd.svg';
-// import { OurStory } from '../assets/OurStory.svg';
-// import { Rectangle } from '../assets/Rectangle.svg';
-// import { Degrade } from '../assets/Degrade.svg';
-// import { Degrade2 } from '../assets/Degrade2.svg';
-// import { OurPillars } from '../assets/OurPillars.svg';
-// import { OurTeam } from '../assets/OurTeam.svg';
-// import { OrangeCard } from '../assets/OrangeCard.svg';
-// import { BlueCard } from '../assets/BlueCard.svg';
-// import { ReadyToFly } from '../assets/ReadyToFly.svg';
-// import { VerticalOrangeLine } from '../assets/VerticalOrangeLine.svg';
-// import { WorkWithUs2 } from '../assets/WorkWithUs2.svg';
-// import { Effect4 } from '../assets/Effect4.svg';
     //< div >
     //         <div >
     //             <KampanosLogo className="logo" />
