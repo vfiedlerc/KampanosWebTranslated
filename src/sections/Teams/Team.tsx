@@ -1,32 +1,15 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 import { FC } from 'react'
-import {MediaCard} from '../../components/Cards/MediaCard';
+import { MediaCard } from '../../components/Cards/MediaCard';
+import andreasT from '../../assets/AndreasThomae.jpg';
 
-import AndreasThomae from '../../assets/AndreasThomae.jpg';
-
-//export const Team = () => {
-
-  //const eva = 'Eva Dias';
-  //const bruno = 'Bruno Buss';
-  //const rafael = 'Rafael Facadas';
-  //const andreas = 'Andreas Thomae';
-  //const vinicius = 'Vinicius Fiedler';
-  //const guilherme = 'Guilherme';
-  //const michael = 'Michael Wiederkehr';
-  //const aline = 'Aline Souza';
-  //const joao = 'Joao Bugarin';
-
-  
-
-
-  export const Team: FC<TeamProps> = ({
-   andreas
+export const Team: FC<TeamProps> = ({
+  props
 }: TeamProps) => {
   return (
     <Grid container>
-       <Grid item>
-
+      <Grid item>
         <Typography>
           Our Team
         </Typography>
@@ -36,52 +19,15 @@ import AndreasThomae from '../../assets/AndreasThomae.jpg';
           <Grid item>
             <Grid container>
               <Grid item>
-                <MediaCard  image={andreas.image} title={andreas.title} text={andreas.text}/>
-              </Grid>
-              <Grid item>
-              {/* <MediaCard  img={img1} title={bruno} text={text}/> */}
-              </Grid>
-              <Grid item>
-              {/* <MediaCard  img={img1} title={bruno} text={text}/> */}
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item>
-            <Grid container>
-              <Grid item>
-              {/* <MediaCard  img={img1} title={bruno} text={text}/> */}
-              </Grid>
-              <Grid item>
-              {/* <MediaCard  img={img1} title={bruno} text={text}/> */}
-              </Grid>
-              <Grid item>
-              {/* <MediaCard  img={img1} title={bruno} text={text}/> */}
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item>
-            <Grid container>
-              <Grid item>
-                {/* <MediaCard img={img1} title={ michael} text={text} /> */}
-              </Grid>
-              <Grid item>
-                {/* <MediaCard img={img1} title={aline } text={text} /> */}
-              </Grid>
-              <Grid item>
-                {/* <MediaCard img={img1} title={joao } text={text} /> */}
+                <MediaCard image={andreasT} title='Andreas Thomae' text='CEO & Chief of Development' />
               </Grid>
             </Grid>
           </Grid>
         </Grid>
-      </Grid> 
+      </Grid>
     </Grid>
   );
 }
 export type TeamProps = {
-  andreas: {
-
-    image: '../../assets/AndreasThomae.jpg', 
-    title: 'Andreas Thomae',
-    text: 'CEO & Chief of Development'
-  }
+ props: any
 };
