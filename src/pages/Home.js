@@ -15,7 +15,7 @@ function Home() {
             {/* <About />    */}
             {/* <Service />          */}
             {/* <Story />  */}
-            {/* <Team /> */}
+            <Team />
             {/* <Footer />  */}
         </Box>
     )
