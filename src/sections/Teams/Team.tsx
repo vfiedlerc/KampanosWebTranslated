@@ -12,23 +12,12 @@ import eva from '../../assets/Eva.jpg';
 import aline from '../../assets/Aline.jpg';
 import bruno from '../../assets/Bruno.jpg';
 
-
-
-
 export const Team: FC<TeamProps> = ({
   props
 }: TeamProps) => {
   return (
     <Grid container spacing={2} >
-      <Grid item md={4}>
-
-
-
-
-
-
-        {/* <img src="./assets/andreasTh.jpg"/>  */}
-
+      <Grid item md={3}>
         <Typography
         sx={{
           transform: 'rotate(-90deg)',
@@ -38,24 +27,18 @@ export const Team: FC<TeamProps> = ({
         >
           Our Team
         </Typography> 
-
-
       </Grid>
-      <Grid item md={8}>
+      <Grid item md={9}>
         <Grid container spacing={2} columns={3} rowSpacing={6}>
           <Grid item >
             <Grid container spacing={2} >
               <Grid item>
-
                 <MediaCard image={andreas} title='Andreas Thomae' text='CEO & Chief of Development' />
               </Grid>
               <Grid item>
-
                 <MediaCard image={rafael} title='Rafael Facadas' text='UX/UI & Visual Designer' />
-
               </Grid>
               <Grid item>
-
                 <MediaCard image={michael} title='Michael Wiederkehr' text='Key-Account Manager' />
               </Grid>
             </Grid>
