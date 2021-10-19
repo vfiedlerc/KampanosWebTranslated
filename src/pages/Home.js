@@ -6,20 +6,17 @@ import { Story } from '../sections/Stories/Story'
 import { Team } from '../sections/Teams/Team'
 import Footer from '../sections/Footer/Footer.js'
 import { Box } from '@mui/material';
-import { MediaCard } from '../components/Cards/MediaCard';
-
+//import { MediaCard } from '../components/Cards/MediaCard';
 
 function Home() {
     return (
         <Box>
-            {/*<Header />
-            <About />
-            {/* <Service /> 
-            <Story /> 
-           
-            <Footer /> */}
-
-            <Team />
+            {/* <Header /> */}
+            {/* <About />    */}
+            {/* <Service />          */}
+            {/* <Story />  */}
+            {/* <Team /> */}
+            {/* <Footer />  */}
         </Box>
     )
 }
