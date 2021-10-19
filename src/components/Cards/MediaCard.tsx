@@ -12,18 +12,19 @@ export const MediaCard: FC<MediaCardProps> = ({
   image,title,text
 }: MediaCardProps ) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ width: 200, height: 250, boxShadow: 0 }}>
       <CardMedia
         component="img"
         height="140"
+        width="200"
         image={image}
         alt={title}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="subtitle1" sx={{color:'#D46918', textAlign: 'center', fontWeight: 'bold', fontSize: '15px',}}>
         {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" sx={{color:'#18191F', textAlign: 'center', fontSize: '15px',}}>
         {text}
         </Typography>
       </CardContent>
