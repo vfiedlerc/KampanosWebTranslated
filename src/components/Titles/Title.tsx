@@ -7,16 +7,16 @@ export const Title: FC<TitleProps> = ({
   color
 }: TitleProps) => {
   return (
-    <Box
-      sx={{
-        transform: 'rotate(-90deg)'
-      }}
-    >
+    <Box>
       <Typography
-        component='h2'
+        component='h1'
         variant='h2'
         sx={{
-          color: `${color}`
+          color: `${color}`,
+          WebkitTextFillColor: 'transparent', 
+          WebkitTextStrokeWidth: '0.5px',
+          WebkitTextStrokeColor: `${color}`,
+          fontWeight: 'bold'
         }}
       >
         {label}
