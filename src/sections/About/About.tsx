@@ -9,12 +9,14 @@ import about1 from "../../assets/About1.svg";
 import about2 from "../../assets/About2.svg";
 import about3 from "../../assets/About3.svg";
 import about4 from "../../assets/About4.svg";
+import TimeToFly from "../../assets/TimeToFly.svg";
 import frontDesign from "../../assets/FrontEnd.png";
 import ourService from "../../assets/OurService.svg";
 
 const FontsBox = styled("div")(({ theme }) => ({
   margin: 0,
   padding: 0,
+
   [theme.breakpoints.down("sm")]: {
     h1: {
       transform: "none",
@@ -104,45 +106,9 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
         container
         sx={{
           backgroundColor: "#FFF",
+          mt: 20,
         }}
       >
-        <Grid
-          container
-          spacing={2}
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            flexGrow: 1,
-            backgroundColor: "#FFF",
-            width: "100%",
-          }}
-        >
-          <Grid
-            item
-            xs={10}
-            sm={7}
-            md={7}
-            lg={6}
-            sx={{
-              margin: "auto",
-              paddingTop: "6%",
-              paddingBottom: "6%",
-              textAlign: "center",
-            }}
-          >
-            AA
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            sx={{
-              width: "100%",
-              marginBottom: "6%",
-            }}
-          >
-            <img src={highTech} alt="High Technology" title="High Technology" />
-          </Grid>
-        </Grid>
 
         <Grid
           container
@@ -154,7 +120,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
             display: "flex",
             justifyContent: "center",
             flexGrow: 1,
-            backgroundColor: "#382626",
+
             width: "100%",
           }}
         >
@@ -170,7 +136,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
               justifyContent: "center",
               textAlignLast: "center",
               margin: 0,
-              backgroundColor: "#FFFFFF",
+              backgroundColor: "#df0395",
             }}
           >
             <Typography variant="h1">ABOUT US</Typography>
@@ -368,7 +334,6 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
             display: "flex",
             justifyContent: "center",
             flexGrow: 1,
-            backgroundColor: "#382626",
             width: "100%",
           }}
         >
@@ -560,7 +525,23 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
               </Grid>
             </Grid>
           </Grid>
+          <Grid
+                item
+                md={3}
+                sx={{
+                  padding: 0,
+                }}
+              >
+                <Box
+                  sx={{
+                    alignItems: "center",
+                  }}
+                >
+                  <img src={TimeToFly} alt="Time to Fly" title="Time to Fly" />
+                </Box>
+              </Grid>
         </Grid>
+        
       </Grid>
     </FontsBox>
   );
