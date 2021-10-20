@@ -14,6 +14,7 @@ import bruno from '../../assets/Bruno.jpg';
 import Button from '@mui/material/Button';
 import OurTeamEffect from '../../assets/OurTeamEffect.png';
 import OurTeamEffects from '../../assets/OurTeamEffect.svg';
+import {Title} from '../../components/Titles/Title';
 
 
 
@@ -31,7 +32,10 @@ export const Team: FC<TeamProps> = ({
 
      
 
-        <Typography
+<Title color="#D46918" label="OUR TEAM"/>
+
+
+        {/* <Typography
         sx={{
           transform: 'rotate(-90deg)',
           fontSize: '88px',
@@ -39,7 +43,7 @@ export const Team: FC<TeamProps> = ({
         }}
         >
           Our Team
-        </Typography> 
+        </Typography>  */}
 
 
       </Grid>

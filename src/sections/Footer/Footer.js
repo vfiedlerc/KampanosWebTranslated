@@ -1,49 +1,157 @@
 import React from 'react';
-import './Footer.css';
-import { Box, Grid, Typography } from '@mui/material';
+
+import { Box, Grid, Link, Typography, Icon } from '@mui/material';
+
+import { ReactComponent as FacebookIcon } from '../../assets/FacebookIcon.svg';
+import { ReactComponent as LinkedinIcon } from '../../assets/LinkedinIcon.svg';
+import { ReactComponent as InstagramIcon } from '../../assets/InstagramIcon.svg';
+
 
 const Footer = () => {
-  return (    
-      <Box>
-        <Grid container
-        
+  return (
+    <Box>
+      <Grid container
+        xs={12}
+        sm={12}
+        md={12}
+        lg={12}
+        direction='column'
+        rowSpacing={3}
+
         sx={{
           display: 'flex',
           justifyContent: 'center',
           flexGrow: 1,
           backgroundColor: '#4177B7',
           width: '100%',
-          paddingY: '6rem'
+          paddingBottom: '2.5rem',
+          paddingTop: '5rem',
+          textAlign: 'center',
         }}
+
+
+      >
+
+
+        <Grid item>
+          {/* //1 */}
+          <Typography
+            color="white" variant="h4"
+          >kampanos.</Typography>
+        </Grid>
+
+
+        <Grid item >
         
-        >
-
-<Typography>
-  Kampanos.
-</Typography>
+          {/* //2 */}
 
 
+         
 
+          <Grid container 
 
+            
+             spacing={4} sx={{
+              justifyContent: 'center',
+              textAlign: 'center'
+            }}>
+
+            <Grid item >
+              <Link underline="hover" color="#FAFAFA" >Home</Link>
+              {/* //1 */}
+            </Grid>
+
+            <Grid item>
+              <Link underline="hover" color="#FAFAFA" >About us</Link>
+              {/* //2 */}
+            </Grid>
+
+            <Grid item>
+              <Link underline="hover" color="#FAFAFA" >Our service</Link>
+              {/* //3 */}
+            </Grid>
+
+            <Grid item>
+              <Link underline="hover" color="#FAFAFA" >Our story</Link>
+              {/* //4*/}
+            </Grid>
+
+            <Grid item >
+              <Link underline="hover" color="#FAFAFA"  >Our team</Link>
+              {/* //5 */}
+            </Grid>
+
+            <Grid item >
+              <Link underline="hover" color="#FAFAFA"
+              >Jobs offer</Link>
+              {/* //6 */}
+            </Grid>
+
+          </Grid>
 
         </Grid>
-      </Box>
+
+
+        <Grid item>
+          {/* //3 */}
+          <Grid container sx={{
+            justifyContent: 'center'
+          }}>
+
+            <Grid item>
+              <Link href="#"><FacebookIcon /> </Link>
+            </Grid>
+
+            <Grid item>
+              <Link href="#" ><LinkedinIcon /> </Link>
+            </Grid>
+
+            <Grid item>
+              <Link href="#" ><InstagramIcon /> </Link>
+            </Grid>
+
+
+
+
+          </Grid>
+
+        </Grid>
+
+
+
+
+
+        <Grid item>
+          <Typography
+            color="#D9DBE1"
+          > 2021 © Kampanos All rights reserved.️ </Typography>
+        </Grid>
+
+
+        <Grid item >
+          <Grid container sx={{ paddingRight: '5.5rem' }} spacing={2} justifyContent="right">
+
+
+            <Grid item >
+              <Link underline="hover" color="#FCEDD0" href="#"> Terms of use </Link>
+            </Grid>
+
+            <Grid item>
+              <Link underline="hover" color="#FCEDD0" href="#">  Privacy Policy</Link>
+            </Grid>
+
+            <Grid item>
+              <Link underline="hover" color="#FCEDD0" href="#"> Cookie Policy </Link>
+            </Grid>
+          </Grid>
+        </Grid>
+
+
+
+      </Grid>
+    </Box>
   )
 }
 export default Footer
 
 
-// < div className = "background" >
-//   <h1>kampanos.</h1>
-//   <a href="#Home">Home</a>
-//   <a href="#AboutUs"> About us</a>
-//   <a href="#OurServices">About us</a>
-//   <a href="#OurHistory">Our history</a>
-//   <a href="#JobOffers">job offers</a>
-//   <div>
-//     <p className="AllRightsReserved">2021 @ Kampanos All rights reserved.</p>
-//   </div>
-//   <a>Terms of use</a>
-//   <a>Privacy Policy</a>
-//   <a>Cookie Policy</a>
-// </div >
