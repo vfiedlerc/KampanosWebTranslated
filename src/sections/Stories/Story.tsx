@@ -13,7 +13,8 @@ const StoryBox = styled('div')(({ theme }) => ({
             fontSize: '1.8rem',
             textAlign: 'left',
             textAlignLast: 'left',
-            margin: '2rem 1.5rem 0 1rem'
+            margin: 0
+            //margin: '2rem 1.5rem 0 1rem'
         },
         h5: { fontSize: '1rem' },
         span: {
@@ -35,13 +36,14 @@ const StoryBox = styled('div')(({ theme }) => ({
     //         textAlign: 'left'
     //     }
     // },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.between('sm', 'md')]: {
         h1: {
-            transform: 'rotate(-90deg)',
+            transform: 'none',
             fontSize: '2rem',
             textAlign: 'left',
             textAlignLast: 'left',
-            margin: '2rem 1.5rem 0 1rem'
+            //margin: '2rem 1.5rem 0 1rem',
+            padding: 0
         },
         h5: { fontSize: '1.2rem' },
         span: {
@@ -52,7 +54,7 @@ const StoryBox = styled('div')(({ theme }) => ({
     [theme.breakpoints.between('md', 'lg')]: {
         //padding: '1rem 1.5rem',
         h1: {
-            transform: 'rotate(-90deg)',
+            transform: 'none',
             fontSize: '4rem'
         },
         h5: { fontSize: '1.45rem' },
@@ -61,7 +63,7 @@ const StoryBox = styled('div')(({ theme }) => ({
     [theme.breakpoints.up('lg')]: {
         //padding: '1rem 1.5rem',
         h1: {
-            transform: 'rotate(-90deg)',
+            transform: 'none',
             fontSize: '5rem'
         },
         h5: { fontSize: '1.58rem' },
@@ -73,30 +75,31 @@ const StoryBox = styled('div')(({ theme }) => ({
 const ImgBox = styled('div')(({ theme }) => ({
     margin: 0,
     padding: 0,
-    [theme.breakpoints.down('sm')]: {
-        width: '150px',
-        textAlign: '-webkit-right',
-        alignContent: 'right',
-        marginRight: '-9rem',
-        marginTop: '-120px',
-        overflow: 'hidden'
-    },
-    [theme.breakpoints.between('sm', 'md')]: {
-        width: '150px',
-        textAlign: '-webkit-right',
-        alignContent: 'right',
-        marginRight: '-9rem',
-        marginTop: '-120px',
-        overflow: 'hidden'
-    },
-    [theme.breakpoints.between('md', 'lg')]: {
-        textAlign: '-webkit-right',
-        alignContent: 'right'
-    },
-    [theme.breakpoints.up('lg')]: {
-        textAlign: '-webkit-right',
-        alignContent: 'right'
-    }
+    display: 'none',
+    // [theme.breakpoints.down('sm')]: {
+    //     width: '150px',
+    //     textAlign: '-webkit-right',
+    //     alignContent: 'right',
+    //     marginRight: '-9rem',
+    //     marginTop: '-120px',
+    //     overflow: 'hidden'
+    // },
+    // [theme.breakpoints.between('sm', 'md')]: {
+    //     width: '150px',
+    //     textAlign: '-webkit-right',
+    //     alignContent: 'right',
+    //     marginRight: '-9rem',
+    //     marginTop: '-120px',
+    //     overflow: 'hidden'
+    // },
+    // [theme.breakpoints.between('md', 'lg')]: {
+    //     textAlign: '-webkit-right',
+    //     alignContent: 'right'
+    // },
+    // [theme.breakpoints.up('lg')]: {
+    //     textAlign: '-webkit-right',
+    //     alignContent: 'right'
+    // }
 }));
 
 const AlignTextBox = styled('div')(({ theme }) => ({
@@ -131,7 +134,8 @@ export const Story = () => {
                     justifyContent: 'center',
                     flexGrow: 1,
                     backgroundColor: '#fff',
-                    width: '100%'
+                    width: '100%',
+                    padding: 0
                 }}
             >
                 <Grid item
@@ -141,7 +145,7 @@ export const Story = () => {
                     sx={{
                         padding: 0,
                         flexGrow: 0,
-                        margin: 0,
+                        marginTop: '1rem',
                         width: '100%',
                         backgroundColor: '#fff',
                         alignSelf: 'center'
