@@ -5,9 +5,10 @@ import { Title } from '../../components/Titles/Title'
 import serviceImg1 from '../../assets/service1.png'
 import serviceImg2 from '../../assets/service2.png'
 import highTech from '../../assets/HighTechnology.svg'
-import uxDesign from '../../assets/UxDesign.png'
+import uxDesign from '../../assets/UxUiDesign.png'
 import frontDesign from '../../assets/FrontEnd.png'
-import ourService from '../../assets/OurService.svg'
+import { Subtitle } from '../../components/Titles/Subtitle'
+import { textAlign } from '@mui/system'
 
 const FontsBox = styled('div')(({ theme }) => ({
   margin: 0,
@@ -24,7 +25,9 @@ const FontsBox = styled('div')(({ theme }) => ({
     },
     h2: {
       fontSize: '1.5rem',
-      textAlign: 'left'
+      textAlign: 'left',
+      marginTop: '3rem',
+      marginBottom: '1.2rem'
     },
     h5: { fontSize: '1rem' },
     p: {
@@ -32,22 +35,24 @@ const FontsBox = styled('div')(({ theme }) => ({
     },
     span: {
       fontSize: '1.5rem',
-      textAlign: 'left'
+      textAlign: 'center'
     }
   },
   [theme.breakpoints.between('sm', 'md')]: {
     h1: {
       transform: 'none',
-      fontSize: '2.5rem',
+      fontSize: '3rem',
       textAlign: 'left',
       textAlignLast: 'left',
-      marginLeft: '1rem',
-      marginTop: '2rem',
+      marginLeft: '6rem',
+      marginTop: '1rem',
       marginBottom: '2rem'
     },
     h2: {
       fontSize: '2rem',
-      textAlign: 'left'
+      textAlign: 'left',
+      marginTop: '3rem',
+      marginBottom: '1.2rem'
     },
     h5: { fontSize: '1.2rem' },
     p: {
@@ -55,20 +60,20 @@ const FontsBox = styled('div')(({ theme }) => ({
     },
     span: {
       fontSize: '2rem',
-      textAlign: 'left'
+      textAlign: 'center'
     }
   },
   [theme.breakpoints.between('md', 'lg')]: {
     h1: {
       transform: 'rotate(-90deg)',
-      fontSize: '2rem',
-      textAlign: 'left',
-      textAlignLast: 'left',
-      marginLeft: '1rem',
-      marginTop: '2rem',
-      marginBottom: '2rem'
+      fontSize: '4rem'
     },
-    h2: { fontSize: '2.8rem' },
+    h2: {
+      fontSize: '2.8rem',
+      marginTop: '5rem',
+      marginBottom: '1.2rem',
+      textAlign: 'left',
+    },
     h5: { fontSize: '1.45rem' },
     p: {
       textAlign: 'left'
@@ -78,20 +83,64 @@ const FontsBox = styled('div')(({ theme }) => ({
   [theme.breakpoints.up('lg')]: {
     h1: {
       transform: 'rotate(-90deg)',
-      fontSize: '2rem',
-      textAlign: 'left',
-      textAlignLast: 'left',
-      marginLeft: '1rem',
-      marginTop: '2rem',
-      marginBottom: '2rem'
+      fontSize: '4rem'
     },
-    h2: { fontSize: '3rem' },
+    h2: {
+      fontSize: '3rem',
+      marginTop: '5rem',
+      marginBottom: '1.2rem'
+    },
     h5: { fontSize: '1.58rem' },
     p: {
       textAlign: 'left'
     },
     span: { fontSize: '3rem' }
   },
+}));
+
+const ImgBox = styled('div')(({ theme }) => ({
+  margin: 0,
+  padding: 0,
+  [theme.breakpoints.down('sm')]: {
+    textAlign: '-webkit-center',
+    alignContent: 'center',
+    justifyContent: 'center'
+  },
+  [theme.breakpoints.between('sm', 'md')]: {
+    textAlign: '-webkit-center',
+    alignContent: 'center'
+  },
+  [theme.breakpoints.between('md', 'lg')]: {
+    textAlign: '-webkit-center',
+    alignContent: 'center'
+  },
+  [theme.breakpoints.up('lg')]: {
+    textAlign: '-webkit-center',
+    alignContent: 'center'
+  }
+}));
+
+const SubtitleBox = styled('div')(({ theme }) => ({
+  margin: 0,
+  padding: 0,
+  [theme.breakpoints.down('sm')]: {
+    span: {
+      fontSize: '1.2rem',
+      textAlign: 'center'
+    }
+  },
+  [theme.breakpoints.between('sm', 'md')]: {
+    span: {
+      fontSize: '1.5rem',
+      textAlign: 'center'
+    }
+  },
+  [theme.breakpoints.between('md', 'lg')]: {
+    span: { fontSize: '1.8rem' }
+  },
+  [theme.breakpoints.up('lg')]: {
+    span: { fontSize: '2rem' }
+  }
 }));
 
 export const Service: FC<ServiceProps> = ({
@@ -115,14 +164,12 @@ export const Service: FC<ServiceProps> = ({
         >
           <Grid item
             xs={10}
-            sm={7}
+            sm={9}
             md={7}
             lg={6}
             sx={{
               margin: 'auto',
-              paddingTop: '6%',
-              paddingBottom: '6%',
-              textAlign: 'center'
+              paddingY: '4%'
             }}
           >
             <Typography
@@ -132,7 +179,7 @@ export const Service: FC<ServiceProps> = ({
                 wordBreak: 'break-word'
               }}
             >
-              We use high technology that works. We always
+              We use high technology that works.We always
               <Typography
                 variant='caption'
                 sx={{
@@ -152,15 +199,22 @@ export const Service: FC<ServiceProps> = ({
               marginBottom: '6%'
             }}
           >
-            <img src={highTech} alt='High Technology' title='High Technology' />
+            <SubtitleBox
+              sx={{
+                whiteSpace: 'nowrap',
+                overflow: 'hidden'
+              }}
+            >
+              <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' />
+            </SubtitleBox>
           </Grid>
         </Grid>
-
         <Grid container
           spacing={2}
           xs={12}
           sm={12}
           md={12}
+          lg={12}
           sx={{
             display: 'flex',
             justifyContent: 'center',
@@ -170,27 +224,21 @@ export const Service: FC<ServiceProps> = ({
           }}
         >
           <Grid item
+            direction='column'
             xs={12}
             sm={12}
             md={3}
             sx={{
               padding: 0,
-              textAlign: 'center',
-              alignItems: 'center',
-              justifyContent: 'center',
-              textAlignLast: 'center',
+              flexGrow: 0,
               margin: 0,
+              width: '100%',
               backgroundColor: '#0D3475',
+              alignSelf: 'center'
             }}
           >
-            {/* <img src={ourService} alt='Our Service' /> */}
-            <Typography
-              variant='h1'
-            >
-              OUR SERVICE
-            </Typography>
+            <Title color='#FAFAFA' label='OUR SERVICE' />
           </Grid>
-
           <Grid item
             xs={12}
             sm={12}
@@ -199,30 +247,71 @@ export const Service: FC<ServiceProps> = ({
             <Grid container
               spacing={2}
               sx={{
-                paddingBottom: '8rem'
+                paddingBottom: '4rem'
               }}
             >
               <Grid item
+                xs={12}
+                sm={12}
                 md={4}
                 sx={{
-                  padding: 0
+                  padding: 0,
+                  // textAlign: 'center',
+                  // alignItems: 'center',
+                  // justifyContent: 'center',
+                  // alignSelf: 'center'
                 }}
               >
-                <img src={serviceImg1} alt='Software Development' title='Software Development' />
+                <ImgBox
+                  sx={{
+                    padding: 0,
+                    // textAlign: 'center',
+                    // justifyContent: 'center',
+                    // alignSelf: 'center',
+                    // alignItems: 'center'
+                  }}
+                >
+                  <img src={serviceImg1} alt='Software Development' title='Software Development' width='250px' />
+                </ImgBox>
               </Grid>
-
               <Grid item
-                md={3}
+                xs={12}
+                sm={12}
+                md={8}
                 sx={{
-                  alignSelf: 'end',
-                  paddingBottom: '1.2rem'
+                  textAlign: 'right',
+                  alignItems: 'top'
                 }}
               >
                 <Grid container
+                  sx={{
+                    textAlign: 'right',
+                    alignItems: 'top'
+                  }}
                 >
                   <Grid item
+                    xs={12}
+                    sm={12}
+                    md={11}
                     sx={{
-                      alignSelf: 'end'
+                      alignItems: 'top'
+                    }}
+                  >
+                    <ImgBox
+                      sx={{
+                        marginBottom: '1.5rem'
+                      }}
+                    >
+                      <img src={uxDesign} alt='UI/UX Design' title='UI/UX Design' width='200px' />
+                    </ImgBox>
+                  </Grid>
+                  <Grid item
+                    xs={12}
+                    sm={12}
+                    md={12}
+                    sx={{
+                      justifyContent: 'center',
+                      alignSelf: 'center'
                     }}
                   >
                     <Typography
@@ -250,16 +339,7 @@ export const Service: FC<ServiceProps> = ({
                         alignItems: 'left'
                       }}
                     >
-                      User Testing
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        color: '#fff',
-                        alignItems: 'left'
-                      }}
-                    >
-                      Design System
+                      User testing
                     </Typography>
                     <Typography
                       variant="body2"
@@ -282,10 +362,32 @@ export const Service: FC<ServiceProps> = ({
                   </Grid>
                 </Grid>
               </Grid>
+            </Grid>
 
+            <Grid container
+              spacing={2}
+              sx={{
+                paddingBottom: '4rem'
+              }}
+            >
               <Grid item
-                md={3}
+                xs={12}
+                sm={12}
+                md={4}
                 sx={{
+                  padding: 0
+                }}
+              >
+                <ImgBox>
+                  <img src={serviceImg2} alt='Software Development' title='Software Development' width='250px' />
+                </ImgBox>
+              </Grid>
+              <Grid item
+                xs={12}
+                sm={12}
+                md={8}
+                sx={{
+                  textAlign: 'right',
                   alignItems: 'top'
                 }}
               >
@@ -295,148 +397,94 @@ export const Service: FC<ServiceProps> = ({
                     alignItems: 'top'
                   }}
                 >
-                  <Box
-                    sx={{
-                      alignItems: 'right'
-                    }}
-                  >
-                    <img src={uxDesign} alt='UI/UX Design' title='UI/UX Design' />
-                  </Box>
-                </Grid>
-              </Grid>
-
-            </Grid>
-
-            <Grid container
-              spacing={2}
-              sx={{
-                width: '100%'
-              }}
-            >
-              <Grid item
-                md={4}
-                sx={{
-                  padding: 0
-                }}
-              >
-                <img src={serviceImg2} alt='Software Development' title='Software Development' />
-              </Grid>
-              <Grid item
-                md={3}
-                sx={{
-                  alignSelf: 'end',
-                  paddingBottom: '2rem'
-                }}
-              >
-                <Grid container
-                 sx={{
-                  flexGrow: 1
-                 }}
-                >
                   <Grid item
-                    md={3}
+                    xs={12}
+                    sm={12}
+                    md={11}
                     sx={{
                       alignItems: 'top'
                     }}
                   >
-                    <Grid container
+                    <ImgBox
                       sx={{
-                        width: '100%',
-                        textAlign: 'right',
-                        alignItems: 'top'
+                        marginBottom: '1.5rem'
                       }}
                     >
-                      <Box
-                        sx={{
-                          alignItems: 'right'
-                        }}
-                      >
-                        <img src={frontDesign} alt='Front-end Design' title='Front-end Design' />
-                      </Box>
-                    </Grid>
+                      <img src={frontDesign} alt='Front-end Design' title='Front-end Design' width='150px' />
+                    </ImgBox>
                   </Grid>
                   <Grid item
+                    xs={12}
+                    sm={12}
+                    md={12}
                     sx={{
-                      width: '100%',
-                      alignSelf: 'end'
+                      justifyContent: 'center',
+                      alignSelf: 'center'
                     }}
                   >
-                    <Grid container
-                     sx={{
-                     flexGrow: 1
-                    }}
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: '#fff',
+                        alignItems: 'left'
+                      }}
                     >
-                      <Grid item
-                        sx={{
-                          width: '100%',
-                          alignSelf: 'end'
-                        }}
-                      >
-                        <Typography
-                          variant="body2"
-                          sx={{
-                            color: '#fff',
-                            alignItems: 'left'
-                          }}
-                        >
-                          Component based Front-End
-                        </Typography>
-                        <Typography
-                          variant="body2"
-                          sx={{
-                            color: '#fff',
-                            alignItems: 'left'
-                          }}
-                        >
-                          Web & Mobile
-                        </Typography>
-                        <Typography
-                          variant="body2"
-                          sx={{
-                            color: '#fff',
-                            alignItems: 'left'
-                          }}
-                        >
-                          Native apps
-                        </Typography>
-                        <Typography
-                          variant="body2"
-                          sx={{
-                            color: '#fff',
-                            alignItems: 'left'
-                          }}
-                        >
-                          API Connections
-                        </Typography>
-                        <Typography
-                          variant="body2"
-                          sx={{
-                            color: '#fff',
-                            alignItems: 'left'
-                          }}
-                        >
-                          React Native
-                        </Typography>
-                        <Typography
-                          variant="body2"
-                          sx={{
-                            color: '#fff',
-                            alignItems: 'left'
-                          }}
-                        >
-                          Fast Development
-                        </Typography>
-                        <Typography
-                          variant="body2"
-                          sx={{
-                            color: '#fff',
-                            alignItems: 'left'
-                          }}
-                        >
-                          Trustable & Fast Delivery
-                        </Typography>
-                      </Grid>
-                    </Grid>
+                      Component based Front-End
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: '#fff',
+                        alignItems: 'left'
+                      }}
+                    >
+                      Web & Mobile
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: '#fff',
+                        alignItems: 'left'
+                      }}
+                    >
+                      Native apps
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: '#fff',
+                        alignItems: 'left'
+                      }}
+                    >
+                      API Connections
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: '#fff',
+                        alignItems: 'left'
+                      }}
+                    >
+                      React Native
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: '#fff',
+                        alignItems: 'left'
+                      }}
+                    >
+                      Fast Development
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: '#fff',
+                        alignItems: 'left'
+                      }}
+                    >
+                      Trustable & Fast Delivery
+                    </Typography>
                   </Grid>
                 </Grid>
               </Grid>

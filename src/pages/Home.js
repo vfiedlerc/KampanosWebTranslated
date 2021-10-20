@@ -1,22 +1,35 @@
 import * as React from 'react';
 import Header from '../sections/Header/Header.js'
-import About from '../sections/About/About.js'
 import { Service } from '../sections/Services/Service'
-import { Story } from '../sections/Stories/Story'
+import { Story, Countries, Goals, Pillars } from '../sections/Stories'
 import { Team } from '../sections/Teams/Team'
 import Footer from '../sections/Footer/Footer.js'
 import { Box } from '@mui/material';
+import { About } from '../sections/About/About';
+
 //import { MediaCard } from '../components/Cards/MediaCard';
 
 function Home() {
     return (
         <Box>
+<<<<<<< HEAD
             {/* <Header /> */}
             {/* <About />    */}
             {/* <Service />          */}
             {/* <Story />  */}
             <Team />   
                 <Footer />  
+=======
+            <Header />
+            <About />
+            <Service />
+            <Story />
+            <Goals />
+            <Pillars />
+            <Countries />
+            <Team />
+            <Footer />
+>>>>>>> 70900a0de1181124242ad7faeb8beab17b5b9269
         </Box>
     )
 }
