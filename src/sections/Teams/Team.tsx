@@ -14,7 +14,7 @@ import bruno from '../../assets/Bruno.jpg';
 import Button from '@mui/material/Button';
 import OurTeamEffect from '../../assets/OurTeamEffect.png';
 import OurTeamEffects from '../../assets/OurTeamEffect.svg';
-import {Title} from '../../components/Titles/Title';
+import { Title } from '../../components/Titles/Title';
 
 
 
@@ -23,16 +23,12 @@ export const Team: FC<TeamProps> = ({
   props
 }: TeamProps) => {
   return (
+
     // <Box sx={{backgroundImage: `${OurTeamEffects}`, backgroudSize: 'cover', backgroundRepeat: 'no-repeat'}}> 
 
-    <Grid container spacing={2} >
-
-      
+    <Grid container spacing={2} sx={{marginBottom: '2rem'}} >
       <Grid item xs={12} md={4}>
-
-     
-
-<Title color="#D46918" label="OUR TEAM"/>
+        <Title color="#D46918" label="OUR TEAM" />
 
 
         {/* <Typography
@@ -48,22 +44,16 @@ export const Team: FC<TeamProps> = ({
 
       </Grid>
       <Grid item xs={6} md={8}>
-        <Grid container spacing={2} columns={3} rowSpacing={6}>
+        <Grid container spacing={2} columns={3} rowSpacing={6} sx={{textAlign:'center'}}>
           <Grid item >
             <Grid container spacing={2} >
               <Grid item>
-
                 <MediaCard image={andreas} title='Andreas Thomae' text='CEO & Chief of Development' />
-                
-                
               </Grid>
               <Grid item>
-
                 <MediaCard image={andreas} title='Rafael Facadas' text='UX/UI & Visual Designer' />
-
               </Grid>
               <Grid item>
-
                 <MediaCard image={andreas} title='Michael Wiederkehr' text='Key-Account Manager' />
               </Grid>
             </Grid>

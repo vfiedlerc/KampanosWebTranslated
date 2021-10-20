@@ -42,16 +42,16 @@ const Footer = () => {
 
 
         <Grid item >
-        
+
           {/* //2 */}
 
 
-         
 
-          <Grid container 
 
-            
-             spacing={4} sx={{
+          <Grid container
+
+
+            spacing={4} sx={{
               justifyContent: 'center',
               textAlign: 'center'
             }}>
@@ -103,11 +103,11 @@ const Footer = () => {
             </Grid>
 
             <Grid item>
-              <Link href="#" ><LinkedinIcon /> </Link>
+              <Link href="https://www.linkedin.com/company/kampanos/" ><LinkedinIcon /> </Link>
             </Grid>
 
             <Grid item>
-              <Link href="#" ><InstagramIcon /> </Link>
+              <Link href="https://www.instagram.com/kampanos.pt/" ><InstagramIcon /> </Link>
             </Grid>
 
 
