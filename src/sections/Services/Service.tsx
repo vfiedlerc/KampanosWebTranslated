@@ -16,9 +16,9 @@ const FontsBox = styled('div')(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     h1: {
       transform: 'none',
-      fontSize: '2.35rem',
+      fontSize: '2rem',
       textAlign: 'left',
-      textAlignLast: 'center',
+      textAlignLast: 'left',
       marginLeft: '1rem',
       marginTop: '2rem',
       marginBottom: '2rem'
@@ -40,13 +40,13 @@ const FontsBox = styled('div')(({ theme }) => ({
   },
   [theme.breakpoints.between('sm', 'md')]: {
     h1: {
-      transform: 'rotate(-90deg)',
+      transform: 'none',
       fontSize: '3rem',
-      // textAlign: 'left',
-      // textAlignLast: 'left',
-      // marginLeft: '1rem',
-      // marginTop: '2rem',
-      // marginBottom: '2rem'
+      textAlign: 'left',
+      textAlignLast: 'left',
+      marginLeft: '6rem',
+      marginTop: '1rem',
+      marginBottom: '2rem'
     },
     h2: {
       fontSize: '2rem',
@@ -56,11 +56,11 @@ const FontsBox = styled('div')(({ theme }) => ({
     },
     h5: { fontSize: '1.2rem' },
     p: {
-      textAlign: 'left'
+      textAlign: 'center'
     },
     span: {
       fontSize: '2rem',
-      textAlign: 'left'
+      textAlign: 'center'
     }
   },
   [theme.breakpoints.between('md', 'lg')]: {
@@ -83,7 +83,7 @@ const FontsBox = styled('div')(({ theme }) => ({
   [theme.breakpoints.up('lg')]: {
     h1: {
       transform: 'rotate(-90deg)',
-      fontSize: '5rem'
+      fontSize: '4rem'
     },
     h2: {
       fontSize: '3rem',
@@ -103,7 +103,8 @@ const ImgBox = styled('div')(({ theme }) => ({
   padding: 0,
   [theme.breakpoints.down('sm')]: {
     textAlign: '-webkit-center',
-    alignContent: 'center'
+    alignContent: 'center',
+    justifyContent: 'center'
   },
   [theme.breakpoints.between('sm', 'md')]: {
     textAlign: '-webkit-center',
@@ -116,6 +117,29 @@ const ImgBox = styled('div')(({ theme }) => ({
   [theme.breakpoints.up('lg')]: {
     textAlign: '-webkit-center',
     alignContent: 'center'
+  }
+}));
+
+const SubtitleBox = styled('div')(({ theme }) => ({
+  margin: 0,
+  padding: 0,
+  [theme.breakpoints.down('sm')]: {
+    span: {
+      fontSize: '1.2rem',
+      textAlign: 'center'
+    }
+  },
+  [theme.breakpoints.between('sm', 'md')]: {
+    span: {
+      fontSize: '1.5rem',
+      textAlign: 'center'
+    }
+  },
+  [theme.breakpoints.between('md', 'lg')]: {
+    span: { fontSize: '1.8rem' }
+  },
+  [theme.breakpoints.up('lg')]: {
+    span: { fontSize: '2rem' }
   }
 }));
 
@@ -145,9 +169,7 @@ export const Service: FC<ServiceProps> = ({
             lg={6}
             sx={{
               margin: 'auto',
-              paddingTop: '6%',
-              paddingBottom: '4%',
-              //textAlign: 'center'
+              paddingY: '4%'
             }}
           >
             <Typography
@@ -177,14 +199,14 @@ export const Service: FC<ServiceProps> = ({
               marginBottom: '6%'
             }}
           >
-            <Box
+            <SubtitleBox
               sx={{
                 whiteSpace: 'nowrap',
                 overflow: 'hidden'
               }}
             >
               <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' />
-            </Box>
+            </SubtitleBox>
           </Grid>
         </Grid>
         <Grid container
@@ -192,6 +214,7 @@ export const Service: FC<ServiceProps> = ({
           xs={12}
           sm={12}
           md={12}
+          lg={12}
           sx={{
             display: 'flex',
             justifyContent: 'center',
@@ -201,8 +224,9 @@ export const Service: FC<ServiceProps> = ({
           }}
         >
           <Grid item
+          direction='column'
             xs={12}
-            sm={3}
+            sm={12}
             md={3}
             sx={{
               padding: 0,
@@ -217,7 +241,7 @@ export const Service: FC<ServiceProps> = ({
           </Grid>
           <Grid item
             xs={12}
-            sm={9}
+            sm={12}
             md={9}
           >
             <Grid container
@@ -228,30 +252,31 @@ export const Service: FC<ServiceProps> = ({
             >
               <Grid item
                 xs={12}
-                sm={3}
+                sm={12}
                 md={3}
                 sx={{
                   padding: 0,
                   textAlign: 'center',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  alignSelf: 'center',
-                  maxWidth: 250
+                  alignSelf: 'center'
                 }}
               >
                 <ImgBox
                   sx={{
                     padding: 0,
                     textAlign: 'center',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    alignSelf: 'center',
+                    alignItems: 'center'
                   }}
                 >
-                  <img src={serviceImg1} alt='Software Development' title='Software Development' width='300px' />
+                  <img src={serviceImg1} alt='Software Development' title='Software Development' width='250px' />
                 </ImgBox>
               </Grid>
               <Grid item
                 xs={12}
-                sm={8}
+                sm={12}
                 md={8}
                 sx={{
                   textAlign: 'right',
@@ -277,7 +302,7 @@ export const Service: FC<ServiceProps> = ({
                         marginBottom: '1.5rem'
                       }}
                     >
-                      <img src={uxDesign} alt='UI/UX Design' title='UI/UX Design' />
+                      <img src={uxDesign} alt='UI/UX Design' title='UI/UX Design'  width='200px' />
                     </ImgBox>
                   </Grid>
                   <Grid item
@@ -385,7 +410,7 @@ export const Service: FC<ServiceProps> = ({
                         marginBottom: '1.5rem'
                       }}
                     >
-                      <img src={frontDesign} alt='Front-end Design' title='Front-end Design' />
+                      <img src={frontDesign} alt='Front-end Design' title='Front-end Design'  width='150px' />
                     </ImgBox>
                   </Grid>
                   <Grid item
@@ -464,7 +489,6 @@ export const Service: FC<ServiceProps> = ({
                 </Grid>
               </Grid>
             </Grid>
-
           </Grid>
         </Grid>
       </Grid>
