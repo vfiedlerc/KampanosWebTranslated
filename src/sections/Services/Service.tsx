@@ -224,7 +224,7 @@ export const Service: FC<ServiceProps> = ({
           }}
         >
           <Grid item
-          direction='column'
+            direction='column'
             xs={12}
             sm={12}
             md={3}
@@ -253,22 +253,22 @@ export const Service: FC<ServiceProps> = ({
               <Grid item
                 xs={12}
                 sm={12}
-                md={3}
+                md={4}
                 sx={{
                   padding: 0,
-                  textAlign: 'center',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  alignSelf: 'center'
+                  // textAlign: 'center',
+                  // alignItems: 'center',
+                  // justifyContent: 'center',
+                  // alignSelf: 'center'
                 }}
               >
                 <ImgBox
                   sx={{
                     padding: 0,
-                    textAlign: 'center',
-                    justifyContent: 'center',
-                    alignSelf: 'center',
-                    alignItems: 'center'
+                    // textAlign: 'center',
+                    // justifyContent: 'center',
+                    // alignSelf: 'center',
+                    // alignItems: 'center'
                   }}
                 >
                   <img src={serviceImg1} alt='Software Development' title='Software Development' width='250px' />
@@ -302,7 +302,7 @@ export const Service: FC<ServiceProps> = ({
                         marginBottom: '1.5rem'
                       }}
                     >
-                      <img src={uxDesign} alt='UI/UX Design' title='UI/UX Design'  width='200px' />
+                      <img src={uxDesign} alt='UI/UX Design' title='UI/UX Design' width='200px' />
                     </ImgBox>
                   </Grid>
                   <Grid item
@@ -410,7 +410,7 @@ export const Service: FC<ServiceProps> = ({
                         marginBottom: '1.5rem'
                       }}
                     >
-                      <img src={frontDesign} alt='Front-end Design' title='Front-end Design'  width='150px' />
+                      <img src={frontDesign} alt='Front-end Design' title='Front-end Design' width='150px' />
                     </ImgBox>
                   </Grid>
                   <Grid item
