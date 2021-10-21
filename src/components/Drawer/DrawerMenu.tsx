@@ -6,23 +6,12 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import { MenuItem, MenuItemProps } from "./MenuItem";
-import {
-  AppBar,
-  Box,
-  IconButton,
-  Theme,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import {AppBar,Box,IconButton,Theme,Toolbar,Typography,} from "@mui/material";
 import Close from "@material-ui/icons/Close";
 import MenuIcon from "@material-ui/icons/Menu";
 import menuLogo from "../../assets/KampanosBrandMenu.svg";
 
-/* ALL ICONS ARE PLACEHOLDERS FOR NOW */
 
-/**
- * Provide documentation
- */
 export const DrawerMenu: FC<DrawerMenuProps> = ({
   menuItems,
 }: DrawerMenuProps) => {

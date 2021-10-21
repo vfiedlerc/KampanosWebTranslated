@@ -136,10 +136,10 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
               justifyContent: "center",
               textAlignLast: "center",
               margin: 0,
-              backgroundColor: "#df0395",
+              backgroundColor: "#FFF",
             }}
           >
-            <Typography variant="h1">ABOUT US</Typography>
+            <Title color="#D46918" label="ABOUT US" />
           </Grid>
 
           <Grid item xs={12} sm={12} md={9}>
@@ -164,6 +164,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                   sx={{
                     color: "#0D3475",
                     wordBreak: "break-word",
+                    fontWeight: 'bold',
                   }}
                 >
                   Kampanos is a fully remote IT and tech solutions company...
@@ -174,6 +175,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                       wordBreak: "break-word",
                       fontSize: "3.75rem",
                       letterSpacing: 0,
+                      
                     }}
                   >
                     {" "}
@@ -192,7 +194,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                 md={2}
                 sx={{
                   alignItems: "top",
-                  backgroundColor: "#df2783",
+                  backgroundColor: "#FFF",
                 }}
               />
 
@@ -202,7 +204,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                 order={{ xs: 1, sm: 1, md: 3 }}
                 sx={{
                   alignItems: "top",
-                  backgroundColor: "#f30000",
+                  backgroundColor: "#FFF",
                 }}
               >
                 <Grid
@@ -258,7 +260,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                 md={2}
                 sx={{
                   alignItems: "top",
-                  backgroundColor: "#df2783",
+                  backgroundColor: "#FFF",
                 }}
               />
 
@@ -268,7 +270,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                 md={4}
                 sx={{
                   alignItems: "top",
-                  backgroundColor: "#f30000",
+                  backgroundColor: "#FFF",
                 }}
               >
                 <Grid
@@ -283,31 +285,29 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                       alignItems: "right",
                     }}
                   >
-                   <Typography
-                  variant="h4"
-                  sx={{
-                    color: "#0D3475",
-                    wordBreak: "break-word",
-                  }}
-                >
-                  Kampanos is a fully remote IT and tech solutions company...
-                  <Typography
-                    variant="h5"
-                    sx={{
-                      color: "#0D3475",
-                      wordBreak: "break-word",
-                      fontSize: "3.75rem",
-                      letterSpacing: 0,
-                    }}
-                  >
-                    {" "}
-                    that aims to create the best apps, websites, landing pages,
-                    tech and visual solutions for our clients. Working at
-                    Kampanos means working remotely. We strongly believe that
-                    remote jobs are the future and success can be achieved
-                    through this.
-                  </Typography>
-                </Typography>
+                    <Typography
+                      variant="h4"
+                      sx={{
+                        color: "#0D3475",
+                        wordBreak: "break-word",
+                        fontWeight: 'bold',
+                      }}
+                    >
+                      Success comes from passion and motivation...
+                      <Typography
+                        variant="h5"
+                        sx={{
+                          color: "#0D3475",
+                          wordBreak: "break-word",
+                          fontSize: "3.75rem",
+                          letterSpacing: 0,
+                        }}
+                      >
+                        {" "}
+                        the love for being part of something that makes a difference in the world, that drives people, companies and projects
+                        Grabbing our digital construction tools from home allows us to build amazing things in this incredible and ever-growing digital world.
+                      </Typography>
+                    </Typography>
                   </Box>
                 </Grid>
               </Grid>
@@ -322,7 +322,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
           backgroundColor: "#FFF",
         }}
       >
-      
+
 
         <Grid
           container
@@ -376,9 +376,10 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                   sx={{
                     color: "#0D3475",
                     wordBreak: "break-word",
+                    fontWeight: 'bold',
                   }}
                 >
-                  Kampanos is a fully remote IT and tech solutions company...
+                  We celebrate loyalty and achievements.
                   <Typography
                     variant="h5"
                     sx={{
@@ -389,11 +390,12 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                     }}
                   >
                     {" "}
-                    that aims to create the best apps, websites, landing pages,
-                    tech and visual solutions for our clients. Working at
-                    Kampanos means working remotely. We strongly believe that
-                    remote jobs are the future and success can be achieved
-                    through this.
+                    We want to help you achieve your goals and your dreams.
+                    We want to help you achieve your goals and your dreams.
+                    We want to help you achieve your goals and your dreams.
+                    We want to help you achieve your goals and your dreams.
+                    We want to help you achieve your goals and your dreams.
+
                   </Typography>
                 </Typography>
               </Grid>
@@ -404,7 +406,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                 md={2}
                 sx={{
                   alignItems: "top",
-                  backgroundColor: "#df2783",
+                  backgroundColor: "#FFF",
                 }}
               />
 
@@ -414,7 +416,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                 order={{ xs: 1, sm: 1, md: 3 }}
                 sx={{
                   alignItems: "top",
-                  backgroundColor: "#f30000",
+                  backgroundColor: "#FFF",
                 }}
               >
                 <Grid
@@ -470,7 +472,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                 md={2}
                 sx={{
                   alignItems: "top",
-                  backgroundColor: "#df2783",
+                  backgroundColor: "#ffffff",
                 }}
               />
 
@@ -480,7 +482,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                 md={4}
                 sx={{
                   alignItems: "top",
-                  backgroundColor: "#f30000",
+                  backgroundColor: "#ffffff",
                 }}
               >
                 <Grid
@@ -495,53 +497,50 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                       alignItems: "right",
                     }}
                   >
-                   <Typography
-                  variant="h4"
-                  sx={{
-                    color: "#0D3475",
-                    wordBreak: "break-word",
-                  }}
-                >
-                  Kampanos is a fully remote IT and tech solutions company...
-                  <Typography
-                    variant="h5"
-                    sx={{
-                      color: "#0D3475",
-                      wordBreak: "break-word",
-                      fontSize: "3.75rem",
-                      letterSpacing: 0,
-                    }}
-                  >
-                    {" "}
-                    that aims to create the best apps, websites, landing pages,
-                    tech and visual solutions for our clients. Working at
-                    Kampanos means working remotely. We strongly believe that
-                    remote jobs are the future and success can be achieved
-                    through this.
-                  </Typography>
-                </Typography>
+                    <Typography
+                      variant="h4"
+                      sx={{
+                        color: "#0D3475",
+                        wordBreak: "break-word",
+                        fontWeight: 'bold',
+                      }}
+                    >
+                      We offer a slate of services regarding IT...
+                      <Typography
+                        variant="h5"
+                        sx={{
+                          color: "#0D3475",
+                          wordBreak: "break-word",
+                          fontSize: "3.75rem",
+                          letterSpacing: 0,
+                        }}
+                      >
+                        {" "}
+                        and Technology aswell as App Design and Development, Web Design solutions, Marketing and Social Media, Branding, Graphic Design, Programming and more.
+                      </Typography>
+                    </Typography>
                   </Box>
                 </Grid>
               </Grid>
             </Grid>
           </Grid>
           <Grid
-                item
-                md={3}
-                sx={{
-                  padding: 0,
-                }}
-              >
-                <Box
-                  sx={{
-                    alignItems: "center",
-                  }}
-                >
-                  <img src={TimeToFly} alt="Time to Fly" title="Time to Fly" />
-                </Box>
-              </Grid>
+            item
+            md={3}
+            sx={{
+              padding: 0,
+            }}
+          >
+            <Box
+              sx={{
+                alignItems: "center",
+              }}
+            >
+              <img src={TimeToFly} alt="Time to Fly" title="Time to Fly" />
+            </Box>
+          </Grid>
         </Grid>
-        
+
       </Grid>
     </FontsBox>
   );
@@ -550,13 +549,3 @@ export type AboutProps = {
   props: any;
 };
 
-{
-  /* <Typography
-variant="h5"
-sx= {{
-  color: '#D46918'
-}}
->
-Service
-</Typography> */
-}

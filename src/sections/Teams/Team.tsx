@@ -19,27 +19,20 @@ import { Title } from '../../components/Titles/Title';
 
 
 
+
 export const Team: FC<TeamProps> = ({
   props
 }: TeamProps) => {
   return (
 
-    // <Box sx={{backgroundImage: `${OurTeamEffects}`, backgroudSize: 'cover', backgroundRepeat: 'no-repeat'}}> 
+    
 
     <Grid container spacing={2} sx={{marginBottom: '2rem'}} >
       <Grid item xs={12} md={4}>
-        <Title color="#D46918" label="OUR TEAM" />
+        <Title  color="#D46918" label="OUR TEAM" />
 
 
-        {/* <Typography
-        sx={{
-          transform: 'rotate(-90deg)',
-          fontSize: '88px',
-          color: '#D46918;'
-        }}
-        >
-          Our Team
-        </Typography>  */}
+        <img className="imgTeam" src={OurTeamEffects} />
 
 
       </Grid>
@@ -60,6 +53,7 @@ export const Team: FC<TeamProps> = ({
           </Grid>
           <Grid item>
             <Grid container spacing={2} >
+          
               <Grid item>
                 <MediaCard image={andreas} title='Vinícius Fiedler' text='  Full-Stack Developer' />
               </Grid>
