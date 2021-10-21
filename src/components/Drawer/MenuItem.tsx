@@ -10,7 +10,6 @@ export const MenuItem: FC<MenuItemProps> = ({
   label,
   target,
   href,
-  size,
   title,
   color
 }: MenuItemProps) => {
@@ -19,10 +18,9 @@ export const MenuItem: FC<MenuItemProps> = ({
       href={href}
       title={label}
       target={target}
-      underline="none"
+      underline="hover"
       color={color}
-    >
-    
+    >    
       {label}
     </Link>
   );
@@ -32,7 +30,6 @@ export type MenuItemProps = {
   label: string;
   target: string;
   href: string;
-  size: number;
   title: string;
   color: string | '#FFF';
 };
