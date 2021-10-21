@@ -57,12 +57,17 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
             </Toolbar>
           </AppBar>
 
-          <Grid container>
+
+
+
+          <Grid container  >
+
             <Box>
               <Typography
                 variant="h2"
                 sx={{
                   marginRight: 0,
+                  
                 }}
               >
                 <MenuItem
@@ -82,8 +87,91 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
             >
             </Box>
 
-            <Box></Box>
-            <Box></Box>
+
+            <Box>
+              <Typography
+                variant="h2"
+                sx={{
+                  marginRight: 0,
+                
+                  
+                }}
+              >
+                <MenuItem
+                  label='About us'
+                  href='#'
+                  title='About us'
+                  target='_self'
+                  color="#878787"
+                />
+              </Typography>
+            </Box>
+
+
+
+
+            <Box>
+              <Typography
+                variant="h2"
+                sx={{
+                  marginRight: 0,
+                  
+                }}
+              >
+                <MenuItem
+                  label='Our services'
+                  href='#'
+                  title='Our services'
+                  target='_self'
+                  color="#878787"
+                />
+              </Typography>
+            </Box>
+
+
+            <Box>
+              <Typography
+                variant="h2"
+                sx={{
+                  marginRight: 0,
+                  
+                }}
+              >
+                <MenuItem
+                  label='Our story'
+                  href='#'
+                  title='Our story'
+                  target='_self'
+                  color="#878787"
+                />
+              </Typography>
+            </Box>
+
+
+            <Box>
+              <Typography
+                variant="h2"
+                sx={{
+                  marginRight: 0,
+                  
+                }}
+              >
+                <MenuItem
+                  label='Our team'
+                  href='#'
+                  title='Our team'
+                  target='_self'
+                  color="#CEE8F9"
+                />
+              </Typography>
+            </Box>
+
+
+
+
+
+
+
           </Grid>
         </Box>
       </SwipeableDrawer>

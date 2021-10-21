@@ -15,7 +15,7 @@ import Button from '@mui/material/Button';
 import OurTeamEffect from '../../assets/OurTeamEffect.png';
 import OurTeamEffects from '../../assets/OurTeamEffect.svg';
 import { Title } from '../../components/Titles/Title';
-import './style.css';
+
 
 
 export const Team: FC<TeamProps> = ({
@@ -62,7 +62,7 @@ export const Team: FC<TeamProps> = ({
               <Grid item>
                 <MediaCard image={andreas} title='João Bugarin' text='Software Developer' />
               </Grid>
-              <img className="imgTeam" src={OurTeamEffects} />
+             
             </Grid>
           </Grid>
           <Grid item>
