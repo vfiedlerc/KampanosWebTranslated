@@ -62,7 +62,6 @@ export const Team: FC<TeamProps> = ({
               <Grid item>
                 <MediaCard image={andreas} title='João Bugarin' text='Software Developer' />
               </Grid>
-             
             </Grid>
           </Grid>
           <Grid item>
