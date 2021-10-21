@@ -51,7 +51,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
           >
             <Toolbar>
               <Box sx={{ flexGrow: 1 }}>
-                <img src={menuLogo} alt="KampanosLogo" title="KampanosLogo" />
+                <img src={menuLogo} alt="Kampanos" title="Kampanos" />
               </Box>
               <Close onClick={toggleDrawer} />
             </Toolbar>

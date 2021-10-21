@@ -37,7 +37,7 @@ const Header = () => {
             backgroundColor: '#fff'
           }}
         >
-          <img src={centerLogo} alt='KampanosLogo' title='KampanosLogo' />
+          <img src={centerLogo} alt='Kampanos' title='Kampanos' />
         </Grid>
       </Grid>
       <Box 

@@ -1,7 +1,8 @@
 // @ts-check
 import * as React from "react";
 import { FC } from "react";
-import { Link } from "@mui/material";
+import { Link, Grid } from "@mui/material";
+
 
 /**
  * Provide documentation
@@ -15,16 +16,24 @@ export const MenuItem: FC<MenuItemProps> = ({
   color
 }: MenuItemProps) => {
   return (
-    <Link
-      href={href}
-      title={label}
-      target={target}
-      underline="none"
-      color={color}
-    >
-    
-      {label}
-    </Link>
+
+    <Grid container>
+
+      <Link
+        href={"https://www.google.com/"}
+        title={label}
+        target={target}
+        underline="none"
+        color={color} >
+       {label}
+      </Link>
+      
+    </Grid>
+
+
+
+
+
   );
 };
 
