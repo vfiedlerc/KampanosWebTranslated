@@ -101,7 +101,7 @@ const FontsBox = styled("div")(({ theme }) => ({
 
 export const About: FC<AboutProps> = ({ props }: AboutProps) => {
   return (
-    <FontsBox>
+    <FontsBox sx= {{marginY: '6rem'}}>
       <Grid
         container
         sx={{

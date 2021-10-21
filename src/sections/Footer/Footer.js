@@ -9,7 +9,7 @@ import { ReactComponent as InstagramIcon } from '../../assets/InstagramIcon.svg'
 
 const Footer = () => {
   return (
-    <Box>
+    <Box sx= {{marginY: '6rem'}}>
       <Grid container
         xs={12}
         sm={12}

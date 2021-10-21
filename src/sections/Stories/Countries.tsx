@@ -9,23 +9,23 @@ const CountriesBox = styled('div')(({ theme }) => ({
     justifyContent: 'center',
     alignItems: 'center',
     [theme.breakpoints.down('sm')]: {
-        paddingTop: '3rem',
-        paddingBottom: '5rem',
+       marginTop: '3rem',
+       marginBottom: '5rem',
         span: { fontSize: '1rem', letterSpacing: 0 }
     },
     [theme.breakpoints.between('sm', 'md')]: {
-        paddingTop: '6rem',
-        paddingBottom: '6rem',
+       marginTop: '6rem',
+       marginBottom: '6rem',
         span: { fontSize: '1.5rem', letterSpacing: 0 }
     },
     [theme.breakpoints.between('md', 'lg')]: {
-        paddingTop: '8rem',
-        paddingBottom: '8rem',
+       marginTop: '8rem',
+       marginBottom: '8rem',
         span: { fontSize: '1.5rem', letterSpacing: 0 }
     },
     [theme.breakpoints.up('lg')]: {
-        paddingTop: '8rem',
-        paddingBottom: '8rem',
+       marginTop: '8rem',
+       marginBottom: '8rem',
         span: { fontSize: '1.8rem', letterSpacing: 0 }
     },
 }));
@@ -34,11 +34,13 @@ export const Countries = () => {
     return (
         <CountriesBox
             sx={{
+                width: '100%',
                 backgroundImage: `URL(${mapaMundi})`,
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
-                alignItems: 'center'
+                alignItems: 'center',
+                // margin: '2rem auto 6rem'
             }}>
             <Grid container
                 xs={10}
