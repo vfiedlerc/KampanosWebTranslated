@@ -11,29 +11,19 @@ export const MenuItem: FC<MenuItemProps> = ({
   label,
   target,
   href,
-  size,
   title,
   color
 }: MenuItemProps) => {
   return (
-
-    <Grid container>
-
-      <Link
-        href={"https://www.google.com/"}
-        title={label}
-        target={target}
-        underline="none"
-        color={color} >
-       {label}
-      </Link>
-      
-    </Grid>
-
-
-
-
-
+    <Link
+      href={href}
+      title={label}
+      target={target}
+      underline="hover"
+      color={color}
+    >    
+      {label}
+    </Link>
   );
 };
 
@@ -41,7 +31,6 @@ export type MenuItemProps = {
   label: string;
   target: string;
   href: string;
-  size: number;
   title: string;
   color: string | '#FFF';
 };

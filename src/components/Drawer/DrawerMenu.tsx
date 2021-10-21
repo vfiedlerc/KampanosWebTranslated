@@ -6,7 +6,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import { MenuItem, MenuItemProps } from "./MenuItem";
-import {AppBar,Box,IconButton,Theme,Toolbar,Typography,} from "@mui/material";
+import { AppBar, Box, Grid, IconButton, Theme, Toolbar, Typography, } from "@mui/material";
 import Close from "@material-ui/icons/Close";
 import MenuIcon from "@material-ui/icons/Menu";
 import menuLogo from "../../assets/KampanosBrandMenu.svg";
@@ -57,39 +57,34 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
             </Toolbar>
           </AppBar>
 
-          
-         
-          <Box>
-            {menuItems.map((menuItem, index) => {
-              return (
-                <Typography
-                  key={"menuItem" + index}
-                  variant="subtitle1"
-                  sx={{
-                    //fontWeight: 'bold',
-                    marginRight: 0,
-                  }}
-                >
-                  <MenuItem
-                    label={menuItem.label}
-                    href={menuItem.href}
-                    size={menuItem.size}
-                    title={menuItem.title}
-                    target={menuItem.target}
-                    color="#878787"
-                  />
-                </Typography>
-              );
-            })}
-          </Box>
-          <Box
-            sx={{
-              justifyContent: "center",
-            }}
-          ></Box>
-          
-          <Box></Box>
-          <Box></Box>
+          <Grid container>
+            <Box>
+              <Typography
+                variant="h2"
+                sx={{
+                  marginRight: 0,
+                }}
+              >
+                <MenuItem
+                  label='Home'
+                  href='#'
+                  title='Home'
+                  target='_self'
+                  color="#878787"
+                />
+              </Typography>
+            </Box>
+
+            <Box
+              sx={{
+                justifyContent: "center",
+              }}
+            >
+            </Box>
+
+            <Box></Box>
+            <Box></Box>
+          </Grid>
         </Box>
       </SwipeableDrawer>
     </>

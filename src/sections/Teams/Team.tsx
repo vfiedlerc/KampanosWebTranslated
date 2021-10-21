@@ -18,27 +18,25 @@ import { Title } from '../../components/Titles/Title';
 import './style.css';
 
 
-
-
-
 export const Team: FC<TeamProps> = ({
   props
 }: TeamProps) => {
   return (
-
-    
-
-    <Grid container spacing={2} sx={{marginBottom: '2rem'}} >
-      <Grid item xs={12} md={4}>
-        <Title  color="#D46918" label="OUR TEAM" />
-
-
-        
-
-
+    <Grid container spacing={2} sx={{
+      width: '100%',
+      backgroundImage: `URL(${OurTeamEffects})`,
+      backgroundSize: 'contain',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      alignItems: 'center',
+      margin: '2rem 2rem 6rem 4rem'
+    }} >
+      <Grid item xs={12} md={4} sx={{ alignSelf: 'start' }}>
+        <Title color="#D46918" label="OUR TEAM" />
       </Grid>
-      <Grid item xs={6} md={8}>
-        <Grid container spacing={2} columns={3} rowSpacing={6} sx={{textAlign:'center'}}>
+      <Grid item xs={6} md={8}
+      >
+        <Grid container spacing={2} columns={3} rowSpacing={6} sx={{ textAlign: 'center' }}>
           <Grid item >
             <Grid container spacing={2} >
               <Grid item>
@@ -54,7 +52,7 @@ export const Team: FC<TeamProps> = ({
           </Grid>
           <Grid item>
             <Grid container spacing={2} >
-          
+
               <Grid item>
                 <MediaCard image={andreas} title='Vinícius Fiedler' text='  Full-Stack Developer' />
               </Grid>

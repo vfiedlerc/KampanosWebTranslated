@@ -30,7 +30,7 @@ const TitleBox = styled('div')(({ theme }) => ({
   [theme.breakpoints.between('md', 'lg')]: {
     h1: {
       transform: 'rotate(-90deg)',
-      fontSize: '4rem'
+      fontSize: '3.8rem'
     }
   },
   [theme.breakpoints.up('lg')]: {

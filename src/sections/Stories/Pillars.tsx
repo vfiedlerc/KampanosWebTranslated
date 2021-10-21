@@ -9,7 +9,8 @@ export const Pillars = () => {
             spacing={2}
             sx={{
                 backgroundColor: '#fff',
-                width: '100%'
+                width: '100%',
+                margin: '4rem auto'
             }}
         >
             <Grid

@@ -22,20 +22,20 @@ const StoryBox = styled('div')(({ theme }) => ({
             textAlign: 'center'
         }
     },
-    // [theme.breakpoints.between('sm', 'md')]: {
-    //     h1: {
-    //         transform: 'none',
-    //         fontSize: '2rem',
-    //         textAlign: 'left',
-    //         textAlignLast: 'left',
-    //         margin: '2rem 1.5rem 0 1rem'
-    //     },
-    //     h5: { fontSize: '1.2rem' },
-    //     span: {
-    //         fontSize: '.7rem',
-    //         textAlign: 'left'
-    //     }
-    // },
+    [theme.breakpoints.between('sm', 'md')]: {
+        h1: {
+            transform: 'none',
+            fontSize: '2rem',
+            textAlign: 'left',
+            textAlignLast: 'left',
+            margin: '2rem 1.5rem 0 1rem'
+        },
+        h5: { fontSize: '1.2rem' },
+        span: {
+            fontSize: '.7rem',
+            textAlign: 'left'
+        }
+    },
     [theme.breakpoints.between('sm', 'md')]: {
         h1: {
             transform: 'none',
@@ -75,31 +75,30 @@ const StoryBox = styled('div')(({ theme }) => ({
 const ImgBox = styled('div')(({ theme }) => ({
     margin: 0,
     padding: 0,
-    display: 'none',
-    // [theme.breakpoints.down('sm')]: {
-    //     width: '150px',
-    //     textAlign: '-webkit-right',
-    //     alignContent: 'right',
-    //     marginRight: '-9rem',
-    //     marginTop: '-120px',
-    //     overflow: 'hidden'
-    // },
-    // [theme.breakpoints.between('sm', 'md')]: {
-    //     width: '150px',
-    //     textAlign: '-webkit-right',
-    //     alignContent: 'right',
-    //     marginRight: '-9rem',
-    //     marginTop: '-120px',
-    //     overflow: 'hidden'
-    // },
-    // [theme.breakpoints.between('md', 'lg')]: {
-    //     textAlign: '-webkit-right',
-    //     alignContent: 'right'
-    // },
-    // [theme.breakpoints.up('lg')]: {
-    //     textAlign: '-webkit-right',
-    //     alignContent: 'right'
-    // }
+    [theme.breakpoints.down('sm')]: {
+        width: '150px',
+        textAlign: '-webkit-right',
+        alignContent: 'right',
+        // marginRight: '-9rem',
+        marginTop: '-120px',
+        overflow: 'hidden'
+    },
+    [theme.breakpoints.between('sm', 'md')]: {
+        width: '150px',
+        textAlign: '-webkit-right',
+        alignContent: 'right',
+        // marginRight: '-9rem',
+        marginTop: '-120px',
+        overflow: 'hidden'
+    },
+    [theme.breakpoints.between('md', 'lg')]: {
+        textAlign: '-webkit-right',
+        alignContent: 'right'
+    },
+    [theme.breakpoints.up('lg')]: {
+        textAlign: '-webkit-right',
+        alignContent: 'right'
+    }
 }));
 
 const AlignTextBox = styled('div')(({ theme }) => ({
@@ -111,19 +110,19 @@ const AlignTextBox = styled('div')(({ theme }) => ({
         margin: '0 5rem 0 2rem',
     },
     [theme.breakpoints.between('sm', 'md')]: {
-        margin: '0 5rem 0 2rem', 
+        margin: '0 5rem 0 2rem',
     },
     [theme.breakpoints.between('md', 'lg')]: {
         margin: '1rem 1.5rem',
     },
     [theme.breakpoints.up('lg')]: {
-       margin: '1rem 1.5rem', 
+        margin: '1rem 1.5rem',
     },
 }));
 
 export const Story = () => {
     return (
-        <StoryBox>
+        <StoryBox sx={{ margin: '6rem auto 4rem' }}>
             <Grid container
                 spacing={2}
                 xs={12}
@@ -140,7 +139,7 @@ export const Story = () => {
             >
                 <Grid item
                     xs={12}
-                    sm={2}
+                    sm={12}
                     md={2}
                     sx={{
                         padding: 0,
@@ -148,7 +147,8 @@ export const Story = () => {
                         marginTop: '1rem',
                         width: '100%',
                         backgroundColor: '#fff',
-                        alignSelf: 'center'
+                        alignSelf: 'center',
+                        textAlign: 'center'
                     }}
                 >
                     <Title color='#D46918' label='OUR STORY' />
@@ -164,7 +164,7 @@ export const Story = () => {
                             spacing={2}
                             xs={12}
                             sm={12}
-                            md={12}
+                            md={6}
                         >
                             <Grid item
                                 xs={12}
@@ -269,8 +269,8 @@ export const Story = () => {
 
                 <Grid item
                     xs={12}
-                    sm={4}
-                    md={4}
+                    sm={6}
+                    md={6}
                     sx={{
                         padding: 0,
                         textAlign: 'right',
@@ -293,13 +293,16 @@ export const Story = () => {
                             sx={{
                                 padding: 0,
                                 textAlign: 'right',
-                                justifyContent: 'right'                               
+                                justifyContent: 'right'
                             }}
                         >
                             <img src={orangeBlueBox} alt='Orange Blue Box' title='Orange Blue Box' width='200px' />
                         </ImgBox>
                     </Grid>
                 </Grid>
+
+
+
             </Grid>
         </StoryBox>
     );
