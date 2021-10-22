@@ -4,9 +4,6 @@ import { FC } from "react";
 import { Link, Grid } from "@mui/material";
 
 
-/**
- * Provide documentation
- */
 export const MenuItem: FC<MenuItemProps> = ({
   label,
   target,

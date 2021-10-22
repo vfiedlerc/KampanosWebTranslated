@@ -57,33 +57,146 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
             </Toolbar>
           </AppBar>
 
-          <Grid container>
-            <Box>
-              <Typography
-                variant="h2"
+
+
+
+          <Grid container spacing={2} direction="column"
+  justifyContent="center"
+  alignItems="flex-start"
+ 
+  
+  >
+
+
+
+            <Grid item>
+              <Box>
+                <Typography
+                  variant="h2"
+                  sx={{
+                    marginRight: 0,
+
+                  }}
+                >
+                  <MenuItem
+                    label='Home'
+                    href='#'
+                    title='Home'
+                    target='_self'
+                    color="#878787"
+                  />
+                </Typography>
+              </Box>
+            </Grid>
+
+
+
+
+            <Grid item>
+
+              <Box
                 sx={{
-                  marginRight: 0,
+                  justifyContent: "center",
                 }}
               >
-                <MenuItem
-                  label='Home'
-                  href='#'
-                  title='Home'
-                  target='_self'
-                  color="#878787"
-                />
-              </Typography>
-            </Box>
+              </Box>
 
-            <Box
-              sx={{
-                justifyContent: "center",
-              }}
-            >
-            </Box>
 
-            <Box></Box>
-            <Box></Box>
+              <Box>
+                <Typography
+                  variant="h2"
+                  sx={{
+                    marginRight: 0,
+
+
+                  }}
+                >
+                  <MenuItem
+                    label='About us'
+                    href='#'
+                    title='About us'
+                    target='_self'
+                    color="#878787"
+                  />
+                </Typography>
+              </Box>
+            </Grid>
+
+
+
+
+
+
+
+
+            <Grid item>
+              <Box>
+                <Typography
+                  variant="h2"
+                  sx={{
+                    marginRight: 0,
+
+                  }}
+                >
+                  <MenuItem
+                    label='Our services'
+                    href='#'
+                    title='Our services'
+                    target='_self'
+                    color="#878787"
+                  />
+                </Typography>
+              </Box>
+
+            </Grid>
+
+
+
+
+
+            <Grid item>
+
+              <Box>
+                <Typography
+                  variant="h2"
+                  sx={{
+                    marginRight: 0,
+
+                  }}
+                >
+                  <MenuItem
+                    label='Our story'
+                    href='#'
+                    title='Our story'
+                    target='_self'
+                    color="#878787"
+                  />
+                </Typography>
+              </Box>
+            </Grid>
+
+
+
+
+            <Grid item>
+              <Box>
+                <Typography
+                  variant="h2"
+                  sx={{
+                    marginRight: 0,
+
+                  }}
+                >
+                  <MenuItem
+                    label='Our team'
+                    href='#'
+                    title='Our team'
+                    target='_self'
+                    color="#CEE8F9"
+                  />
+                </Typography>
+              </Box>
+            </Grid>
           </Grid>
         </Box>
       </SwipeableDrawer>
