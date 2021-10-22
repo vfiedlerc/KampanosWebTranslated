@@ -6,10 +6,16 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import { MenuItem, MenuItemProps } from "./MenuItem";
-import { AppBar, Box, Grid, IconButton, Theme, Toolbar, Typography, } from "@mui/material";
+import { AppBar, Box, Grid, Icon, IconButton, Theme, Toolbar, Typography, } from "@mui/material";
 import Close from "@material-ui/icons/Close";
 import MenuIcon from "@material-ui/icons/Menu";
 import menuLogo from "../../assets/KampanosBrandMenu.svg";
+
+import FaceIcon from "../../assets/FaceIcon.svg";
+import LinkIcon from "../../assets/LinkIcon.svg";
+import InstaIcon from "../../assets/InstaIcon.svg";
+import workMenuButton from "../../assets/workMenuButton.svg";
+import rectangleMenu from "../../assets/rectangleMenu.svg";
 
 
 export const DrawerMenu: FC<DrawerMenuProps> = ({
@@ -61,14 +67,58 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
 
 
           <Grid container spacing={2} direction="column"
-  justifyContent="center"
-  alignItems="flex-start"
- 
-  
-  >
+            justifyContent="center"
+            alignItems="flex-start"
+
+
+          >
+
+            <Grid item direction="column">
+
+
+              <Grid container>
+                <Grid item>
 
 
 
+                  <Grid container direction="column">
+
+                    <Grid item xs={12}>  
+
+                    <Typography sx={{ transform: 'rotate(-90deg)' }} color=" #FAFAFA">
+                      
+                       @kampanos 2021
+
+                     </Typography></Grid>
+
+
+
+                    <Grid item xs={12}>
+                      <img src={FaceIcon} alt="Facebook" title="Facebook" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                      <img src={LinkIcon} alt="Facebook" title="Facebook" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                      <img src={InstaIcon} alt="Facebook" title="Facebook" />
+                    </Grid>
+                  </Grid>
+
+                </Grid>
+
+                <Grid item direction="column">
+
+
+
+                </Grid>
+
+              </Grid>
+
+
+
+            </Grid>
             <Grid item>
               <Box>
                 <Typography
@@ -197,6 +247,29 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                 </Typography>
               </Box>
             </Grid>
+
+            <Grid container direction="row"
+              justifyContent="flex-end"
+              alignItems="flex-end" spacing={3}>
+
+
+              <Grid item>
+                <Typography variant="h3" color="#FAFAFA">Let’s work together!</Typography>
+              </Grid>
+
+
+
+              <Grid item>
+                <img src={rectangleMenu} alt="Facebook" title="Facebook" />
+              </Grid>
+
+              <Grid item>
+                <img src={workMenuButton} alt="Facebook" title="Facebook" />
+              </Grid>
+
+            </Grid>
+
+
           </Grid>
         </Box>
       </SwipeableDrawer>

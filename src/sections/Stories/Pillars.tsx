@@ -19,7 +19,7 @@ export const Pillars = () => {
                 sm={12}
                 md={6}
             >
-                {/* <Title color='#D46918' label='OUR Goals' /> */}
+                {/* <Title color='#D46918' label='OUR Goals' />*/}
             </Grid>
             <Grid
                 item

@@ -7,8 +7,6 @@ import Footer from '../sections/Footer/Footer.js'
 import { Box } from '@mui/material';
 import { About } from '../sections/About/About';
 
-//import { MediaCard } from '../components/Cards/MediaCard';
-
 function Home() {
     return (
         <Box>

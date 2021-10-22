@@ -57,12 +57,12 @@ const Footer = () => {
             }}>
 
             <Grid item >
-              <Link underline="hover" color="#FAFAFA" >Home</Link>
+              <Link  underline="hover" color="#FAFAFA" >Home</Link>
               {/* //1 */}
             </Grid>
 
             <Grid item>
-              <Link underline="hover" color="#FAFAFA" >About us</Link>
+              <Link href="" underline="hover" color="#FAFAFA" >About us</Link>
               {/* //2 */}
             </Grid>
 
