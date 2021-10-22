@@ -55,7 +55,8 @@ export const Title: FC<TitleProps> = ({
           WebkitTextFillColor: 'transparent',
           WebkitTextStrokeWidth: '0.5px',
           WebkitTextStrokeColor: `${color}`,
-          fontWeight: 'bold'
+          fontWeight: 'bold',
+          whiteSpace:'nowrap'
         }}
       >
         {label}
