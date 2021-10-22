@@ -6,7 +6,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import { MenuItem, MenuItemProps } from "./MenuItem";
-import { AppBar, Box, Grid, Icon, IconButton, Theme, Toolbar, Typography, } from "@mui/material";
+import { AppBar, Box, Grid, Icon, IconButton, styled, Theme, Toolbar, Typography, } from "@mui/material";
 import Close from "@material-ui/icons/Close";
 import MenuIcon from "@material-ui/icons/Menu";
 import menuLogo from "../../assets/KampanosBrandMenu.svg";
@@ -26,6 +26,42 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
   const toggleDrawer = () => {
     setState(!state);
   };
+
+  const MenuBox = styled('div')(({ theme }) => ({
+    margin: 0,
+    padding: 0,
+    [theme.breakpoints.down('sm')]: {
+      h2: {
+        fontSize: '1.5rem',
+        textAlign: 'left',
+        paddingBottom:'1.2rem'
+      },
+      h3: { fontSize: '1rem' }
+    },
+    [theme.breakpoints.between('sm', 'md')]: {
+      h2: {
+        fontSize: '2rem',
+        textAlign: 'left',
+        paddingBottom:'1.2rem'
+      },
+      h3: { fontSize: '1.2rem' }
+    },
+    [theme.breakpoints.between('md', 'lg')]: {
+      h2: {
+        fontSize: '2.8rem',
+        paddingBottom:'1.2rem'
+      },
+      h3: { fontSize: '1.45rem' }
+    },
+    [theme.breakpoints.up('lg')]: {
+      h2: {
+        fontSize: '3.5rem',
+        paddingBottom:'1.2rem'
+      },
+      h3: { fontSize: '3.5rem' }
+    },
+  }));
+
   return (
     <>
       <Button onClick={toggleDrawer}>
@@ -37,32 +73,32 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
         onOpen={toggleDrawer}
         onClose={toggleDrawer}
       >
-        <Box
+        <AppBar
+          position="static"
+          sx={{
+            backgroundColor: "#4177B7",
+            color: "#FFF",
+            boxShadow: "none",
+          }}
+        >
+          <Toolbar>
+            <Box sx={{ flexGrow: 1 }}>
+              <img src={menuLogo} alt="Kampanos" title="Kampanos" />
+            </Box>
+            <Close onClick={toggleDrawer} />
+          </Toolbar>
+        </AppBar>
+
+        <MenuBox
           sx={{
             width: "100vw",
             height: "100vh",
             alignItems: "center",
             justifyContent: "center",
             backgroundColor: "#4177B7",
-            padding: 6,
+            //padding: 6,
           }}
         >
-          <AppBar
-            position="static"
-            sx={{
-              backgroundColor: "#4177B7",
-              color: "#FFF",
-              boxShadow: "none",
-            }}
-          >
-            <Toolbar>
-              <Box sx={{ flexGrow: 1 }}>
-                <img src={menuLogo} alt="Kampanos" title="Kampanos" />
-              </Box>
-              <Close onClick={toggleDrawer} />
-            </Toolbar>
-          </AppBar>
-
           <Grid container
             spacing={2}
             xs={12}
@@ -72,7 +108,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
             direction="row"
             justifyContent="center"
             alignItems="flex-start"
-            sx={{height: '100%'}}
+            sx={{ height: '100%' }}
           >
             {/* Redes */}
             <Grid item
@@ -134,7 +170,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                 direction="row"
                 justifyContent="left"
                 alignItems="flex-start"
-               
+
               >
                 <Grid item>
                   <Grid container direction='column'>
@@ -273,7 +309,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
             </Grid>
 
           </Grid>
-        </Box>
+        </MenuBox>
       </SwipeableDrawer>
     </>
   );
