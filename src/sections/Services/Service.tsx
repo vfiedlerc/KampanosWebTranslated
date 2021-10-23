@@ -204,8 +204,7 @@ export const Service: FC<ServiceProps> = ({
                 whiteSpace: 'nowrap',
                 overflow: 'hidden'
               }}
-            >
-              <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' />
+            > <Subtitle color='#D46918' label=' high technology ' stroke='1.5px' direction='right' /> 
             </SubtitleBox>
           </Grid>
         </Grid>
