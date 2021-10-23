@@ -111,12 +111,12 @@ const ImgBox = styled('div')(({ theme }) => ({
     alignContent: 'center'
   },
   [theme.breakpoints.between('md', 'lg')]: {
-    textAlign: '-webkit-center',
-    alignContent: 'center'
+    textAlign: '-webkit-right',
+    alignContent: 'right'
   },
   [theme.breakpoints.up('lg')]: {
-    textAlign: '-webkit-center',
-    alignContent: 'center'
+    textAlign: '-webkit-right',
+    alignContent: 'right'
   }
 }));
 
@@ -254,20 +254,12 @@ export const Service: FC<ServiceProps> = ({
                 sm={12}
                 md={4}
                 sx={{
-                  padding: 0,
-                  // textAlign: 'center',
-                  // alignItems: 'center',
-                  // justifyContent: 'center',
-                  // alignSelf: 'center'
+                  padding: 0
                 }}
               >
                 <ImgBox
                   sx={{
-                    padding: 0,
-                    // textAlign: 'center',
-                    // justifyContent: 'center',
-                    // alignSelf: 'center',
-                    // alignItems: 'center'
+                    padding: 0
                   }}
                 >
                   <img src={serviceImg1} alt='Software Development' title='Software Development' width='250px' />
