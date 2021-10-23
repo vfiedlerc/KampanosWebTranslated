@@ -2,16 +2,11 @@ import * as React from "react";
 import { FC } from "react";
 import { Box, Grid, styled, Typography } from "@mui/material";
 import { Title } from "../../components/Titles/Title";
-import serviceImg1 from "../../assets/service1.png";
-import serviceImg2 from "../../assets/service2.png";
-import highTech from "../../assets/HighTechnology.svg";
 import about1 from "../../assets/About1.svg";
 import about2 from "../../assets/About2.svg";
 import about3 from "../../assets/About3.svg";
 import about4 from "../../assets/About4.svg";
 import TimeToFly from "../../assets/TimeToFly.svg";
-import frontDesign from "../../assets/FrontEnd.png";
-import ourService from "../../assets/OurService.svg";
 
 const FontsBox = styled("div")(({ theme }) => ({
   margin: 0,
@@ -66,11 +61,11 @@ const FontsBox = styled("div")(({ theme }) => ({
   [theme.breakpoints.between("md", "lg")]: {
     h1: {
       transform: "rotate(-90deg)",
-      fontSize: "2rem",
+      fontSize: "3rem",
       textAlign: "left",
       textAlignLast: "left",
       marginLeft: "1rem",
-      marginTop: "2rem",
+      marginTop: "13rem",
       marginBottom: "2rem",
     },
     h2: { fontSize: "2.8rem" },
@@ -83,11 +78,11 @@ const FontsBox = styled("div")(({ theme }) => ({
   [theme.breakpoints.up("lg")]: {
     h1: {
       transform: "rotate(-90deg)",
-      fontSize: "2rem",
+      fontSize: "3rem",
       textAlign: "left",
       textAlignLast: "left",
       marginLeft: "1rem",
-      marginTop: "2rem",
+      marginTop: "13rem",
       marginBottom: "2rem",
     },
     h2: { fontSize: "3rem" },
@@ -101,12 +96,12 @@ const FontsBox = styled("div")(({ theme }) => ({
 
 export const About: FC<AboutProps> = ({ props }: AboutProps) => {
   return (
-    <FontsBox sx= {{marginY: '6rem'}}>
+    <FontsBox sx={{ margin: '4rem auto' }}>
       <Grid
         container
         sx={{
           backgroundColor: "#FFF",
-          mt: 20,
+          mt: 30
         }}
       >
 
@@ -124,7 +119,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
             width: "100%",
           }}
         >
-          <Grid
+          {/* <Grid
             item
             xs={12}
             sm={12}
@@ -140,6 +135,23 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
             }}
           >
             <Title color="#D46918" label="ABOUT US" />
+          </Grid> */}
+
+          <Grid item
+            direction='column'
+            xs={12}
+            sm={12}
+            md={3}
+            sx={{
+              padding: 0,
+              flexGrow: 0,
+              margin: 0,
+              width: '100%',
+              backgroundColor: '#fff',
+              alignSelf: 'start'
+            }}
+          >
+            <Title color='#D46918' label='ABOUT US' />
           </Grid>
 
           <Grid item xs={12} sm={12} md={9}>
@@ -175,7 +187,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                       wordBreak: "break-word",
                       fontSize: "3.75rem",
                       letterSpacing: 0,
-                      
+
                     }}
                   >
                     {" "}
