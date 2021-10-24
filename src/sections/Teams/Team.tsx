@@ -114,6 +114,7 @@ export const Team: FC<TeamProps> = ({
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',        
         margin: '2rem 2rem 6rem 4rem',
+        overflow: 'hidden'
       }} >
 
         <Grid item xs={12} md={4} sx={{

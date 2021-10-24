@@ -12,7 +12,7 @@ import { textAlign } from '@mui/system'
 
 const FontsBox = styled('div')(({ theme }) => ({
   margin: 0,
-  padding: 0,
+  padding: '0 auto 6rem',
   [theme.breakpoints.down('sm')]: {
     h1: {
       transform: 'none',
@@ -150,7 +150,7 @@ export const Service: FC<ServiceProps> = ({
     <FontsBox>
       <Grid container
         sx={{
-          backgroundColor: '#0D3475'
+          backgroundColor: '#0D3475'          
         }}>
         <Grid container
           spacing={2}
