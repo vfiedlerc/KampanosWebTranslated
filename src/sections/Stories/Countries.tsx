@@ -9,23 +9,27 @@ const CountriesBox = styled('div')(({ theme }) => ({
     justifyContent: 'center',
     alignItems: 'center',
     [theme.breakpoints.down('sm')]: {
-       marginTop: '3rem',
-       marginBottom: '5rem',
+       marginTop: '4rem',
+       marginBottom: '4rem',
+       minHeight: '200px',
         span: { fontSize: '1rem', letterSpacing: 0 }
     },
     [theme.breakpoints.between('sm', 'md')]: {
-       marginTop: '6rem',
-       marginBottom: '6rem',
+        marginTop: '4rem',
+        marginBottom: '4rem',
+       minHeight: '400px',
         span: { fontSize: '1.5rem', letterSpacing: 0 }
     },
     [theme.breakpoints.between('md', 'lg')]: {
-       marginTop: '8rem',
-       marginBottom: '8rem',
+       marginTop: '2rem',
+       marginBottom: '8rem',       
+       minHeight: '600px',
         span: { fontSize: '1.5rem', letterSpacing: 0 }
     },
     [theme.breakpoints.up('lg')]: {
-       marginTop: '8rem',
-       marginBottom: '8rem',
+       marginTop: '2rem',
+       marginBottom: '8rem',       
+       minHeight: '600px',
         span: { fontSize: '1.8rem', letterSpacing: 0 }
     },
 }));
@@ -40,6 +44,7 @@ export const Countries = () => {
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
                 alignItems: 'center',
+                alignSelf: 'center'
                 // margin: '2rem auto 6rem'
             }}>
             <Grid container
@@ -52,6 +57,7 @@ export const Countries = () => {
                     width: 'fit-content',
                     textAlign: 'center',
                     alignItems: 'center',
+                    minHeight: 'inherit',
                 }}>
                 <Grid item>
                     <Typography

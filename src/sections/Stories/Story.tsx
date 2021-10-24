@@ -300,9 +300,6 @@ export const Story = () => {
                         </ImgBox>
                     </Grid>
                 </Grid>
-
-
-
             </Grid>
         </StoryBox>
     );
