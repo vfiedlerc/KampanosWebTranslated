@@ -163,7 +163,7 @@ export const Story = () => {
                                     md={12}
                                     sx={{
                                         textAlign: 'left',
-                                        alignItems: 'bottom'
+                                        marginBottom:'1rem'
                                     }}
                                 >
                                     <Typography
@@ -203,7 +203,8 @@ export const Story = () => {
                                     sm={12}
                                     md={12}
                                     sx={{
-                                        textAlign: 'left'
+                                        textAlign: 'left',
+                                        marginTop: '1.2rem'
                                     }}
                                 >
                                     <Typography

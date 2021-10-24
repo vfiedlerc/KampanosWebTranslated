@@ -1,14 +1,12 @@
 import * as React from 'react'
 import { FC } from 'react'
-import { Box, Grid, styled, Typography } from '@mui/material'
+import { Grid, styled, Typography } from '@mui/material'
 import { Title } from '../../components/Titles/Title'
 import serviceImg1 from '../../assets/service1.png'
 import serviceImg2 from '../../assets/service2.png'
-import highTech from '../../assets/HighTechnology.svg'
 import uxDesign from '../../assets/UxUiDesign.png'
 import frontDesign from '../../assets/FrontEnd.png'
 import { Subtitle } from '../../components/Titles/Subtitle'
-import { textAlign } from '@mui/system'
 
 const FontsBox = styled('div')(({ theme }) => ({
   margin: 0,
