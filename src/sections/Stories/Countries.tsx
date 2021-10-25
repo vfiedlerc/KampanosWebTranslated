@@ -9,23 +9,27 @@ const CountriesBox = styled('div')(({ theme }) => ({
     justifyContent: 'center',
     alignItems: 'center',
     [theme.breakpoints.down('sm')]: {
-        paddingTop: '3rem',
-        paddingBottom: '5rem',
+       marginTop: '4rem',
+       marginBottom: '4rem',
+       minHeight: '200px',
         span: { fontSize: '1rem', letterSpacing: 0 }
     },
     [theme.breakpoints.between('sm', 'md')]: {
-        paddingTop: '6rem',
-        paddingBottom: '6rem',
+        marginTop: '4rem',
+        marginBottom: '4rem',
+       minHeight: '400px',
         span: { fontSize: '1.5rem', letterSpacing: 0 }
     },
     [theme.breakpoints.between('md', 'lg')]: {
-        paddingTop: '8rem',
-        paddingBottom: '8rem',
+       marginTop: '2rem',
+       marginBottom: '8rem',       
+       minHeight: '600px',
         span: { fontSize: '1.5rem', letterSpacing: 0 }
     },
     [theme.breakpoints.up('lg')]: {
-        paddingTop: '8rem',
-        paddingBottom: '8rem',
+       marginTop: '2rem',
+       marginBottom: '8rem',       
+       minHeight: '600px',
         span: { fontSize: '1.8rem', letterSpacing: 0 }
     },
 }));
@@ -34,11 +38,14 @@ export const Countries = () => {
     return (
         <CountriesBox
             sx={{
+                width: '100%',
                 backgroundImage: `URL(${mapaMundi})`,
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
-                alignItems: 'center'
+                alignItems: 'center',
+                alignSelf: 'center'
+                // margin: '2rem auto 6rem'
             }}>
             <Grid container
                 xs={10}
@@ -50,6 +57,7 @@ export const Countries = () => {
                     width: 'fit-content',
                     textAlign: 'center',
                     alignItems: 'center',
+                    minHeight: 'inherit',
                 }}>
                 <Grid item>
                     <Typography

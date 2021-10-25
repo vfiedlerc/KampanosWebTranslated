@@ -1,30 +1,28 @@
 // @ts-check
 import * as React from "react";
 import { FC } from "react";
-import { Link } from "@mui/material";
+import { Link, Grid } from "@mui/material";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+//import { HashLink } from 'react-router-hash-link';
 
-/**
- * Provide documentation
- */
+
 export const MenuItem: FC<MenuItemProps> = ({
   label,
   target,
   href,
-  size,
   title,
   color
 }: MenuItemProps) => {
   return (
-    <Link
+    <HashLink
       href={href}
       title={label}
       target={target}
-      underline="none"
+      underline="hover"
       color={color}
-    >
-    
+    >    
       {label}
-    </Link>
+    </HashLink>
   );
 };
 
@@ -32,7 +30,6 @@ export type MenuItemProps = {
   label: string;
   target: string;
   href: string;
-  size: number;
   title: string;
   color: string | '#FFF';
 };

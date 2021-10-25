@@ -9,7 +9,7 @@ import { ReactComponent as InstagramIcon } from '../../assets/InstagramIcon.svg'
 
 const Footer = () => {
   return (
-    <Box>
+    <Box sx= {{marginY: '6rem'}}>
       <Grid container
         xs={12}
         sm={12}
@@ -27,6 +27,7 @@ const Footer = () => {
           paddingBottom: '2.5rem',
           paddingTop: '5rem',
           textAlign: 'center',
+          
         }}
 
 
@@ -42,27 +43,27 @@ const Footer = () => {
 
 
         <Grid item >
-        
+
           {/* //2 */}
 
 
-         
 
-          <Grid container 
 
-            
-             spacing={4} sx={{
+          <Grid container
+
+
+            spacing={4} sx={{
               justifyContent: 'center',
               textAlign: 'center'
             }}>
 
             <Grid item >
-              <Link underline="hover" color="#FAFAFA" >Home</Link>
+              <Link  underline="hover" color="#FAFAFA" >Home</Link>
               {/* //1 */}
             </Grid>
 
             <Grid item>
-              <Link underline="hover" color="#FAFAFA" >About us</Link>
+              <Link href="" underline="hover" color="#FAFAFA" >About us</Link>
               {/* //2 */}
             </Grid>
 
@@ -103,11 +104,11 @@ const Footer = () => {
             </Grid>
 
             <Grid item>
-              <Link href="#" ><LinkedinIcon /> </Link>
+              <Link href="https://www.linkedin.com/company/kampanos/" ><LinkedinIcon /> </Link>
             </Grid>
 
             <Grid item>
-              <Link href="#" ><InstagramIcon /> </Link>
+              <Link href="https://www.instagram.com/kampanos.pt/" ><InstagramIcon /> </Link>
             </Grid>
 
 

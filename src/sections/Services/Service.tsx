@@ -1,18 +1,16 @@
 import * as React from 'react'
 import { FC } from 'react'
-import { Box, Grid, styled, Typography } from '@mui/material'
+import { Grid, styled, Typography } from '@mui/material'
 import { Title } from '../../components/Titles/Title'
 import serviceImg1 from '../../assets/service1.png'
 import serviceImg2 from '../../assets/service2.png'
-import highTech from '../../assets/HighTechnology.svg'
 import uxDesign from '../../assets/UxUiDesign.png'
 import frontDesign from '../../assets/FrontEnd.png'
 import { Subtitle } from '../../components/Titles/Subtitle'
-import { textAlign } from '@mui/system'
 
 const FontsBox = styled('div')(({ theme }) => ({
   margin: 0,
-  padding: 0,
+  padding: '0 auto 6rem',
   [theme.breakpoints.down('sm')]: {
     h1: {
       transform: 'none',
@@ -111,12 +109,12 @@ const ImgBox = styled('div')(({ theme }) => ({
     alignContent: 'center'
   },
   [theme.breakpoints.between('md', 'lg')]: {
-    textAlign: '-webkit-center',
-    alignContent: 'center'
+    textAlign: '-webkit-right',
+    alignContent: 'right'
   },
   [theme.breakpoints.up('lg')]: {
-    textAlign: '-webkit-center',
-    alignContent: 'center'
+    textAlign: '-webkit-right',
+    alignContent: 'right'
   }
 }));
 
@@ -150,7 +148,7 @@ export const Service: FC<ServiceProps> = ({
     <FontsBox>
       <Grid container
         sx={{
-          backgroundColor: '#0D3475'
+          backgroundColor: '#0D3475'          
         }}>
         <Grid container
           spacing={2}
@@ -204,8 +202,7 @@ export const Service: FC<ServiceProps> = ({
                 whiteSpace: 'nowrap',
                 overflow: 'hidden'
               }}
-            >
-              <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' /> <Subtitle color='#D46918' label='high technology' stroke='1px' />
+            > <Subtitle color='#D46918' label=' high technology ' stroke='1.5px' direction='right' /> 
             </SubtitleBox>
           </Grid>
         </Grid>
@@ -255,20 +252,12 @@ export const Service: FC<ServiceProps> = ({
                 sm={12}
                 md={4}
                 sx={{
-                  padding: 0,
-                  // textAlign: 'center',
-                  // alignItems: 'center',
-                  // justifyContent: 'center',
-                  // alignSelf: 'center'
+                  padding: 0
                 }}
               >
                 <ImgBox
                   sx={{
-                    padding: 0,
-                    // textAlign: 'center',
-                    // justifyContent: 'center',
-                    // alignSelf: 'center',
-                    // alignItems: 'center'
+                    padding: 0
                   }}
                 >
                   <img src={serviceImg1} alt='Software Development' title='Software Development' width='250px' />

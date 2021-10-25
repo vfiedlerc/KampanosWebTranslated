@@ -30,7 +30,7 @@ const TitleBox = styled('div')(({ theme }) => ({
   [theme.breakpoints.between('md', 'lg')]: {
     h1: {
       transform: 'rotate(-90deg)',
-      fontSize: '4rem'
+      fontSize: '3.8rem'
     }
   },
   [theme.breakpoints.up('lg')]: {
@@ -55,7 +55,8 @@ export const Title: FC<TitleProps> = ({
           WebkitTextFillColor: 'transparent',
           WebkitTextStrokeWidth: '0.5px',
           WebkitTextStrokeColor: `${color}`,
-          fontWeight: 'bold'
+          fontWeight: 'bold',
+          whiteSpace:'nowrap'
         }}
       >
         {label}
