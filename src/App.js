@@ -7,7 +7,7 @@ import { Box } from '@mui/material';
 
 function App() {
   return (
-    <Box sx={{overflowX: 'hidden'}}>
+    <Box>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
