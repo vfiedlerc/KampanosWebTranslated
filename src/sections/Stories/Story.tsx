@@ -111,6 +111,7 @@ export const Story = () => {
     return (
         <StoryBox sx={{width: '100%'}}>
             <Grid container
+            id="story"
                 spacing={2}
                 xs={12}
                 sm={12}

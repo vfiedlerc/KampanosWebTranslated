@@ -53,8 +53,7 @@ const Header = () => {
   return (
     <>
       <Topbar />
-      <Grid
-        container
+      <Grid container id="header"
         spacing={0}
         direction='column'
         alignItems='center'
@@ -76,6 +75,7 @@ const Header = () => {
 
         </Grid>
       </Grid>
+      
       <SubtitleBox
         sx={{
           whiteSpace: 'nowrap',

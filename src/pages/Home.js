@@ -10,7 +10,7 @@ import { About } from '../sections/About/About';
 function Home() {
     return (
         <Box>
-           <Header />
+           <Header/>
             <About />
             <Service />
             <Story />

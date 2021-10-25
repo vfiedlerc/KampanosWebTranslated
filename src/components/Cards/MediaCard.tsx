@@ -15,7 +15,7 @@ export const MediaCard: FC<MediaCardProps> = ({
     <Card sx={{ width: 200, height: 250, boxShadow: 0 }}>
       <CardMedia
         component="img"
-        height="140"
+        height="180"
         width="200"
         image={image}
         alt={title}

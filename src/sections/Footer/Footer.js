@@ -10,7 +10,7 @@ import { ReactComponent as InstagramIcon } from '../../assets/InstagramIcon.svg'
 const Footer = () => {
   return (
     <Box sx= {{marginY: '6rem'}}>
-      <Grid container
+      <Grid container 
         xs={12}
         sm={12}
         md={12}
@@ -58,32 +58,32 @@ const Footer = () => {
             }}>
 
             <Grid item >
-              <Link  underline="hover" color="#FAFAFA" >Home</Link>
+              <Link  href="#header" underline="hover" color="#FAFAFA" >Home</Link>
               {/* //1 */}
             </Grid>
 
             <Grid item>
-              <Link href="" underline="hover" color="#FAFAFA" >About us</Link>
+              <Link href="#about" underline="hover" color="#FAFAFA" >About us</Link>
               {/* //2 */}
             </Grid>
 
             <Grid item>
-              <Link underline="hover" color="#FAFAFA" >Our service</Link>
+              <Link  href="#service" underline="hover" color="#FAFAFA" >Our service</Link>
               {/* //3 */}
             </Grid>
 
             <Grid item>
-              <Link underline="hover" color="#FAFAFA" >Our story</Link>
+              <Link  href="#story" underline="hover" color="#FAFAFA" >Our story</Link>
               {/* //4*/}
             </Grid>
 
             <Grid item >
-              <Link underline="hover" color="#FAFAFA"  >Our team</Link>
+              <Link   href="#team" underline="hover" color="#FAFAFA"  >Our team</Link>
               {/* //5 */}
             </Grid>
 
             <Grid item >
-              <Link underline="hover" color="#FAFAFA"
+              <Link href="https://www.linkedin.com/company/kampanos/"  underline="hover" color="#FAFAFA"
               >Jobs offer</Link>
               {/* //6 */}
             </Grid>

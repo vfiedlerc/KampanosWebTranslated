@@ -97,7 +97,7 @@ const FontsBox = styled("div")(({ theme }) => ({
 export const About: FC<AboutProps> = ({ props }: AboutProps) => {
   return (
     <FontsBox sx={{ margin: '4rem auto' }}>
-      <Grid container 
+      <Grid container id="about"
         sx={{
           backgroundColor: "#FFF",
           mt: 30
