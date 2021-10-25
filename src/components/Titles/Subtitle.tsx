@@ -7,26 +7,6 @@ import Marquee from "react-fast-marquee";
 const SubtitleBox = styled('span')(({ theme }) => ({
   margin: 0,
   padding: 0,
-  [theme.breakpoints.down('sm')]: {
-    h6: {
-      //   marginTop: '2rem',
-      //   marginBottom: '2rem'
-    }
-  },
-  [theme.breakpoints.between('sm', 'md')]: {
-    h6: {
-      //   marginTop: '2rem',
-      //   marginBottom: '2rem'
-    }
-  },
-  [theme.breakpoints.between('md', 'lg')]: {
-    h6: {
-    }
-  },
-  [theme.breakpoints.up('lg')]: {
-    h6: {
-    }
-  }
 }));
 
 export const Subtitle: FC<SubtitleProps> = ({

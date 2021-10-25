@@ -55,12 +55,6 @@ const ImgBox = styled('div')(({ theme }) => ({
     margin: 0,
     padding: 0,
     [theme.breakpoints.down('sm')]: {
-        // width: '100%',
-        // textAlign: '-webkit-right',
-        // alignContent: 'right',
-        // marginLeft: '8rem',
-        // //marginTop: '-100px',
-        // overflow: 'hidden'
         display: 'none'
     },
     [theme.breakpoints.between('sm', 'md')]: {
@@ -77,25 +71,42 @@ const ImgBox = styled('div')(({ theme }) => ({
     }
 }));
 
-const AlignTextBox = styled('div')(({ theme }) => ({
+const AlignTitleBox = styled('div')(({ theme }) => ({
     margin: 0,
-    // [theme.breakpoints.between('xs', 'sm')]: {
-    //     margin: '0 11rem 0 2rem',
-    // },
     [theme.breakpoints.down('sm')]: {
-        margin: '0 3rem 0 2rem',
-        justifyContent: 'center'
+        fontSize: '1.2rem',
+        lineHeight: 1
     },
     [theme.breakpoints.between('sm', 'md')]: {
-        margin: 0
+        fontSize: '1.5rem',
+        lineHeight: 1
     },
     [theme.breakpoints.between('md', 'lg')]: {
-        margin: '1rem 1.5rem',
+        fontSize: '1.8rem',
+        lineHeight: 1
     },
     [theme.breakpoints.up('lg')]: {
-        margin: '1rem 1.5rem',
+        fontSize: '2rem',
+        lineHeight: 1
     },
 }));
+
+const AlignTextBox = styled('div')(({ theme }) => ({
+    margin: 0,
+    [theme.breakpoints.down('sm')]: {
+        fontSize: '.7rem'
+    },
+    [theme.breakpoints.between('sm', 'md')]: {
+        fontSize: '.7rem'
+    },
+    [theme.breakpoints.between('md', 'lg')]: {
+        fontSize: '1rem'
+    },
+    [theme.breakpoints.up('lg')]: {
+        fontSize: '1rem'
+    },
+}));
+
 const SubtitleBox = styled('div')(({ theme }) => ({
     margin: 0,
     padding: 0,
@@ -161,7 +172,7 @@ export const Pillars = () => {
                                 justifyContent: 'left'
                             }}
                         >
-                            <img src={orangeBox} alt='Orange  Box' title='Orange  Box' width='600px' />
+                            <img src={orangeBox} alt='Orange  Box' title='Orange Box' width='600px' />
                         </ImgBox>
                     </Grid>
                 </Grid>
@@ -180,63 +191,64 @@ export const Pillars = () => {
                     <Grid container
                         spacing={2}
                         xs={12}
-                        sm={12}
-                        md={12}
+                        sm={9}
+                        md={9}
                         sx={{
-                            //paddingBottom: '4rem',
-                            margin: 0
+                            margin: 0,
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            alignSelf: 'center'
                         }}
                     >
                         <Grid container
                             direction='row'
                             spacing={2}
                             xs={12}
-                            sm={6}
-                            md={6}
+                            sm={9}
+                            md={9}
                         >
                             <Grid item>
                                 <Grid container
                                     xs={12}
                                     sm={12}
                                     md={12}>
-                                    <AlignTextBox>
-                                        <Grid item
-                                            xs={12}
-                                            sm={12}
-                                            md={12}
+
+                                    <Grid item
+                                        xs={12}
+                                        sm={12}
+                                        md={12}
+                                        sx={{
+                                            textAlign: 'left',
+                                            marginBottom: '1rem'
+                                        }}
+                                    >
+                                        <Typography
+                                            variant='h6'
                                             sx={{
-                                                textAlign: 'left',
-                                                marginBottom: '1rem'
+                                                color: '#0D3475',
+                                                fontWeight: 'bold',
+                                                fontSize: '2rem',
+                                                borderColor: '#0D3475',
+                                                borderRadius: '10%'
                                             }}
                                         >
-                                            <Typography
-                                                variant='h6'
-                                                sx={{
-                                                    color: '#0D3475',
-                                                    fontWeight: 'bold',
-                                                    fontSize: '2rem',
-                                                    borderColor: '#0D3475',
-                                                    borderRadius: '10%'
-                                                }}
-                                            >
-                                                __
-                                            </Typography>
-                                        </Grid>
+                                            __
+                                        </Typography>
+                                    </Grid>
+                                    <AlignTitleBox>
                                         <Grid item
                                             xs={12}
-                                            sm={12}
-                                            md={12}
+                                            sm={10}
+                                            md={10}
                                             sx={{
-                                                textAlign: 'left',
-                                                lineHeight: 1.2
+                                                textAlign: 'left'
                                             }}
                                         >
                                             <Typography
                                                 variant='caption'
                                                 sx={{
                                                     color: '#0D3475',
-                                                    fontSize: '1.6rem',
-                                                    lineHeight: 1.2,
+                                                    //fontSize: '2rem',
                                                     fontWeight: 'bold'
                                                 }}
                                             >
@@ -247,8 +259,7 @@ export const Pillars = () => {
                                                 sx={{
                                                     color: '#D46918',
                                                     fontWeight: 'bold',
-                                                    fontSize: '1.6rem',
-                                                    lineHeight: 1.2
+                                                    //fontSize: '2rem'
                                                 }}
                                             > strong
                                             </Typography>
@@ -257,8 +268,7 @@ export const Pillars = () => {
                                                 variant='caption'
                                                 sx={{
                                                     color: '#0D3475',
-                                                    fontSize: '1.6rem',
-                                                    lineHeight: 1.2,
+                                                    //fontSize: '2rem',
                                                     fontWeight: 'bold'
                                                 }}
                                             > and our foundations are
@@ -267,17 +277,18 @@ export const Pillars = () => {
                                                 variant='caption'
                                                 sx={{
                                                     color: '#D46918',
-                                                    fontSize: '1.6rem',
-                                                    lineHeight: 1.2,
+                                                    //fontSize: '2rem',
                                                     fontWeight: 'bold'
                                                 }}
                                             > solid.
                                             </Typography>
                                         </Grid>
+                                    </AlignTitleBox>
+                                    <AlignTextBox>
                                         <Grid item
                                             xs={12}
                                             sm={12}
-                                            md={12}
+                                            md={10}
                                             sx={{
                                                 textAlign: 'left',
                                                 marginTop: '1.2rem'
@@ -287,46 +298,47 @@ export const Pillars = () => {
                                                 variant='caption'
                                                 sx={{
                                                     color: '#0D3475',
-                                                    fontSize: '1rem'
+                                                    //fontSize: '1.1rem'
                                                 }}
                                             > We lift up people and develop their skills, we grow together and we learn from each other. We celebrate each other, we celebrate you and your ideas! We encourage hobbies and activities outside the workplace to keep our minds and bodies active and stress-free.
                                             </Typography>
-                                            <Grid item
-                                                xs={12}
-                                                sm={12}
-                                                md={12}
-                                                sx={{
-                                                    textAlign: 'left'
-                                                }}
-                                            >
-                                                <Typography
-                                                    variant='h6'
-                                                    sx={{
-                                                        color: '#0D3475',
-                                                        fontWeight: 'bold',
-                                                        fontSize: '2rem',
-                                                        borderColor: '#0D3475',
-                                                        borderRadius: '10%'
-                                                    }}
-                                                >
-                                                    __
-                                                </Typography>
-                                            </Grid>
                                         </Grid>
                                     </AlignTextBox>
+                                    <Grid item
+                                        xs={12}
+                                        sm={12}
+                                        md={12}
+                                        sx={{
+                                            textAlign: 'left'
+                                        }}
+                                    >
+                                        <Typography
+                                            variant='h6'
+                                            sx={{
+                                                color: '#0D3475',
+                                                fontWeight: 'bold',
+                                                fontSize: '2rem',
+                                                borderColor: '#0D3475',
+                                                borderRadius: '10%'
+                                            }}
+                                        >
+                                            __
+                                        </Typography>
+                                    </Grid>
                                 </Grid>
                             </Grid>
                         </Grid>
-
                     </Grid>
                 </Grid>
-                
+
                 <Grid item
                     xs={12}
                     sm={12}
                     md={12}
                     sx={{
-                        width: '100%'
+                        width: '100%',
+                        zIndex: -100,
+                        marginTop: -8
                     }}
                 >
                     <SubtitleBox

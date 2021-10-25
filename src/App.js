@@ -8,7 +8,7 @@ import { Box } from '@mui/material';
 
 function App() {
   return (
-    <Box >
+    <Box>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />

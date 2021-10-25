@@ -3,7 +3,7 @@ import * as React from "react";
 import { FC } from "react";
 import { Link, Grid } from "@mui/material";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
+//import { HashLink } from 'react-router-hash-link';
 
 
 export const MenuItem: FC<MenuItemProps> = ({
