@@ -106,7 +106,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
         container
         sx={{
           backgroundColor: "#FFF",
-          mt: 20,
+          mt: 30,
         }}
       >
 
@@ -120,26 +120,24 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
             display: "flex",
             justifyContent: "center",
             flexGrow: 1,
-
+            
             width: "100%",
           }}
         >
-          <Grid
-            item
+          <Grid item
+            direction='column'
             xs={12}
             sm={12}
-            md={3}
+            md={3}     
+            
             sx={{
-              padding: 0,
-              textAlign: "center",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlignLast: "center",
+              padding: 4,
               margin: 0,
-              backgroundColor: "#df0395",
+              width: '100%',
+              backgroundColor: '#fff',             
             }}
           >
-            <Typography variant="h1">ABOUT US</Typography>
+            <Title color='#D46918' label='ABOUT US' />
           </Grid>
 
           <Grid item xs={12} sm={12} md={9}>
