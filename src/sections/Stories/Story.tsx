@@ -46,7 +46,7 @@ const StoryBox = styled('div')(({ theme }) => ({
             marginBottom: "2rem"
         },
         h5: { fontSize: '1.45rem' },
-        span: { fontSize: '.8rem' }
+        span: { fontSize: '1rem' }
     },
     [theme.breakpoints.up('lg')]: {
         marginTop: '5rem',
@@ -92,9 +92,6 @@ const ImgBox = styled('div')(({ theme }) => ({
 
 const AlignTextBox = styled('div')(({ theme }) => ({
     margin: 0,
-    // [theme.breakpoints.between('xs', 'sm')]: {
-    //     margin: '0 11rem 0 2rem',
-    // },
     [theme.breakpoints.down('sm')]: {
         margin: '0 3rem 0 2rem',
         justifyContent: 'center'
@@ -211,7 +208,7 @@ export const Story = () => {
                                         variant='caption'
                                         sx={{
                                             color: '#0D3475',
-                                            fontSize: '.8rem'
+                                            fontSize: '1rem'
                                         }}
                                     >
                                         Our team is
@@ -220,7 +217,7 @@ export const Story = () => {
                                             sx={{
                                                 color: '#D46918',
                                                 fontWeight: 'bold',
-                                                fontSize: '.8rem'
+                                                fontSize: '1rem'
                                             }}
                                         > focused, professional, experienced
                                         </Typography>
@@ -228,7 +225,7 @@ export const Story = () => {
                                             variant='caption'
                                             sx={{
                                                 color: '#0D3475',
-                                                fontSize: '.8rem'
+                                                fontSize: '1rem'
                                             }}
                                         > but always learning more and open to all kinds of input. Young and cooperative, we are engaged on working in the past present and future.
                                         </Typography>
