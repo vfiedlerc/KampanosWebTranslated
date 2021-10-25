@@ -27,6 +27,7 @@ const Footer = () => {
           paddingBottom: '2.5rem',
           paddingTop: '5rem',
           textAlign: 'center',
+          
         }}
 
 

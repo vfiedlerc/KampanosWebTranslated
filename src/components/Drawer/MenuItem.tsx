@@ -2,6 +2,8 @@
 import * as React from "react";
 import { FC } from "react";
 import { Link, Grid } from "@mui/material";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 
 export const MenuItem: FC<MenuItemProps> = ({
@@ -12,7 +14,7 @@ export const MenuItem: FC<MenuItemProps> = ({
   color
 }: MenuItemProps) => {
   return (
-    <Link
+    <HashLink
       href={href}
       title={label}
       target={target}
@@ -20,7 +22,7 @@ export const MenuItem: FC<MenuItemProps> = ({
       color={color}
     >    
       {label}
-    </Link>
+    </HashLink>
   );
 };
 

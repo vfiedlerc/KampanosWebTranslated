@@ -18,6 +18,9 @@ import workMenuButton from "../../assets/workMenuButton.svg";
 import rectangleMenu from "../../assets/rectangleMenu.svg";
 
 
+
+
+
 export const DrawerMenu: FC<DrawerMenuProps> = ({
   menuItems,
 }: DrawerMenuProps) => {
@@ -133,9 +136,9 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                         <Grid item>
                           <Grid container direction="column">
                             <Grid item xs={12}>
-                              <Typography sx={{ transform: 'rotate(-90deg)' }} color=" #FAFAFA">
+                              {/* <Typography sx={{ transform: 'rotate(-90deg)' }} color=" #FAFAFA">
                                 @kampanos 2021
-                              </Typography>
+                              </Typography> */}
                             </Grid>
                             <Grid item xs={12}>
                               <img src={FaceIcon} alt="Facebook" title="Facebook" />
@@ -226,7 +229,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                         >
                           <MenuItem
                             label='Our services'
-                            href='#'
+                            href='Service'
                             title='Our services'
                             target='_self'
                             color="#878787"

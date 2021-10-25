@@ -50,7 +50,7 @@ const FontsBox = styled("div")(({ theme }) => ({
       textAlign: "left",
       textAlignLast: "left",
       marginLeft: "1rem",
-      marginTop: "9rem",
+      marginTop: "8rem",
       marginBottom: "2rem",
     }
   },
@@ -61,7 +61,7 @@ const FontsBox = styled("div")(({ theme }) => ({
       textAlign: "left",
       textAlignLast: "left",
       marginLeft: "1rem",
-      marginTop: "9rem",
+      marginTop: "4rem",
       marginBottom: "2rem",
     }
   },
@@ -114,7 +114,8 @@ export const Team: FC<TeamProps> = ({
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',        
         margin: '2rem 2rem 6rem 4rem',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        
       }} >
 
         <Grid item xs={12} md={4} sx={{
