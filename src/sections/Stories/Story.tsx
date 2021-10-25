@@ -17,9 +17,9 @@ const StoryBox = styled('div')(({ theme }) => ({
             marginTop: "2rem",
             marginBottom: "2rem",
         },
-        h5: { fontSize: '1rem' },
+        h5: { fontSize: '1.2rem' },
         span: {
-            fontSize: '.7rem',
+            fontSize: '1rem',
             textAlign: 'center'
         }
     },
@@ -31,9 +31,9 @@ const StoryBox = styled('div')(({ theme }) => ({
             marginTop: "9rem",
             marginBottom: "2rem"          
         },
-        h5: { fontSize: '1.2rem' },
+        h5: { fontSize: '1.3rem' },
         span: {
-            fontSize: '.7rem',
+            fontSize: '1.15rem',
             textAlign: 'left'
         }
     },
@@ -45,8 +45,8 @@ const StoryBox = styled('div')(({ theme }) => ({
             marginTop: "13rem",
             marginBottom: "2rem"
         },
-        h5: { fontSize: '1.45rem' },
-        span: { fontSize: '1rem' }
+        h5: { fontSize: '1.5rem' },
+        span: { fontSize: '1.4rem' }
     },
     [theme.breakpoints.up('lg')]: {
         marginTop: '5rem',
@@ -59,8 +59,8 @@ const StoryBox = styled('div')(({ theme }) => ({
             marginTop: "9rem",
             marginBottom: "2rem",
         },
-        h5: { fontSize: '1.58rem' },
-        span: { fontSize: '1rem' }
+        h5: { fontSize: '1.6rem' },
+        span: { fontSize: '1.4rem' }
     },
 }
 ));
