@@ -7,7 +7,7 @@ import orangeBigBox from '../../assets/OrangeBlueBox.svg'
 const StoryBox = styled('div')(({ theme }) => ({
     margin: 0,
     [theme.breakpoints.down('sm')]: {
-        marginY: 5,
+       margin: '2.5rem auto',
         h1: {
             transform: "none",
             fontSize: "2rem",
@@ -17,39 +17,39 @@ const StoryBox = styled('div')(({ theme }) => ({
             marginTop: "2rem",
             marginBottom: "2rem",
         },
-        h5: { fontSize: '1rem' },
+        h5: { fontSize: '1.2rem' },
         span: {
-            fontSize: '.7rem',
+            fontSize: '1rem',
             textAlign: 'center'
         }
     },
     [theme.breakpoints.between('sm', 'md')]: {
-        marginTop: '5rem',
+       margin: '5rem auto',
         h1: {
             transform: "rotate(-90deg)",
             fontSize: "3rem",
             marginTop: "9rem",
             marginBottom: "2rem"          
         },
-        h5: { fontSize: '1.2rem' },
+        h5: { fontSize: '1.3rem' },
         span: {
-            fontSize: '.7rem',
+            fontSize: '1.15rem',
             textAlign: 'left'
         }
     },
     [theme.breakpoints.between('md', 'lg')]: {
-        marginTop: '5rem',
+       margin: '5rem auto',
         h1: {
             transform: "rotate(-90deg)",
             fontSize: "4rem",   
             marginTop: "13rem",
             marginBottom: "2rem"
         },
-        h5: { fontSize: '1.45rem' },
-        span: { fontSize: '1rem' }
+        h5: { fontSize: '1.5rem' },
+        span: { fontSize: '1.4rem' }
     },
     [theme.breakpoints.up('lg')]: {
-        marginTop: '5rem',
+       margin: '5rem auto',
         h1: {
             transform: "rotate(-90deg)",
             fontSize: "4rem",
@@ -59,8 +59,8 @@ const StoryBox = styled('div')(({ theme }) => ({
             marginTop: "9rem",
             marginBottom: "2rem",
         },
-        h5: { fontSize: '1.58rem' },
-        span: { fontSize: '1rem' }
+        h5: { fontSize: '1.6rem' },
+        span: { fontSize: '1.4rem' }
     },
 }
 ));

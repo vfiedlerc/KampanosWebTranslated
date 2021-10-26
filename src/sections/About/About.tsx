@@ -96,7 +96,7 @@ const FontsBox = styled("div")(({ theme }) => ({
 
 export const About: FC<AboutProps> = ({ props }: AboutProps) => {
   return (
-    <FontsBox sx={{ margin: '4rem auto' }}>
+    <FontsBox sx={{ margin: '4rem 1rem' }}>
       <Grid container id="about"
         sx={{
           backgroundColor: "#FFF",
@@ -114,7 +114,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
             display: "flex",
             justifyContent: "center",
             flexGrow: 1,
-
+            
             width: "100%",
           }}
         >
@@ -122,13 +122,10 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
             item
             xs={12}
             sm={12}
-            md={3}
+            md={3}     
+            
             sx={{
-              padding: 0,
-              textAlign: "center",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlignLast: "center",
+              padding: 4,
               margin: 0,
               backgroundColor: "#FFF",
             }}
