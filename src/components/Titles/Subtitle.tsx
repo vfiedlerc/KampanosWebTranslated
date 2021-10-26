@@ -143,6 +143,42 @@ export const Subtitle: FC<SubtitleProps> = ({
           }}
         > {label}
         </Typography>
+        <Typography
+          variant='caption'
+          sx={{
+            color: `${color}`,
+            WebkitTextFillColor: 'transparent',
+            WebkitTextStrokeWidth: `${stroke}`,
+            WebkitTextStrokeColor: `${color}`,
+            fontWeight: 'bold',
+            paddingRight: '5px'
+          }}
+        > {label}
+        </Typography>
+        <Typography
+          variant='caption'
+          sx={{
+            color: `${color}`,
+            WebkitTextFillColor: 'transparent',
+            WebkitTextStrokeWidth: `${stroke}`,
+            WebkitTextStrokeColor: `${color}`,
+            fontWeight: 'bold',
+            paddingRight: '5px'
+          }}
+        > {label}
+        </Typography>
+        <Typography
+          variant='caption'
+          sx={{
+            color: `${color}`,
+            WebkitTextFillColor: 'transparent',
+            WebkitTextStrokeWidth: `${stroke}`,
+            WebkitTextStrokeColor: `${color}`,
+            fontWeight: 'bold',
+            paddingRight: '5px'
+          }}
+        > {label}
+        </Typography>
       </Marquee>
     </SubtitleBox>
   )

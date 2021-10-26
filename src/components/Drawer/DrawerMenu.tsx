@@ -1,4 +1,5 @@
 import * as React from "react";
+import './styles.css'
 import { FC } from "react";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import Button from "@mui/material/Button";
@@ -17,11 +18,6 @@ import InstaIcon from "../../assets/InstaIcon.svg";
 import workMenuButton from "../../assets/workMenuButton.svg";
 import rectangleMenu from "../../assets/rectangleMenu.svg";
 import { Link } from "@mui/material";
-
-
-
-
-
 
 export const DrawerMenu: FC<DrawerMenuProps> = ({
   menuItems,
@@ -70,7 +66,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
   return (
     <>
       <Button onClick={toggleDrawer}>
-        <MenuIcon fontSize="large" />
+        <MenuIcon fontSize="large" style={{transform: 'scale(1.2)'}} />
       </Button>
       <SwipeableDrawer
         anchor={"right"}
@@ -182,7 +178,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                 <Grid item>
                   <Grid container direction='column'>
                     <Grid item>
-                      <Box onClick={toggleDrawer}>
+                      <Box onClick={toggleDrawer} >
                         <Typography
                           variant="h2"
                           sx={{
@@ -194,8 +190,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                             href='#header'
                             title='Home'
                             target='_self'
-                            color="#878787"
-
+                            color="#6AA2DB"                            
                           />
                         </Typography>
                       </Box>
@@ -209,17 +204,19 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                       </Box>
                       <Box onClick={toggleDrawer}>
                         <Typography
+                        className='link'
                           variant="h2"
                           sx={{
                             marginRight: 0
                           }}
                         >
-                          <MenuItem
+                          <MenuItem                            
                             label='About us'
                             href='#about'
                             title='About us'
                             target='_self'
-                            color="#878787"
+                            // hover='#fff'
+                            color="#6AA2DB"
                           />
                         </Typography>
                       </Box>
@@ -237,7 +234,8 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                             href='#service'
                             title='Our services'
                             target='_self'
-                            color="#878787"
+                            // hover='#fff'
+                            color="#6AA2DB"
                           />
                         </Typography>
                       </Box>
@@ -255,7 +253,8 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                             href='#story'
                             title='Our story'
                             target='_self'
-                            color="#878787"
+                            color="#6AA2DB"
+                            // hover='#fff'
                           />
                         </Typography>
                       </Box>
@@ -273,7 +272,8 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                             href='#team'
                             title='Our team'
                             target='_self'
-                            color="#CEE8F9"
+                            // hover='#fff'
+                            color="#6AA2DB"
                           />
                         </Typography>
                       </Box>
