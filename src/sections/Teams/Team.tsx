@@ -124,14 +124,14 @@ export const Team: FC<TeamProps> = ({
         overflow: 'hidden',
         zIndex: 900 
       }} >
-        <Grid item xs={12} md={4} lg={6 }sx={{
+        <Grid item xs={12} md={4} lg={4}sx={{
           alignSelf: 'start',
           zIndex: 900
         }}>
           <Title color="#D46918" label="OUR TEAM" />
         </Grid>
 
-        <Grid item xs={6} md={8} lg={6}>
+        <Grid item xs={6} md={8} lg={8}>
           <Grid container spacing={2} columns={3} rowSpacing={6} sx={{ textAlign: 'center', }}>
             <Grid item sx={{ textAlign: 'center', }}>
               <Grid container spacing={2} sx={{ textAlign: 'center', }}>
