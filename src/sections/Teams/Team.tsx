@@ -46,7 +46,7 @@ const FontsBox = styled("div")(({ theme }) => ({
     }
   },
   [theme.breakpoints.between("md", "lg")]: {
-    justifyContent: 'center',
+    justifyContent: 'left',
     h1: {
       transform: "rotate(-90deg)",
       fontSize: "4rem",
@@ -58,7 +58,7 @@ const FontsBox = styled("div")(({ theme }) => ({
     }
   },
   [theme.breakpoints.up("lg")]: {
-    justifyContent: 'center',
+    justifyContent: 'left',
     h1: {
       transform: "rotate(-90deg)",
       fontSize: "5rem",
@@ -132,9 +132,9 @@ export const Team: FC<TeamProps> = ({
         </Grid>
 
         <Grid item xs={6} md={8} lg={6}>
-          <Grid container spacing={2} columns={3} rowSpacing={6} sx={{ textAlign: 'center', justifyContent: 'center' }}>
-            <Grid item sx={{ textAlign: 'center', justifyContent: 'center' }}>
-              <Grid container spacing={2} sx={{ textAlign: 'center', justifyContent: 'center' }}>
+          <Grid container spacing={2} columns={3} rowSpacing={6} sx={{ textAlign: 'center', }}>
+            <Grid item sx={{ textAlign: 'center', }}>
+              <Grid container spacing={2} sx={{ textAlign: 'center', }}>
                 <Grid item>
                   <MediaCard image={andreas} title='Andreas Thomae' text='CEO & Chief of Development' />
                 </Grid>
@@ -147,8 +147,8 @@ export const Team: FC<TeamProps> = ({
               </Grid>
             </Grid>
 
-            <Grid item  sx={{ textAlign: 'center', justifyContent: 'center' }}>
-              <Grid container spacing={2} sx={{ textAlign: 'center', justifyContent: 'center' }}>
+            <Grid item  sx={{ textAlign: 'center', }}>
+              <Grid container spacing={2} sx={{ textAlign: 'center', }}>
                 <Grid item>
                   <MediaCard image={eva} title='Eva Dias' text='UX/UI & Visual Designer' />
                 </Grid>
@@ -162,7 +162,7 @@ export const Team: FC<TeamProps> = ({
             </Grid>
 
             <Grid item  >
-              <Grid container spacing={2} sx={{ textAlign: 'center', justifyContent: 'center' }}>
+              <Grid container spacing={2} sx={{ textAlign: 'center', }}>
                 <Grid item>
                   <MediaCard image={vinicius} title='Vinícius Fiedler' text='  Full-Stack Developer' />
                 </Grid>
