@@ -110,7 +110,7 @@ export const Team: FC<TeamProps> = ({
 
 
   return (
-    <FontsBox>
+    <FontsBox sx={{overflow: 'hidden'}}>
       
       <Grid container id="team" spacing={2} sx={{
         width: '100%',
