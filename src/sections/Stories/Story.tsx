@@ -7,7 +7,7 @@ import orangeBigBox from '../../assets/OrangeBlueBox.svg'
 const StoryBox = styled('div')(({ theme }) => ({
     margin: 0,
     [theme.breakpoints.down('sm')]: {
-        marginY: 5,
+       margin: '2.5rem auto',
         h1: {
             transform: "none",
             fontSize: "2rem",
@@ -24,7 +24,7 @@ const StoryBox = styled('div')(({ theme }) => ({
         }
     },
     [theme.breakpoints.between('sm', 'md')]: {
-        marginTop: '5rem',
+       margin: '5rem auto',
         h1: {
             transform: "rotate(-90deg)",
             fontSize: "3rem",
@@ -38,7 +38,7 @@ const StoryBox = styled('div')(({ theme }) => ({
         }
     },
     [theme.breakpoints.between('md', 'lg')]: {
-        marginTop: '5rem',
+       margin: '5rem auto',
         h1: {
             transform: "rotate(-90deg)",
             fontSize: "4rem",   
@@ -49,7 +49,7 @@ const StoryBox = styled('div')(({ theme }) => ({
         span: { fontSize: '1.4rem' }
     },
     [theme.breakpoints.up('lg')]: {
-        marginTop: '5rem',
+       margin: '5rem auto',
         h1: {
             transform: "rotate(-90deg)",
             fontSize: "4rem",
