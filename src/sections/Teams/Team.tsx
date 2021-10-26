@@ -1,5 +1,4 @@
-import React from 'react';
-import { Box, Grid, styled, Typography } from '@mui/material';
+import { Grid, styled } from '@mui/material';
 import { FC } from 'react'
 import { MediaCard } from '../../components/Cards/MediaCard';
 import andreas from '../../assets/andreas.png';
@@ -11,9 +10,6 @@ import joao from '../../assets/joao.png';
 import eva from '../../assets/eva.png';
 import aline from '../../assets/aline.png';
 import bruno from '../../assets/bruno.png';
-import Button from '@mui/material/Button';
-import OurTeamEffect from '../../assets/OurTeamEffect.png';
-import OurTeamEffects from '../../assets/OurTeamEffect.svg';
 import { Title } from '../../components/Titles/Title';
 import { Subtitle } from '../../components/Titles/Subtitle';
 
@@ -107,20 +103,12 @@ const SubtitleBox = styled('div')(({ theme }) => ({
 export const Team: FC<TeamProps> = ({
   props
 }: TeamProps) => {
-
-
   return (
-    <FontsBox sx={{overflow: 'hidden'}}>
-      
+    <FontsBox sx={{overflow: 'hidden'}}>      
       <Grid container id="team" spacing={2} sx={{
         width: '100%',
         alignItems: 'center',
         justifyContent: 'center',
-        // backgroundImage: `URL(${OurTeamEffects})`,
-        // backgroundSize: 'contain',
-        // backgroundRepeat: 'no-repeat',
-        // backgroundPosition: 'center',
-        //margin: '2rem 2rem 6rem 4rem',
         overflow: 'hidden',
         zIndex: 900 
       }} >

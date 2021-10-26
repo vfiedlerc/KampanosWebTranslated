@@ -1,6 +1,5 @@
 // @ts-check
 import * as React from "react";
-import './styles.css'
 import { FC } from "react";
 import { Link, Grid, styled } from "@mui/material";
 import { HashLink } from 'react-router-hash-link';
@@ -13,18 +12,29 @@ export const MenuItem: FC<MenuItemProps> = ({
   color,
   // hover
 }: MenuItemProps) => {
+
+  const StyleLink = styled('div')(({ theme }) => ({
+    a: {
+      color: `${color}`,
+      fontWeight: 'bold',
+      '&:hover': {
+        color: "#fff",
+      }
+    }
+  }));
+  
   return (
-    <HashLink
-      className='link'
-      to={href}
-      title={label}
-      target={target}
-      style={{
-        color: `${color}`
-      }}
-    >
-      {label}
-    </HashLink>
+    <StyleLink>
+      <Link
+        className='link'
+        href={href}
+        title={label}
+        target={target}
+        underline='none'
+      >
+        {label}
+      </Link>
+    </StyleLink>
   )
 };
 

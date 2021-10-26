@@ -43,106 +43,62 @@ const Footer = () => {
 
 
         <Grid item >
-
-          {/* //2 */}
-
-
-
-
           <Grid container
-
-
             spacing={4} sx={{
               justifyContent: 'center',
               textAlign: 'center'
             }}>
-
             <Grid item >
               <Link  href="#header" underline="hover" color="#FAFAFA" >Home</Link>
-              {/* //1 */}
             </Grid>
-
             <Grid item>
               <Link href="#about" underline="hover" color="#FAFAFA" >About us</Link>
-              {/* //2 */}
             </Grid>
-
             <Grid item>
               <Link  href="#service" underline="hover" color="#FAFAFA" >Our service</Link>
-              {/* //3 */}
             </Grid>
-
             <Grid item>
               <Link  href="#story" underline="hover" color="#FAFAFA" >Our story</Link>
-              {/* //4*/}
             </Grid>
-
             <Grid item >
               <Link   href="#team" underline="hover" color="#FAFAFA"  >Our team</Link>
-              {/* //5 */}
             </Grid>
-
             <Grid item >
               <Link href="https://www.linkedin.com/company/kampanos/"  underline="hover" color="#FAFAFA"
               >Jobs offer</Link>
-              {/* //6 */}
             </Grid>
-
           </Grid>
-
         </Grid>
-
-
         <Grid item>
-          {/* //3 */}
           <Grid container sx={{
             justifyContent: 'center'
           }}>
-
             <Grid item>
               <Link href="#"><FacebookIcon /> </Link>
             </Grid>
-
             <Grid item>
               <Link href="https://www.linkedin.com/company/kampanos/" ><LinkedinIcon /> </Link>
             </Grid>
-
             <Grid item>
               <Link href="https://www.instagram.com/kampanos.pt/" ><InstagramIcon /> </Link>
             </Grid>
-
-
-
-
           </Grid>
-
         </Grid>
-
-
-
-
-
         <Grid item>
           <Typography
             color="#D9DBE1"
           > 2021 © Kampanos All rights reserved.️ </Typography>
         </Grid>
-
-
         <Grid item >
-          <Grid container sx={{ paddingRight: '5.5rem' }} spacing={2} justifyContent="right">
-
-
+          <Grid container sx={{ paddingRight: '3rem' }} spacing={2} justifyContent="right">
             <Grid item >
-              <Link underline="hover" color="#FCEDD0" href="#"> Terms of use </Link>
+              <Link underline="hover" color="#FCEDD0" href="#">Terms of use</Link>
             </Grid>
-
             <Grid item>
-              <Link underline="hover" color="#FCEDD0" href="#">  Privacy Policy</Link>
+              <Link underline="hover" color="#FCEDD0" href="#">Privacy Policy</Link>
             </Grid>
-
             <Grid item>
-              <Link underline="hover" color="#FCEDD0" href="#"> Cookie Policy </Link>
+              <Link underline="hover" color="#FCEDD0" href="#">Cookie Policy</Link>
             </Grid>
           </Grid>
         </Grid>

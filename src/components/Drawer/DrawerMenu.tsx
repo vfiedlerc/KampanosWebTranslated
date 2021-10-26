@@ -1,17 +1,12 @@
 import * as React from "react";
-import './styles.css'
 import { FC } from "react";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import Button from "@mui/material/Button";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
 import { MenuItem, MenuItemProps } from "./MenuItem";
-import { AppBar, Box, Grid, Icon, IconButton, styled, Theme, Toolbar, Typography, } from "@mui/material";
+import { AppBar, Box, Grid, styled, Toolbar, Typography, } from "@mui/material";
 import Close from "@material-ui/icons/Close";
 import MenuIcon from "@material-ui/icons/Menu";
 import menuLogo from "../../assets/KampanosBrandMenu.svg";
-
 import FaceIcon from "../../assets/FaceIcon.svg";
 import LinkIcon from "../../assets/LinkIcon.svg";
 import InstaIcon from "../../assets/InstaIcon.svg";
@@ -35,7 +30,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
       h2: {
         fontSize: '1.5rem',
         textAlign: 'left',
-        paddingBottom:'1.2rem'
+        paddingBottom: '1.2rem'
       },
       h3: { fontSize: '1rem' }
     },
@@ -43,30 +38,66 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
       h2: {
         fontSize: '2rem',
         textAlign: 'left',
-        paddingBottom:'1.2rem'
+        paddingBottom: '1.2rem'
       },
       h3: { fontSize: '1.2rem' }
     },
     [theme.breakpoints.between('md', 'lg')]: {
       h2: {
         fontSize: '2.8rem',
-        paddingBottom:'1.2rem'
+        paddingBottom: '1.2rem'
       },
       h3: { fontSize: '1.45rem' }
     },
     [theme.breakpoints.up('lg')]: {
       h2: {
         fontSize: '3.5rem',
-        paddingBottom:'1.2rem'
+        paddingBottom: '1.2rem'
       },
       h3: { fontSize: '3.5rem' }
     },
   }));
 
+  const ItemsBox = styled('div')(({ theme }) => ({
+    marginTop: '10rem' 
+    // margin: 0,
+    // padding: 0,
+    // [theme.breakpoints.down('sm')]: {
+    //   h2: {
+    //     fontSize: '1.5rem',
+    //     textAlign: 'left',
+    //     paddingBottom: '1.2rem'
+    //   },
+    //   h3: { fontSize: '1rem' }
+    // },
+    // [theme.breakpoints.between('sm', 'md')]: {
+    //   h2: {
+    //     fontSize: '2rem',
+    //     textAlign: 'left',
+    //     paddingBottom: '1.2rem'
+    //   },
+    //   h3: { fontSize: '1.2rem' }
+    // },
+    // [theme.breakpoints.between('md', 'lg')]: {
+    //   h2: {
+    //     fontSize: '2.8rem',
+    //     paddingBottom: '1.2rem'
+    //   },
+    //   h3: { fontSize: '1.45rem' }
+    // },
+    // [theme.breakpoints.up('lg')]: {
+    //   h2: {
+    //     fontSize: '3.5rem',
+    //     paddingBottom: '1.2rem'
+    //   },
+    //   h3: { fontSize: '3.5rem' }
+    // },
+  }));
+
   return (
     <>
       <Button onClick={toggleDrawer}>
-        <MenuIcon fontSize="large" style={{transform: 'scale(1.2)'}} />
+        <MenuIcon fontSize="large" style={{ transform: 'scale(1.2)' }} />
       </Button>
       <SwipeableDrawer
         anchor={"right"}
@@ -83,9 +114,10 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
           }}
         >
           <Toolbar>
-            <Box sx={{ flexGrow: 1 }}>
-            <Link href="http://www.kampanos.pt/">{<img src={menuLogo} alt="KampanosLogo" title="KampanosLogo" />}</Link>
-              {/* <img src={menuLogo} alt="Kampanos" title="Kampanos" /> */}
+            <Box sx={{ flexGrow: 1, paddingLeft: '3rem' }}>
+              <Link href="http://www.kampanos.pt/">
+                <img src={menuLogo} alt="KampanosLogo" title="KampanosLogo" />
+              </Link>
             </Box>
             <Close onClick={toggleDrawer} />
           </Toolbar>
@@ -97,65 +129,103 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
             height: "100vh",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "#4177B7",
-            //padding: 6,
+            backgroundColor: "#4177B7"
           }}
         >
           <Grid container
-            spacing={2}
-            xs={12}
-            sm={12}
-            md={12}
-            lg={12}
-            direction="row"
-            justifyContent="center"
-            alignItems="flex-start"
-            sx={{ height: '100%' }}
+            sx={{
+              width: "100vw",
+              height: "100vh",
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: "#4177B7",
+              flexGrow: 1
+            }}
           >
             {/* Redes */}
             <Grid item
               xs={2}
               sm={2}
               md={2}
-              lg={2}>
-              <Grid container
-                spacing={2}
-                xs={12}
-                sm={12}
-                md={12}
-                lg={12}
-                direction="row"
-                justifyContent="center"
-                alignItems="flex-end"
-              >
-                <Grid item>
-                  <Grid container>
-                    <Grid item direction="column">
-                      <Grid container>
-                        <Grid item>
-                          <Grid container direction="column">
-                            <Grid item xs={12}>
-                              {/* <Typography sx={{ transform: 'rotate(-90deg)' }} color=" #FAFAFA">
-                                @kampanos 2021
-                              </Typography> */}
-                            </Grid>
-                            <Grid item xs={12}>
-
-                              <Link href="https://www.facebook.com">{<img  src={FaceIcon} alt="Facebook" title="Facebook" />}</Link>
-                            </Grid>
-                            <Grid item xs={12}>
-                            <Link href="https://www.linkedin.com/company/kampanos/">{<img  src={LinkIcon} alt="Linkedin" title="Linkedin" />}</Link>
-                            </Grid>
-                            <Grid item xs={12}>
-                            <Link href="https://www.instagram.com/kampanos.pt/">{<img  src={InstaIcon} alt="Instagram" title="Instagram" />}</Link>
-                            </Grid>
-                          </Grid>
-                        </Grid>
-                      </Grid>
-                    </Grid>
-                  </Grid>
-                </Grid>
+              lg={2}
+            >
+              <Grid container sx={{ justifyContent: 'center' }}>
+                <Typography
+                  sx={{
+                    transform: 'rotate(-90deg)',
+                    margin: 0,
+                    height: 'fit-content',
+                    width: 'auto'
+                  }}
+                  color=" #FAFAFA"
+                >
+                  @kampanos 2021
+                </Typography>
               </Grid>
+
+              <ItemsBox>
+                <Grid container sx={{ justifyContent: 'center'}}>
+                  <Typography
+                    sx={{
+                      margin: 0,
+                      height: 'fit-content'
+                    }}
+                    color=" #FAFAFA"
+                  >
+                    <Link
+                      href="https://www.facebook.com"
+                      sx={{
+                        margin: 0,
+                        padding: 0,
+                        justifyContent: 'center'
+                      }}
+                    >
+                      <img src={FaceIcon} alt="Facebook" title="Facebook" />
+                    </Link>
+                  </Typography>
+                </Grid>
+             
+              <Grid container sx={{ justifyContent: 'center' }}>
+                <Typography
+                  sx={{
+                    margin: 0,
+                    height: 'fit-content'
+                  }}
+                  color=" #FAFAFA"
+                >
+                  <Link
+                    href="https://www.linkedin.com/company/kampanos/"
+                    sx={{
+                      margin: 0,
+                      padding: 0,
+                      justifyContent: 'center'
+                    }}
+                  >
+                    <img src={LinkIcon} alt="Linkedin" title="Linkedin" />
+                  </Link>
+                </Typography>
+              </Grid>
+              <Grid container sx={{ justifyContent: 'center' }}>
+                <Typography
+                  sx={{
+                    margin: 0,
+                    height: 'fit-content'
+                  }}
+                  color=" #FAFAFA"
+                >
+                  <Link
+                    href="https://www.instagram.com/kampanos.pt/"
+                    sx={{
+                      margin: 0,
+                      padding: 0,
+                      justifyContent: 'center'
+                    }}
+                  >
+                    <img src={InstaIcon} alt="Instagram" title="Instagram" />
+                  </Link>
+                </Typography>
+              </Grid>
+              </ItemsBox>
             </Grid>
 
             <Grid item
@@ -163,7 +233,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
               sm={10}
               md={10}
               lg={10}>
-              {/* Menu */}
+
               <Grid container
                 spacing={2}
                 xs={12}
@@ -172,14 +242,14 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                 lg={12}
                 direction="row"
                 justifyContent="left"
-                alignItems="flex-start"
-
+                alignItems="center"
               >
                 <Grid item>
                   <Grid container direction='column'>
-                    <Grid item>
-                      <Box onClick={toggleDrawer} >
+                    <Grid item  className='link'>
+                      <Box onClick={toggleDrawer}  className='link'>
                         <Typography
+                         className='link'
                           variant="h2"
                           sx={{
                             marginRight: 0
@@ -190,7 +260,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                             href='#header'
                             title='Home'
                             target='_self'
-                            color="#6AA2DB"                            
+                            color="#6AA2DB"
                           />
                         </Typography>
                       </Box>
@@ -204,13 +274,13 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                       </Box>
                       <Box onClick={toggleDrawer}>
                         <Typography
-                        className='link'
+                          className='link'
                           variant="h2"
                           sx={{
                             marginRight: 0
                           }}
                         >
-                          <MenuItem                            
+                          <MenuItem
                             label='About us'
                             href='#about'
                             title='About us'
@@ -254,7 +324,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                             title='Our story'
                             target='_self'
                             color="#6AA2DB"
-                            // hover='#fff'
+                          // hover='#fff'
                           />
                         </Typography>
                       </Box>
