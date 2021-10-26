@@ -42,7 +42,7 @@ const SubtitleBox = styled('div')(({ theme }) => ({
   },
   [theme.breakpoints.up('lg')]: {
     span: {
-      fontSize: '3.2rem',
+      fontSize: '3rem',
       textAlign: 'center',
       lineHeight: 1.35
     }
@@ -57,13 +57,13 @@ const HeaderBox = styled('div')(({ theme }) => ({
     minHeight: '80vh'
   },
   [theme.breakpoints.between('sm', 'md')]: {
-    minHeight: '78vh'
+    minHeight: '75vh'
   },
   [theme.breakpoints.between('md', 'lg')]: {
     minHeight: '70vh'
   },
   [theme.breakpoints.up('lg')]: {
-    minHeight: '68vh'
+    minHeight: '65vh'
   }
 }));
 
