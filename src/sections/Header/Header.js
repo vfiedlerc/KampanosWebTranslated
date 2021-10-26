@@ -58,7 +58,7 @@ const Header = () => {
         direction='column'
         alignItems='center'
         justifyContent='center'
-        style={{ minHeight: '90vh' }}
+        style={{ minHeight: '70vh' }}
       >
         <Grid
           item
