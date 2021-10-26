@@ -16,6 +16,8 @@ import LinkIcon from "../../assets/LinkIcon.svg";
 import InstaIcon from "../../assets/InstaIcon.svg";
 import workMenuButton from "../../assets/workMenuButton.svg";
 import rectangleMenu from "../../assets/rectangleMenu.svg";
+import { Link } from "@mui/material";
+
 
 
 
@@ -141,13 +143,14 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                               </Typography> */}
                             </Grid>
                             <Grid item xs={12}>
-                              <img src={FaceIcon} alt="Facebook" title="Facebook" />
+                              
+                              <Link href="https://www.facebook.com">{<img  src={FaceIcon} alt="Facebook" title="Facebook" />}</Link>
                             </Grid>
                             <Grid item xs={12}>
-                              <img src={LinkIcon} alt="Facebook" title="Facebook" />
+                            <Link href="https://www.linkedin.com/company/kampanos/">{<img  src={LinkIcon} alt="Linkedin" title="Linkedin" />}</Link>
                             </Grid>
                             <Grid item xs={12}>
-                              <img src={InstaIcon} alt="Facebook" title="Facebook" />
+                            <Link href="https://www.instagram.com/kampanos.pt/">{<img  src={InstaIcon} alt="Instagram" title="Instagram" />}</Link>
                             </Grid>
                           </Grid>
                         </Grid>
@@ -212,7 +215,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                         >
                           <MenuItem
                             label='About us'
-                            href='#aboutus'
+                            href='#about'
                             title='About us'
                             target='_self'
                             color="#878787"
@@ -230,7 +233,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                         >
                           <MenuItem
                             label='Our services'
-                            href='#ourservices'
+                            href='#service'
                             title='Our services'
                             target='_self'
                             color="#878787"
@@ -248,7 +251,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                         >
                           <MenuItem
                             label='Our story'
-                            href='#ourstory'
+                            href='#story'
                             title='Our story'
                             target='_self'
                             color="#878787"
@@ -266,7 +269,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                         >
                           <MenuItem
                             label='Our team'
-                            href='#ourteam'
+                            href='#team'
                             title='Our team'
                             target='_self'
                             color="#CEE8F9"

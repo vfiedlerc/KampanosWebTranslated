@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
 
+
 export const MenuItem: FC<MenuItemProps> = ({
   label,
   target,
