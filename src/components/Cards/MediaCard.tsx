@@ -12,7 +12,7 @@ export const MediaCard: FC<MediaCardProps> = ({
   image,title,text
 }: MediaCardProps ) => {
   return (
-    <Card sx={{ width: 200, height: 250, boxShadow: 0 }}>
+    <Card sx={{ width: 200, height: 275, boxShadow: 0 }}>
       <CardMedia
         component="img"
         height="180"
