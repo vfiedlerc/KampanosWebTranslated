@@ -1,0 +1,9 @@
+a.link{
+  color: #6aa2db;
+}
+a.link:hover {
+  color: #fff;
+}
+a.link:visited {
+  color: inherit;
+}
