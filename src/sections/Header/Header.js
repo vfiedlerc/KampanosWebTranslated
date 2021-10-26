@@ -23,7 +23,7 @@ const SubtitleBox = styled('div')(({ theme }) => ({
       fontSize: '1.5rem',
       textAlign: 'center',
       lineHeight: 1.35
-      
+
     }
   },
   [theme.breakpoints.between('sm', 'md')]: {
@@ -49,33 +49,50 @@ const SubtitleBox = styled('div')(({ theme }) => ({
   }
 }));
 
+const HeaderBox = styled('div')(({ theme }) => ({
+  margin: 0,
+  padding: 0,
+  display: 'flex',
+  [theme.breakpoints.down('sm')]: {
+    minHeight: '80vh'
+  },
+  [theme.breakpoints.between('sm', 'md')]: {
+    minHeight: '78vh'
+  },
+  [theme.breakpoints.between('md', 'lg')]: {
+    minHeight: '70vh'
+  },
+  [theme.breakpoints.up('lg')]: {
+    minHeight: '68vh'
+  }
+}));
+
 const Header = () => {
   return (
     <>
       <Topbar />
-      <Grid container id="header"
-        spacing={0}
-        direction='column'
-        alignItems='center'
-        justifyContent='center'
-        style={{ minHeight: '90vh' }}
-      >
-        <Grid
-          item
-          xs={4}
-          sm={4}
-          md={4}
-          sx={{
-            padding: 0,
-            margin: 0,
-            backgroundColor: '#fff'
-          }}
+      <HeaderBox>
+        <Grid container id="header"
+          spacing={0}
+          direction='column'
+          alignItems='center'
+          justifyContent='center'
         >
-          <img src={centerLogo} alt='Kampanos' title='Kampanos' />
-
+          <Grid
+            item
+            xs={4}
+            sm={4}
+            md={4}
+            sx={{
+              padding: 0,
+              margin: 0,
+              backgroundColor: '#fff'
+            }}
+          >
+            <img src={centerLogo} alt='Kampanos' title='Kampanos' />
+          </Grid>
         </Grid>
-      </Grid>
-      
+      </HeaderBox>
       <SubtitleBox
         sx={{
           whiteSpace: 'nowrap',
@@ -86,6 +103,7 @@ const Header = () => {
         <Subtitle color='#D46918' label="WE'RE PEOPLE. WE'RE TEAM. WE'RE REMOTE COMPANY. WE'RE PASSION. " stroke='1.4px' direction='left' />
         <Subtitle color='#6AA2DB' label="WE'RE PEOPLE. WE'RE TEAM. WE'RE REMOTE COMPANY. WE'RE PASSION. " stroke='1.4px' direction='right' />
       </SubtitleBox>
+
     </>
   )
 }
