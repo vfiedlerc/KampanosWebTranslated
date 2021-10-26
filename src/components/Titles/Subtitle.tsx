@@ -19,7 +19,7 @@ export const Subtitle: FC<SubtitleProps> = ({
     <SubtitleBox>
       <Marquee
         direction={direction}
-        speed={90}
+        speed={40}
         gradient={false}
         delay= {0}
       >
