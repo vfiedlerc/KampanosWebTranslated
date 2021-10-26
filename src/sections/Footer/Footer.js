@@ -20,11 +20,11 @@ const Terms = styled('div')(({ theme }) => ({
    paddingRight: 0
   },
   [theme.breakpoints.between('md', 'lg')]: {
-    justifyContent: "right",
+    justifyContent: "flex-end",
    paddingRight: '3rem',
   },
   [theme.breakpoints.up('lg')]: {
-    justifyContent: "right",
+    justifyContent: "flex-end",
    paddingRight: '3rem',
   },
 }));
@@ -139,8 +139,8 @@ const Footer = () => {
         </Grid>
 
         <Terms> 
-        <Grid item >
-          <Grid container  spacing={2} >
+        <Grid item  > 
+          <Grid container  sx={{justifyContent: "flex-end"}} spacing={2} >
             <Grid item xs={12}
             sm={12}
             md={1}
