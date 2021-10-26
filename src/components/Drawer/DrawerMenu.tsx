@@ -211,7 +211,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                         >
                           <MenuItem
                             label='About us'
-                            href='#about'
+                            href='#aboutus'
                             title='About us'
                             target='_self'
                             color="#878787"
@@ -229,7 +229,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                         >
                           <MenuItem
                             label='Our services'
-                            href='#service'
+                            href='#ourservices'
                             title='Our services'
                             target='_self'
                             color="#878787"
@@ -247,7 +247,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                         >
                           <MenuItem
                             label='Our story'
-                            href='#story'
+                            href='#ourstory'
                             title='Our story'
                             target='_self'
                             color="#878787"
@@ -265,7 +265,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                         >
                           <MenuItem
                             label='Our team'
-                            href='#team'
+                            href='#ourteam'
                             title='Our team'
                             target='_self'
                             color="#CEE8F9"

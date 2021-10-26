@@ -202,7 +202,8 @@ export const Story = () => {
                                     md={12}
                                     sx={{
                                         textAlign: 'left',
-                                        marginTop: '1.2rem'
+                                        marginTop: '1.2rem',
+                                        fontSize: '1.5rem'
                                     }}
                                 >
                                     <Typography
@@ -210,6 +211,7 @@ export const Story = () => {
                                         sx={{
                                             color: '#0D3475',
                                             fontSize: '1rem'
+                                            
                                         }}
                                     >
                                         Our team is
