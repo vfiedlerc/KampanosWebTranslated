@@ -100,11 +100,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
       <Grid container id="about"
         sx={{
           backgroundColor: "#FFF",
-<<<<<<< HEAD
-          mt: 30,
-=======
           mt: 30
->>>>>>> c4006ae0034a35fa9e11185a53454caf22b8de1e
         }}
       >
 
@@ -122,13 +118,8 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
             width: "100%",
           }}
         >
-<<<<<<< HEAD
-          <Grid item
-            direction='column'
-=======
           {/* <Grid
             item
->>>>>>> c4006ae0034a35fa9e11185a53454caf22b8de1e
             xs={12}
             sm={12}
             md={3}     
@@ -136,10 +127,6 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
             sx={{
               padding: 4,
               margin: 0,
-<<<<<<< HEAD
-              width: '100%',
-              backgroundColor: '#fff',             
-=======
               backgroundColor: "#FFF",
             }}
           >
@@ -158,7 +145,6 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
               width: '100%',
               backgroundColor: '#fff',
               alignSelf: 'start'
->>>>>>> c4006ae0034a35fa9e11185a53454caf22b8de1e
             }}
           >
             <Title color='#D46918' label='ABOUT US' />
