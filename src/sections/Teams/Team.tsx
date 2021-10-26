@@ -63,10 +63,10 @@ const FontsBox = styled("div")(({ theme }) => ({
       transform: "rotate(-90deg)",
       fontSize: "5rem",
       textAlign: "left",
-      textAlignLast: "left",
+      textAlignLast: "center",
       marginLeft: "1rem",
       marginTop: "10rem",
-      marginBottom: "2rem",
+      marginBottom: "2rem"
     }
   },
 }));
@@ -122,20 +122,17 @@ export const Team: FC<TeamProps> = ({
         // backgroundPosition: 'center',
         //margin: '2rem 2rem 6rem 4rem',
         overflow: 'hidden',
-        zIndex: 900
+        zIndex: 900 
       }} >
-        <Grid item xs={12} md={4} sx={{
+        <Grid item xs={12} md={4} lg={6 }sx={{
           alignSelf: 'start',
           zIndex: 900
         }}>
           <Title color="#D46918" label="OUR TEAM" />
         </Grid>
 
-        <Grid item xs={6} md={8}>
-
-          {/* <Grid container spacing={2} columns={3} rowSpacing={6} sx={{ textAlign: 'center', zIndex: 900, marginTop: '-250px' }}> */}
+        <Grid item xs={6} md={8} lg={6}>
           <Grid container spacing={2} columns={3} rowSpacing={6} sx={{ textAlign: 'center', justifyContent: 'center' }}>
-
             <Grid item sx={{ textAlign: 'center', justifyContent: 'center' }}>
               <Grid container spacing={2} sx={{ textAlign: 'center', justifyContent: 'center' }}>
                 <Grid item>
@@ -189,7 +186,7 @@ export const Team: FC<TeamProps> = ({
           transform: 'rotate(-20deg)',
           zIndex: -9999,
           marginTop: '-528px', 
-          height: '100vh',         
+          height: '70vh',         
           alignSelf: 'center',
           position: 'relative'
         }}
