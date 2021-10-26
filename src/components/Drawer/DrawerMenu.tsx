@@ -59,39 +59,34 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
   }));
 
   const ItemsBox = styled('div')(({ theme }) => ({
-    marginTop: '10rem' 
+    marginTop: '10rem',
     // margin: 0,
     // padding: 0,
-    // [theme.breakpoints.down('sm')]: {
-    //   h2: {
-    //     fontSize: '1.5rem',
-    //     textAlign: 'left',
-    //     paddingBottom: '1.2rem'
-    //   },
-    //   h3: { fontSize: '1rem' }
-    // },
-    // [theme.breakpoints.between('sm', 'md')]: {
-    //   h2: {
-    //     fontSize: '2rem',
-    //     textAlign: 'left',
-    //     paddingBottom: '1.2rem'
-    //   },
-    //   h3: { fontSize: '1.2rem' }
-    // },
-    // [theme.breakpoints.between('md', 'lg')]: {
-    //   h2: {
-    //     fontSize: '2.8rem',
-    //     paddingBottom: '1.2rem'
-    //   },
-    //   h3: { fontSize: '1.45rem' }
-    // },
-    // [theme.breakpoints.up('lg')]: {
-    //   h2: {
-    //     fontSize: '3.5rem',
-    //     paddingBottom: '1.2rem'
-    //   },
-    //   h3: { fontSize: '3.5rem' }
-    // },
+    [theme.breakpoints.down('sm')]: {
+    justifyContent: 'center'
+    },
+    [theme.breakpoints.between('sm', 'md')]: {
+      h2: {
+        fontSize: '2rem',
+        textAlign: 'left',
+        paddingBottom: '1.2rem'
+      },
+      h3: { fontSize: '1.2rem' }
+    },
+    [theme.breakpoints.between('md', 'lg')]: {
+      h2: {
+        fontSize: '2.8rem',
+        paddingBottom: '1.2rem'
+      },
+      h3: { fontSize: '1.45rem' }
+    },
+    [theme.breakpoints.up('lg')]: {
+      h2: {
+        fontSize: '3.5rem',
+        paddingBottom: '1.2rem'
+      },
+      h3: { fontSize: '3.5rem' }
+    },
   }));
 
   return (
@@ -114,9 +109,10 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
           }}
         >
           <Toolbar>
-            <Box sx={{ flexGrow: 1 }}>
-              <Link href="http://www.kampanos.pt/">{<img src={menuLogo} alt="KampanosLogo" title="KampanosLogo" />}</Link>
-              {/* <img src={menuLogo} alt="Kampanos" title="Kampanos" /> */}
+            <Box sx={{ flexGrow: 1}}>
+              <Link href="http://www.kampanos.pt/">
+                <img src={menuLogo} alt="KampanosLogo" title="KampanosLogo" />
+              </Link>
             </Box>
             <Close onClick={toggleDrawer} />
           </Toolbar>
@@ -143,8 +139,8 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
           >
             {/* Redes */}
             <Grid item
-              xs={2}
-              sm={2}
+              xs={4}
+              sm={4}
               md={2}
               lg={2}
             >
@@ -163,7 +159,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
               </Grid>
 
               <ItemsBox>
-                <Grid container sx={{ justifyContent: 'center'}}>
+                <Grid container sx={{ justifyContent: 'center' }}>
                   <Typography
                     sx={{
                       margin: 0,
@@ -183,53 +179,53 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                     </Link>
                   </Typography>
                 </Grid>
-             
-              <Grid container sx={{ justifyContent: 'center' }}>
-                <Typography
-                  sx={{
-                    margin: 0,
-                    height: 'fit-content'
-                  }}
-                  color=" #FAFAFA"
-                >
-                  <Link
-                    href="https://www.linkedin.com/company/kampanos/"
+
+                <Grid container sx={{ justifyContent: 'center' }}>
+                  <Typography
                     sx={{
                       margin: 0,
-                      padding: 0,
-                      justifyContent: 'center'
+                      height: 'fit-content'
                     }}
+                    color=" #FAFAFA"
                   >
-                    <img src={LinkIcon} alt="Linkedin" title="Linkedin" />
-                  </Link>
-                </Typography>
-              </Grid>
-              <Grid container sx={{ justifyContent: 'center' }}>
-                <Typography
-                  sx={{
-                    margin: 0,
-                    height: 'fit-content'
-                  }}
-                  color=" #FAFAFA"
-                >
-                  <Link
-                    href="https://www.instagram.com/kampanos.pt/"
+                    <Link
+                      href="https://www.linkedin.com/company/kampanos/"
+                      sx={{
+                        margin: 0,
+                        padding: 0,
+                        justifyContent: 'center'
+                      }}
+                    >
+                      <img src={LinkIcon} alt="Linkedin" title="Linkedin" />
+                    </Link>
+                  </Typography>
+                </Grid>
+                <Grid container sx={{ justifyContent: 'center' }}>
+                  <Typography
                     sx={{
                       margin: 0,
-                      padding: 0,
-                      justifyContent: 'center'
+                      height: 'fit-content'
                     }}
+                    color=" #FAFAFA"
                   >
-                    <img src={InstaIcon} alt="Instagram" title="Instagram" />
-                  </Link>
-                </Typography>
-              </Grid>
+                    <Link
+                      href="https://www.instagram.com/kampanos.pt/"
+                      sx={{
+                        margin: 0,
+                        padding: 0,
+                        justifyContent: 'center'
+                      }}
+                    >
+                      <img src={InstaIcon} alt="Instagram" title="Instagram" />
+                    </Link>
+                  </Typography>
+                </Grid>
               </ItemsBox>
             </Grid>
 
             <Grid item
-              xs={10}
-              sm={10}
+              xs={8}
+              sm={8}
               md={10}
               lg={10}>
 
@@ -245,10 +241,10 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
               >
                 <Grid item>
                   <Grid container direction='column'>
-                    <Grid item  className='link'>
-                      <Box onClick={toggleDrawer}  className='link'>
+                    <Grid item className='link'>
+                      <Box onClick={toggleDrawer} className='link'>
                         <Typography
-                         className='link'
+                          className='link'
                           variant="h2"
                           sx={{
                             marginRight: 0
@@ -362,7 +358,8 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                   height: '250px',
                   alignContent: 'end',
                   justifyContent: "right",
-                  alignItems: "bottom"
+                  alignItems: "bottom",
+                  paddingRight: '1rem'
                 }}
               >
                 <Grid item>
@@ -373,7 +370,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                       <Grid item>
                         <Typography variant="h3" color="#FAFAFA">Let’s work together!</Typography>
                       </Grid>
-                      <Grid item>
+                      <Grid item display={{ xs: 'none', sm: 'block' }}>
                         <img src={rectangleMenu} alt="Facebook" title="Facebook" />
                       </Grid>
                       <Grid item>
