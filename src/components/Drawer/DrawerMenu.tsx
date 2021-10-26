@@ -35,7 +35,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
       h2: {
         fontSize: '1.5rem',
         textAlign: 'left',
-        paddingBottom:'1.2rem'
+        paddingBottom: '1.2rem'
       },
       h3: { fontSize: '1rem' }
     },
@@ -43,21 +43,21 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
       h2: {
         fontSize: '2rem',
         textAlign: 'left',
-        paddingBottom:'1.2rem'
+        paddingBottom: '1.2rem'
       },
       h3: { fontSize: '1.2rem' }
     },
     [theme.breakpoints.between('md', 'lg')]: {
       h2: {
         fontSize: '2.8rem',
-        paddingBottom:'1.2rem'
+        paddingBottom: '1.2rem'
       },
       h3: { fontSize: '1.45rem' }
     },
     [theme.breakpoints.up('lg')]: {
       h2: {
         fontSize: '3.5rem',
-        paddingBottom:'1.2rem'
+        paddingBottom: '1.2rem'
       },
       h3: { fontSize: '3.5rem' }
     },
@@ -66,7 +66,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
   return (
     <>
       <Button onClick={toggleDrawer}>
-        <MenuIcon fontSize="large" style={{transform: 'scale(1.2)'}} />
+        <MenuIcon fontSize="large" style={{ transform: 'scale(1.2)' }} />
       </Button>
       <SwipeableDrawer
         anchor={"right"}
@@ -84,7 +84,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
         >
           <Toolbar>
             <Box sx={{ flexGrow: 1 }}>
-            <Link href="http://www.kampanos.pt/">{<img src={menuLogo} alt="KampanosLogo" title="KampanosLogo" />}</Link>
+              <Link href="http://www.kampanos.pt/">{<img src={menuLogo} alt="KampanosLogo" title="KampanosLogo" />}</Link>
               {/* <img src={menuLogo} alt="Kampanos" title="Kampanos" /> */}
             </Box>
             <Close onClick={toggleDrawer} />
@@ -134,21 +134,26 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                       <Grid container>
                         <Grid item>
                           <Grid container direction="column">
-                            <Grid item xs={12}>
-                              {/* <Typography sx={{ transform: 'rotate(-90deg)' }} color=" #FAFAFA">
-                                @kampanos 2021
-                              </Typography> */}
-                            </Grid>
-                            <Grid item xs={12}>
 
-                              <Link href="https://www.facebook.com">{<img  src={FaceIcon} alt="Facebook" title="Facebook" />}</Link>
+                            <Grid item xs={6}>
+                              <Typography sx={{ transform: 'rotate(-90deg)' }} color=" #FAFAFA">
+                                @kampanos 2021
+                              </Typography>
+
+                              <Grid item xs={6}>
+                                <Link href="https://www.facebook.com">{<img src={FaceIcon} alt="Facebook" title="Facebook" />}</Link>
+                              </Grid>
+
+                              <Grid item xs={6}>
+                                <Link href="https://www.linkedin.com/company/kampanos/">{<img src={LinkIcon} alt="Linkedin" title="Linkedin" />}</Link>
+                              </Grid>
+
+                              <Grid item xs={6}>
+                                <Link href="https://www.instagram.com/kampanos.pt/">{<img src={InstaIcon} alt="Instagram" title="Instagram" />}</Link>
+                              </Grid>
+
                             </Grid>
-                            <Grid item xs={12}>
-                            <Link href="https://www.linkedin.com/company/kampanos/">{<img  src={LinkIcon} alt="Linkedin" title="Linkedin" />}</Link>
-                            </Grid>
-                            <Grid item xs={12}>
-                            <Link href="https://www.instagram.com/kampanos.pt/">{<img  src={InstaIcon} alt="Instagram" title="Instagram" />}</Link>
-                            </Grid>
+
                           </Grid>
                         </Grid>
                       </Grid>
@@ -190,7 +195,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                             href='#header'
                             title='Home'
                             target='_self'
-                            color="#6AA2DB"                            
+                            color="#6AA2DB"
                           />
                         </Typography>
                       </Box>
@@ -204,13 +209,13 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                       </Box>
                       <Box onClick={toggleDrawer}>
                         <Typography
-                        className='link'
+                          className='link'
                           variant="h2"
                           sx={{
                             marginRight: 0
                           }}
                         >
-                          <MenuItem                            
+                          <MenuItem
                             label='About us'
                             href='#about'
                             title='About us'
@@ -254,7 +259,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                             title='Our story'
                             target='_self'
                             color="#6AA2DB"
-                            // hover='#fff'
+                          // hover='#fff'
                           />
                         </Typography>
                       </Box>
