@@ -88,7 +88,8 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
         >
           <Toolbar>
             <Box sx={{ flexGrow: 1 }}>
-              <img src={menuLogo} alt="Kampanos" title="Kampanos" />
+            <Link href="http://www.kampanos.pt/">{<img src={menuLogo} alt="KampanosLogo" title="KampanosLogo" />}</Link>
+              {/* <img src={menuLogo} alt="Kampanos" title="Kampanos" /> */}
             </Box>
             <Close onClick={toggleDrawer} />
           </Toolbar>
@@ -143,7 +144,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                               </Typography> */}
                             </Grid>
                             <Grid item xs={12}>
-                              
+
                               <Link href="https://www.facebook.com">{<img  src={FaceIcon} alt="Facebook" title="Facebook" />}</Link>
                             </Grid>
                             <Grid item xs={12}>
@@ -194,7 +195,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                             title='Home'
                             target='_self'
                             color="#878787"
-                            
+
                           />
                         </Typography>
                       </Box>
