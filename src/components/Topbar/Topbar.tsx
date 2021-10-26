@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import { DrawerMenu } from "../Drawer/DrawerMenu";
 import menuLogo from "../../assets/KampanosBrand.svg";
+import { Link } from "@mui/material";
 
 export default function Topbar() {
   const menuItems = [{     
@@ -37,7 +38,8 @@ export default function Topbar() {
     >
       <Toolbar>
         <Box sx={{ flexGrow: 1 }}>
-          <img src={menuLogo} alt="KampanosLogo" title="KampanosLogo" />
+          
+          <Link href="http://www.kampanos.pt/">{<img src={menuLogo} alt="KampanosLogo" title="KampanosLogo" />}</Link>
         </Box>
         <DrawerMenu menuItems={menuItems} />
       </Toolbar>
