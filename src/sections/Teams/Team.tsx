@@ -186,7 +186,7 @@ export const Team: FC<TeamProps> = ({
           transform: 'rotate(-20deg)',
           zIndex: -9999,
           marginTop: '-528px', 
-          height: '70vh',         
+          height: '80vh',         
           alignSelf: 'center',
           position: 'relative'
         }}

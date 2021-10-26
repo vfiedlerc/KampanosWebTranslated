@@ -178,7 +178,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                 <Grid item>
                   <Grid container direction='column'>
                     <Grid item>
-                      <Box>
+                      <Box onClick={toggleDrawer}>
                         <Typography
                           variant="h2"
                           sx={{
@@ -191,6 +191,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                             title='Home'
                             target='_self'
                             color="#878787"
+                            
                           />
                         </Typography>
                       </Box>
@@ -202,7 +203,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                         }}
                       >
                       </Box>
-                      <Box>
+                      <Box onClick={toggleDrawer}>
                         <Typography
                           variant="h2"
                           sx={{
@@ -220,7 +221,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                       </Box>
                     </Grid>
                     <Grid item>
-                      <Box>
+                      <Box onClick={toggleDrawer}>
                         <Typography
                           variant="h2"
                           sx={{
@@ -238,7 +239,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                       </Box>
                     </Grid>
                     <Grid item>
-                      <Box>
+                      <Box onClick={toggleDrawer}>
                         <Typography
                           variant="h2"
                           sx={{
@@ -256,7 +257,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                       </Box>
                     </Grid>
                     <Grid item>
-                      <Box>
+                      <Box onClick={toggleDrawer}>
                         <Typography
                           variant="h2"
                           sx={{
