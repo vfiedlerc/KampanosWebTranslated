@@ -276,6 +276,7 @@ export const Story = () => {
                                 xs={12}
                                 sm={3}
                                 md={3}
+                                display={{xs: 'none', sm: 'none', md: 'block'}}
                                 sx={{
                                     padding: 0,
                                     textAlign: 'right',
@@ -286,11 +287,14 @@ export const Story = () => {
                                 }}
                             >
                                 <ImgBox
+                               
                                     sx={{
                                         padding: 0,
                                         textAlign: 'right',
-                                        justifyContent: 'right'
+                                        justifyContent: 'right',
+                                        
                                     }}
+                                    
                                 >
                                     <img src={orangeBlueBox} alt='Orange Blue Box' title='Orange Blue Box' width='200px' />
                                 </ImgBox>
