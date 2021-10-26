@@ -249,7 +249,8 @@ export const Pillars = () => {
                                                 sx={{
                                                     color: '#0D3475',
                                                     //fontSize: '2rem',
-                                                    fontWeight: 'bold'
+                                                    fontWeight: 'bold',
+                                                    fontSize: '1.5rem'
                                                 }}
                                             >
                                                 Our pillars are
@@ -259,7 +260,7 @@ export const Pillars = () => {
                                                 sx={{
                                                     color: '#D46918',
                                                     fontWeight: 'bold',
-                                                    //fontSize: '2rem'
+                                                    fontSize: '1.5rem'
                                                 }}
                                             > strong
                                             </Typography>
@@ -269,7 +270,8 @@ export const Pillars = () => {
                                                 sx={{
                                                     color: '#0D3475',
                                                     //fontSize: '2rem',
-                                                    fontWeight: 'bold'
+                                                    fontWeight: 'bold',
+                                                    fontSize: '1.5rem'
                                                 }}
                                             > and our foundations are
                                             </Typography>
@@ -278,7 +280,8 @@ export const Pillars = () => {
                                                 sx={{
                                                     color: '#D46918',
                                                     //fontSize: '2rem',
-                                                    fontWeight: 'bold'
+                                                    fontWeight: 'bold',
+                                                    fontSize: '1.5rem'
                                                 }}
                                             > solid.
                                             </Typography>
@@ -295,7 +298,7 @@ export const Pillars = () => {
                                             }}
                                         >
                                             <Typography
-                                                variant='caption'
+                                                variant='h6'
                                                 sx={{
                                                     color: '#0D3475',
                                                     //fontSize: '1.1rem'

@@ -2,15 +2,15 @@ import React from 'react';
 import { Box, Grid, styled, Typography } from '@mui/material';
 import { FC } from 'react'
 import { MediaCard } from '../../components/Cards/MediaCard';
-import andreas from '../../assets/Andreas.jpg';
-import rafael from '../../assets/Rafael.jpg';
-import michael from '../../assets/Michael.jpg';
-import vinicius from '../../assets/Vinicius.jpg';
-import guilherme from '../../assets/Guilherme.jpg';
-import joao from '../../assets/Joao.jpg';
-import eva from '../../assets/Eva.jpg';
-import aline from '../../assets/Aline.jpg';
-import bruno from '../../assets/Bruno.jpg';
+import andreas from '../../assets/andreas.png';
+import rafael from '../../assets/rafael.png';
+import michael from '../../assets/michael.png';
+import vinicius from '../../assets/vinicius.png';
+import guilherme from '../../assets/guilherme.png';
+import joao from '../../assets/joao.png';
+import eva from '../../assets/eva.png';
+import aline from '../../assets/aline.png';
+import bruno from '../../assets/bruno.png';
 import Button from '@mui/material/Button';
 import OurTeamEffect from '../../assets/OurTeamEffect.png';
 import OurTeamEffects from '../../assets/OurTeamEffect.svg';
@@ -106,7 +106,7 @@ export const Team: FC<TeamProps> = ({
   return (
     <FontsBox>
 
-      <Grid container spacing={2} sx={{
+      <Grid container id="team" spacing={2} sx={{
         width: '100%',
         alignItems: 'center',
         backgroundImage: `URL(${OurTeamEffects})`,
@@ -135,24 +135,10 @@ export const Team: FC<TeamProps> = ({
                   <MediaCard image={andreas} title='Andreas Thomae' text='CEO & Chief of Development' />
                 </Grid>
                 <Grid item>
-                  <MediaCard image={andreas} title='Rafael Facadas' text='UX/UI & Visual Designer' />
+                  <MediaCard image={rafael} title='Rafael Facadas' text='UX/UI & Visual Designer' />
                 </Grid>
                 <Grid item>
-                  <MediaCard image={andreas} title='Michael Wiederkehr' text='Key-Account Manager' />
-                </Grid>
-              </Grid>
-            </Grid>
-
-            <Grid item >
-              <Grid container spacing={2}>
-                <Grid item>
-                  <MediaCard image={andreas} title='Vinícius Fiedler' text='  Full-Stack Developer' />
-                </Grid>
-                <Grid item>
-                  <MediaCard image={andreas} title='Guilherme Lemos' text='UX/UI & Visual Designer' />
-                </Grid>
-                <Grid item>
-                  <MediaCard image={andreas} title='João Bugarin' text='Software Developer' />
+                  <MediaCard image={michael} title='Michael Wiederkehr' text='Key-Account Manager' />
                 </Grid>
               </Grid>
             </Grid>
@@ -160,13 +146,31 @@ export const Team: FC<TeamProps> = ({
             <Grid item >
               <Grid container spacing={2}>
                 <Grid item>
-                  <MediaCard image={andreas} title='Eva Dias' text='UX/UI & Visual Designer' />
+                <MediaCard image={eva} title='Eva Dias' text='UX/UI & Visual Designer' />
                 </Grid>
                 <Grid item>
-                  <MediaCard image={andreas} title='Aline Souza' text='Software Developer' />
+                  <MediaCard image={guilherme} title='Guilherme Lemos' text='UX/UI & Visual Designer' />
                 </Grid>
                 <Grid item>
-                  <MediaCard image={andreas} title='Bruno Buss' text='Web & Front-end Developer' />
+                  
+                  <MediaCard image={aline} title='Aline Souza' text='Software Developer' />
+                </Grid>
+              </Grid>
+            </Grid>
+
+            <Grid item >
+              <Grid container spacing={2}>
+                <Grid item>
+                  
+
+                  <MediaCard image={vinicius} title='Vinícius Fiedler' text='  Full-Stack Developer' />
+                </Grid>
+                <Grid item>
+                  
+                  <MediaCard image={bruno} title='Bruno Buss' text='Web & Front-end Developer' />
+                </Grid>
+                <Grid item>
+                <MediaCard image={joao} title='João Bugarin' text='Software Developer' /> 
                 </Grid>
               </Grid>
             </Grid>
