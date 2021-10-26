@@ -46,7 +46,7 @@ const FontsBox = styled("div")(({ theme }) => ({
     }
   },
   [theme.breakpoints.between("md", "lg")]: {
-    justifyContent: 'center',
+    justifyContent: 'left',
     h1: {
       transform: "rotate(-90deg)",
       fontSize: "4rem",
@@ -58,15 +58,15 @@ const FontsBox = styled("div")(({ theme }) => ({
     }
   },
   [theme.breakpoints.up("lg")]: {
-    justifyContent: 'center',
+    justifyContent: 'left',
     h1: {
       transform: "rotate(-90deg)",
       fontSize: "5rem",
       textAlign: "left",
-      textAlignLast: "left",
+      textAlignLast: "center",
       marginLeft: "1rem",
       marginTop: "10rem",
-      marginBottom: "2rem",
+      marginBottom: "2rem"
     }
   },
 }));
@@ -122,22 +122,19 @@ export const Team: FC<TeamProps> = ({
         // backgroundPosition: 'center',
         //margin: '2rem 2rem 6rem 4rem',
         overflow: 'hidden',
-        zIndex: 900
+        zIndex: 900 
       }} >
-        <Grid item xs={12} md={4} sx={{
+        <Grid item xs={12} md={4} lg={4}sx={{
           alignSelf: 'start',
           zIndex: 900
         }}>
           <Title color="#D46918" label="OUR TEAM" />
         </Grid>
 
-        <Grid item xs={6} md={8}>
-
-          {/* <Grid container spacing={2} columns={3} rowSpacing={6} sx={{ textAlign: 'center', zIndex: 900, marginTop: '-250px' }}> */}
-          <Grid container spacing={2} columns={3} rowSpacing={6} sx={{ textAlign: 'center', justifyContent: 'center' }}>
-
-            <Grid item sx={{ textAlign: 'center', justifyContent: 'center' }}>
-              <Grid container spacing={2} sx={{ textAlign: 'center', justifyContent: 'center' }}>
+        <Grid item xs={6} md={8} lg={8}>
+          <Grid container spacing={2} columns={3} rowSpacing={6} sx={{ textAlign: 'center', }}>
+            <Grid item sx={{ textAlign: 'center', }}>
+              <Grid container spacing={2} sx={{ textAlign: 'center', }}>
                 <Grid item>
                   <MediaCard image={andreas} title='Andreas Thomae' text='CEO & Chief of Development' />
                 </Grid>
@@ -150,8 +147,8 @@ export const Team: FC<TeamProps> = ({
               </Grid>
             </Grid>
 
-            <Grid item  sx={{ textAlign: 'center', justifyContent: 'center' }}>
-              <Grid container spacing={2} sx={{ textAlign: 'center', justifyContent: 'center' }}>
+            <Grid item  sx={{ textAlign: 'center', }}>
+              <Grid container spacing={2} sx={{ textAlign: 'center', }}>
                 <Grid item>
                   <MediaCard image={eva} title='Eva Dias' text='UX/UI & Visual Designer' />
                 </Grid>
@@ -165,7 +162,7 @@ export const Team: FC<TeamProps> = ({
             </Grid>
 
             <Grid item  >
-              <Grid container spacing={2} sx={{ textAlign: 'center', justifyContent: 'center' }}>
+              <Grid container spacing={2} sx={{ textAlign: 'center', }}>
                 <Grid item>
                   <MediaCard image={vinicius} title='Vinícius Fiedler' text='  Full-Stack Developer' />
                 </Grid>
@@ -189,7 +186,7 @@ export const Team: FC<TeamProps> = ({
           transform: 'rotate(-20deg)',
           zIndex: -9999,
           marginTop: '-528px', 
-          height: '100vh',         
+          height: '80vh',         
           alignSelf: 'center',
           position: 'relative'
         }}
