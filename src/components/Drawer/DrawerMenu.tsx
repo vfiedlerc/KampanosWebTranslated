@@ -3,7 +3,7 @@ import { FC } from "react";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import Button from "@mui/material/Button";
 import { MenuItem, MenuItemProps } from "./MenuItem";
-import { AppBar, Box, Grid, styled, Toolbar, Typography, } from "@mui/material";
+import { AppBar, Box, Divider, Grid, makeStyles, styled, Toolbar, Typography, } from "@mui/material";
 import Close from "@material-ui/icons/Close";
 import MenuIcon from "@material-ui/icons/Menu";
 import menuLogo from "../../assets/KampanosBrandMenu.svg";
@@ -22,6 +22,9 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
   const toggleDrawer = () => {
     setState(!state);
   };
+
+  const iOS =
+    typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
   const MenuBox = styled('div')(({ theme }) => ({
     margin: 0,
@@ -63,7 +66,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
     // margin: 0,
     // padding: 0,
     [theme.breakpoints.down('sm')]: {
-    justifyContent: 'center'
+      justifyContent: 'center'
     },
     [theme.breakpoints.between('sm', 'md')]: {
       h2: {
@@ -92,9 +95,16 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
   return (
     <>
       <Button onClick={toggleDrawer}>
-        <MenuIcon fontSize="large" style={{ transform: 'scale(1.2)' }} />
+        <MenuIcon fontSize="large" style={{ transform: 'scale(1.4)' }} />
       </Button>
+
       <SwipeableDrawer
+        ModalProps={{
+          keepMounted: true,
+          disableEnforceFocus: true
+        }}
+        disableBackdropTransition={!iOS}
+        disableDiscovery={iOS}
         anchor={"right"}
         open={state}
         onOpen={toggleDrawer}
@@ -106,31 +116,36 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
             backgroundColor: "#4177B7",
             color: "#FFF",
             boxShadow: "none",
+            paddingTop: '2%',
+            paddingLeft: '5%',
+            paddingRight: '5%',
+            width: '100%'
           }}
         >
           <Toolbar>
-            <Box sx={{ flexGrow: 1}}>
+            <Box sx={{ flexGrow: 1 }}>
               <Link href="http://www.kampanos.pt/">
                 <img src={menuLogo} alt="KampanosLogo" title="KampanosLogo" />
               </Link>
             </Box>
-            <Close onClick={toggleDrawer} />
+            <Close onClick={toggleDrawer} style={{ transform: 'scale(1.4)', marginRight: '2rem' }} />
           </Toolbar>
         </AppBar>
 
         <MenuBox
           sx={{
             width: "100vw",
-            height: "100vh",
+            height: "100%",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "#4177B7"
+            backgroundColor: "#4177B7",
+            overflow: 'hidden'
           }}
         >
           <Grid container
             sx={{
-              width: "100vw",
-              height: "100vh",
+              width: "100%",
+              height: "100%",
               alignItems: "center",
               justifyContent: "center",
               backgroundColor: "#4177B7",
@@ -139,27 +154,36 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
           >
             {/* Redes */}
             <Grid item
-              xs={4}
-              sm={4}
+              xs={2}
+              sm={2}
               md={2}
               lg={2}
+              sx={{
+                justifyContent: 'left',
+                width: '100%',
+                paddingLeft: '5%',
+                paddingRight: '5%',
+              }}
             >
-              <Grid container sx={{ justifyContent: 'center' }}>
+              <Grid container
+                sx={{
+                  WebkitWritingMode: 'vertical-lr',
+                  transform: 'rotate(-180deg)',
+                  alignItems: 'center'
+                }}>
                 <Typography
+                variant='caption'
                   sx={{
-                    transform: 'rotate(-90deg)',
                     margin: 0,
-                    height: 'fit-content',
-                    width: 'auto'
+                    color: "#FAFAFA",
                   }}
-                  color=" #FAFAFA"
                 >
                   @kampanos 2021
                 </Typography>
               </Grid>
 
               <ItemsBox>
-                <Grid container sx={{ justifyContent: 'center' }}>
+                <Grid container sx={{ justifyContent: 'center', minHeight: 'max-content' }}>
                   <Typography
                     sx={{
                       margin: 0,
@@ -224,8 +248,8 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
             </Grid>
 
             <Grid item
-              xs={8}
-              sm={8}
+              xs={10}
+              sm={10}
               md={10}
               lg={10}>
 
@@ -236,15 +260,18 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                 md={12}
                 lg={12}
                 direction="row"
-                justifyContent="left"
-                alignItems="center"
+                sx={{
+                  alignContent: 'center',
+                  justifyContent: "left",
+                  alignItems: "center",
+                  marginLeft: '1rem'
+                }}
               >
-                <Grid item>
+                <Grid item >
                   <Grid container direction='column'>
-                    <Grid item className='link'>
-                      <Box onClick={toggleDrawer} className='link'>
+                    <Grid item>
+                      <Box onClick={toggleDrawer}>
                         <Typography
-                          className='link'
                           variant="h2"
                           sx={{
                             marginRight: 0
@@ -269,7 +296,6 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                       </Box>
                       <Box onClick={toggleDrawer}>
                         <Typography
-                          className='link'
                           variant="h2"
                           sx={{
                             marginRight: 0
@@ -280,7 +306,6 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                             href='#about'
                             title='About us'
                             target='_self'
-                            // hover='#fff'
                             color="#6AA2DB"
                           />
                         </Typography>
@@ -299,7 +324,6 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                             href='#service'
                             title='Our services'
                             target='_self'
-                            // hover='#fff'
                             color="#6AA2DB"
                           />
                         </Typography>
@@ -319,7 +343,6 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                             title='Our story'
                             target='_self'
                             color="#6AA2DB"
-                          // hover='#fff'
                           />
                         </Typography>
                       </Box>
@@ -337,7 +360,6 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                             href='#team'
                             title='Our team'
                             target='_self'
-                            // hover='#fff'
                             color="#6AA2DB"
                           />
                         </Typography>
@@ -349,33 +371,44 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
 
               {/* Let's work together */}
               <Grid container
-                xs={12}
-                sm={12}
-                md={12}
-                lg={12}
-                direction="row"
+                // direction="row"
                 sx={{
-                  height: '250px',
+                  bottom: 0,
+                  // minHeight: '150px',
                   alignContent: 'end',
                   justifyContent: "right",
                   alignItems: "bottom",
                   paddingRight: '1rem'
                 }}
               >
-                <Grid item>
-                  <Grid container>
-                    <Grid container direction="row"
-                      justifyContent="flex-end"
-                      alignItems="flex-end" spacing={3}>
-                      <Grid item>
-                        <Typography variant="h3" color="#FAFAFA">Let’s work together!</Typography>
-                      </Grid>
-                      <Grid item display={{ xs: 'none', sm: 'block' }}>
-                        <img src={rectangleMenu} alt="Facebook" title="Facebook" />
-                      </Grid>
-                      <Grid item>
-                        <img src={workMenuButton} alt="Facebook" title="Facebook" />
-                      </Grid>
+                <Grid item
+                  xs={12}
+                  sm={12}
+                  md={12}
+                  lg={12}
+                >
+                  <Grid container
+                    // direction="row"
+                    justifyContent="flex-end"
+                    alignItems="flex-end"
+                    spacing={3}
+                  >
+                    <Grid item>
+                      <Typography variant="h3" color="#FAFAFA">Let’s work together!</Typography>
+                    </Grid>
+                    <Grid item display={{ xs: 'none', sm: 'none', md: 'block' }}>
+                      <img src={rectangleMenu} alt="Facebook" title="Facebook" />
+                      {/* <Divider variant='middle' flexItem sx={{ color: '#fff', border: '4px solid #fff', height: '80px' }} /> */}
+                    </Grid>
+                    <Grid item>
+                      {/* <Button
+                          href="#"
+                          variant="contained"
+                          sx={{ color: '#fff', backgroundColor: '#0D3475', padding: '1.25rem 1.5rem', fontWeight: 'bold', fontSize: '1.6rem' }}
+                        >
+                          Work with us
+                        </Button> */}
+                      <img src={workMenuButton} alt="Facebook" title="Facebook" />
                     </Grid>
                   </Grid>
                 </Grid>
@@ -391,3 +424,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
 export type DrawerMenuProps = {
   menuItems: MenuItemProps[];
 };
+function useStyles() {
+  throw new Error("Function not implemented.");
+}
+

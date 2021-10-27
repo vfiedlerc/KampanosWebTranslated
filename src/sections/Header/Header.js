@@ -53,6 +53,7 @@ const HeaderBox = styled('div')(({ theme }) => ({
   margin: 0,
   padding: 0,
   display: 'flex',
+  
   [theme.breakpoints.down('sm')]: {
     minHeight: '80vh'
   },
