@@ -1,10 +1,36 @@
 import React from 'react';
 
-import { Box, Grid, Link, Typography, Icon } from '@mui/material';
+import { Box, Grid, Link, Typography, Icon,  styled} from '@mui/material';
 
 import { ReactComponent as FacebookIcon } from '../../assets/FacebookIcon.svg';
 import { ReactComponent as LinkedinIcon } from '../../assets/LinkedinIcon.svg';
 import { ReactComponent as InstagramIcon } from '../../assets/InstagramIcon.svg';
+
+
+
+const Terms = styled('div')(({ theme }) => ({
+  padding: 0,
+  marginTop: '2rem',
+  [theme.breakpoints.down('sm')]: {
+   justifyContent: "center",
+   paddingRight: 0
+  },
+  [theme.breakpoints.between('sm', 'md')]: {
+    justifyContent: "center",
+   paddingRight: 0
+  },
+  [theme.breakpoints.between('md', 'lg')]: {
+    justifyContent: "flex-end",
+   paddingRight: '3rem',
+  },
+  [theme.breakpoints.up('lg')]: {
+    justifyContent: "flex-end",
+   paddingRight: '3rem',
+  },
+}));
+
+
+
 
 
 const Footer = () => {
@@ -42,25 +68,47 @@ const Footer = () => {
         </Grid>
 
 
-        <Grid item >
+        <Grid item  
+       
+        >
           <Grid container
             spacing={4} sx={{
               justifyContent: 'center',
               textAlign: 'center'
             }}>
-            <Grid item >
+            <Grid item 
+             xs={12}
+             sm={12}
+             md={1}
+             lg={1}>
               <Link  href="#header" underline="hover" color="#FAFAFA" >Home</Link>
             </Grid>
-            <Grid item>
+            <Grid item
+            xs={12}
+            sm={12}
+            md={1}
+            lg={1}>
               <Link href="#about" underline="hover" color="#FAFAFA" >About us</Link>
             </Grid>
-            <Grid item>
+            <Grid item
+            xs={12}
+            sm={12}
+            md={1}
+            lg={1}>
               <Link  href="#service" underline="hover" color="#FAFAFA" >Our service</Link>
             </Grid>
-            <Grid item>
+            <Grid item
+            xs={12}
+            sm={12}
+            md={1}
+            lg={1}>
               <Link  href="#story" underline="hover" color="#FAFAFA" >Our story</Link>
             </Grid>
-            <Grid item >
+            <Grid item
+            xs={12}
+            sm={12}
+            md={1}
+            lg={1} >
               <Link   href="#team" underline="hover" color="#FAFAFA"  >Our team</Link>
             </Grid>
             <Grid item >
@@ -89,20 +137,31 @@ const Footer = () => {
             color="#D9DBE1"
           > 2021 © Kampanos All rights reserved.️ </Typography>
         </Grid>
-        <Grid item >
-          <Grid container sx={{ paddingRight: '3rem' }} spacing={2} justifyContent="right">
-            <Grid item >
+
+        <Terms> 
+        <Grid item  > 
+          <Grid container  sx={{justifyContent: "flex-end"}} spacing={2} >
+            <Grid item xs={12}
+            sm={12}
+            md={1}
+            lg={1} >
               <Link underline="hover" color="#FCEDD0" href="#">Terms of use</Link>
             </Grid>
-            <Grid item>
+            <Grid item xs={12}
+            sm={12}
+            md={1}
+            lg={1}>
               <Link underline="hover" color="#FCEDD0" href="#">Privacy Policy</Link>
             </Grid>
-            <Grid item>
+            <Grid item xs={12}
+            sm={12}
+            md={1}
+            lg={1}>
               <Link underline="hover" color="#FCEDD0" href="#">Cookie Policy</Link>
             </Grid>
           </Grid>
         </Grid>
-
+        </Terms>
 
 
       </Grid>
