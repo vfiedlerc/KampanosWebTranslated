@@ -26,7 +26,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
   const iOS =
     typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-  const MenuBox = styled('div')(({ theme }) => ({
+ const MenuBox = styled('div')(({ theme }) => ({
     margin: 0,
     padding: 0,
     [theme.breakpoints.down('sm')]: {
@@ -35,76 +35,57 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
         textAlign: 'left',
         paddingBottom: '1.2rem'
       },
-      h3: {
-        fontSize: '1.3rem',
-        justifyContent: 'center',
-        marginTop: '2rem'
-      }
+      h3: { fontSize: '1.2rem', textAlign: 'center', }
     },
     [theme.breakpoints.between('sm', 'md')]: {
       h2: {
         fontSize: '2.5rem',
         textAlign: 'left',
         paddingBottom: '1.2rem'
-      },
-      h3: {
-        fontSize: '1.5rem',
-        justifyContent: 'center',
-        marginTop: '2rem'
       }
     },
     [theme.breakpoints.between('md', 'lg')]: {
       h2: {
         fontSize: '2.8rem',
         paddingBottom: '1.2rem'
-      },
-      h3: {
-        fontSize: '1.8rem',
-        justifyContent: 'left',
-        marginTop: '2rem'
       }
     },
     [theme.breakpoints.up('lg')]: {
       h2: {
         fontSize: '3.5rem',
         paddingBottom: '1.2rem'
-      },
-      h3: {
-        fontSize: '2rem',
-        justifyContent: 'left',
-        marginTop: '2rem'
       }
     },
-  }));
+ }));
 
   const ItemsBox = styled('div')(({ theme }) => ({
     marginTop: '10rem',
-    // margin: 0,
-    // padding: 0,
+  }));
+
+  const BottomBox = styled('div')(({ theme }) => ({
+    margin: '2rem auto 0',
+    padding: 0,
+    display: 'flex',
+    flexDirection: 'row',  
+    width: '100%',  
+    //height: 'fit-content',
+    //justifyContent: 'space-around',
     [theme.breakpoints.down('sm')]: {
-      justifyContent: 'center'
+      justifyContent: 'center',
+      
     },
     [theme.breakpoints.between('sm', 'md')]: {
-      h2: {
-        fontSize: '2rem',
-        textAlign: 'left',
-        paddingBottom: '1.2rem'
-      },
-      h3: { fontSize: '1.2rem' }
-    },
-    [theme.breakpoints.between('md', 'lg')]: {
-      h2: {
-        fontSize: '2.8rem',
-        paddingBottom: '1.2rem'
-      },
+      justifyContent: 'center',
       h3: { fontSize: '1.45rem' }
     },
+    [theme.breakpoints.between('md', 'lg')]: {
+      justifyContent: 'end',
+      alignContent: 'flex-end',
+      h3: { fontSize: '2rem' }
+    },
     [theme.breakpoints.up('lg')]: {
-      h2: {
-        fontSize: '3.5rem',
-        paddingBottom: '1.2rem'
-      },
-      h3: { fontSize: '3.5rem' }
+      justifyContent: 'end',
+      h3: { fontSize: '2.5rem' }
     },
   }));
 
@@ -387,48 +368,71 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
               </Grid>
 
               {/* Let's work together */}
-              <Grid container
-                sx={{
-                  bottom: 0,
-                  alignContent: 'end',
-                  justifyContent: "right",
-                  alignItems: "bottom",
-                  paddingRight: '1rem'
-                }}
-              >
-                <Grid item
-                  xs={12}
-                  sm={12}
-                  md={12}
-                  lg={12}
+              
+                <Grid container
+                  sx={{
+                    bottom: 0,
+                    // alignContent: 'end',
+                    // justifyContent: "right",
+                    // alignItems: "bottom",
+                    paddingRight: '1rem'
+                  }}
                 >
-                  <Grid container
-                    // direction="row"
-                    justifyContent="flex-end"
-                    alignItems="flex-end"
-                    spacing={3}
+                  <BottomBox
+              style={{width:'100%'}}>
+                  <Grid item
+                    xs={12}
+                    sm={12}
+                    md={12}
+                    lg={12}
                   >
-                    <Grid item>
-                      <Typography variant="h3" color="#FAFAFA">Let’s work together!</Typography>
-                    </Grid>
-                    <Grid item display={{ xs: 'none', sm: 'block', md: 'block' }}>
-                      {/* <img src={rectangleMenu} alt="Facebook" title="Facebook" /> */}
-                      <Divider variant='middle' flexItem sx={{ color: '#fff', backgroundColor: '#fff', border: '2px solid #fff', height: '3rem' }} />
-                    </Grid>
-                    <Grid item>
-                      <Button
-                        href="https://www.kampanos.pt"
-                        target='_blank'
-                        variant="contained"
-                        sx={{ color: '#fff', backgroundColor: '#0D3475', fontWeight: 'bold', fontSize: '1.2rem' }}
+                    <Grid container
+                      alignItems="flex-end"
+                      spacing={3}
+                    >
+                      <Grid item>
+                        <Typography
+                        variant="h3"
+                        color="#FAFAFA">
+                          Let’s work together!
+                          </Typography>
+                      </Grid>
+                      <Grid item
+                      display={{ xs: 'none', sm: 'block', md: 'block' }}
                       >
-                        Work with us
-                      </Button>
-                      {/* <img src={workMenuButton} alt="Facebook" title="Facebook" /> */}
+                        <Divider
+                        variant='middle'
+                        flexItem
+                        sx={{
+                          color: '#fff',
+                          backgroundColor: '#fff',
+                          border: '2px solid #fff',
+                          height: '4rem'
+                          }}
+                          />
+                      </Grid>
+                      <Grid item>
+                        <Button
+                          href="https://www.kampanos.pt"
+                          target='_blank'
+                          variant="contained"
+                          sx={{
+                            color: '#fff',
+                            backgroundColor:
+                            '#0D3475',
+                            padding: '.7rem 2rem',
+                            fontWeight: 'bold',
+                            fontSize: '1.2rem'
+                          }}
+                        >
+                          Work with us
+                        </Button>
+                      </Grid>
                     </Grid>
                   </Grid>
+                  </BottomBox>
                 </Grid>
-              </Grid>
+             
             </Grid>
 
           </Grid>
