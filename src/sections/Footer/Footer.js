@@ -1,12 +1,8 @@
 import React from 'react';
-
 import { Box, Grid, Link, Typography, Icon,  styled} from '@mui/material';
-
 import { ReactComponent as FacebookIcon } from '../../assets/FacebookIcon.svg';
 import { ReactComponent as LinkedinIcon } from '../../assets/LinkedinIcon.svg';
 import { ReactComponent as InstagramIcon } from '../../assets/InstagramIcon.svg';
-
-
 
 const Terms = styled('div')(({ theme }) => ({
   padding: 0,
@@ -29,10 +25,6 @@ const Terms = styled('div')(({ theme }) => ({
   },
 }));
 
-
-
-
-
 const Footer = () => {
   return (
     <Box sx= {{marginY: '6rem'}}>
@@ -43,33 +35,24 @@ const Footer = () => {
         lg={12}
         direction='column'
         rowSpacing={3}
-
         sx={{
           display: 'flex',
           justifyContent: 'center',
           flexGrow: 1,
           backgroundColor: '#4177B7',
           width: '100%',
-          paddingBottom: '2.5rem',
-          paddingTop: '5rem',
-          textAlign: 'center',
-          
+          paddingBottom: '0.5rem',
+          paddingTop: '2rem',
+          textAlign: 'center',          
         }}
-
-
       >
-
-
         <Grid item>
           {/* //1 */}
           <Typography
             color="white" variant="h4"
           >kampanos.</Typography>
         </Grid>
-
-
-        <Grid item  
-       
+        <Grid item        
         >
           <Grid container
             spacing={4} sx={{
@@ -137,7 +120,6 @@ const Footer = () => {
             color="#D9DBE1"
           > 2021 © Kampanos All rights reserved.️ </Typography>
         </Grid>
-
         <Terms> 
         <Grid item  > 
           <Grid container  sx={{justifyContent: "flex-end"}} spacing={2} >
@@ -162,8 +144,6 @@ const Footer = () => {
           </Grid>
         </Grid>
         </Terms>
-
-
       </Grid>
     </Box>
   )
