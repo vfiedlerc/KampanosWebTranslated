@@ -3,7 +3,7 @@ import { FC } from "react";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import Button from "@mui/material/Button";
 import { MenuItem, MenuItemProps } from "./MenuItem";
-import { AppBar, Box, Divider, Grid, makeStyles, styled, Toolbar, Typography, } from "@mui/material";
+import { AppBar, Box, Divider, Grid, makeStyles, styled, Toolbar, Typography } from "@mui/material";
 import Close from "@material-ui/icons/Close";
 import MenuIcon from "@material-ui/icons/Menu";
 import menuLogo from "../../assets/KampanosBrandMenu.svg";
@@ -13,6 +13,8 @@ import InstaIcon from "../../assets/InstaIcon.svg";
 import workMenuButton from "../../assets/workMenuButton.svg";
 import rectangleMenu from "../../assets/rectangleMenu.svg";
 import { Link } from "@mui/material";
+
+
 
 export const DrawerMenu: FC<DrawerMenuProps> = ({
   menuItems,
@@ -125,10 +127,16 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
           }}
         >
           <Toolbar>
-            <Box sx={{ flexGrow: 1 }}>
-              <Link href="http://www.kampanos.pt/">
+            <Box sx={{ flexGrow: 1, }}>
+
+              <Button href="https://www.kampanos.pt/">
+              <img src={menuLogo} alt="KampanosLogo" title="KampanosLogo" />
+              </Button>
+
+               {/* <Link href="http://www.kampanos.pt/">
                 <img src={menuLogo} alt="KampanosLogo" title="KampanosLogo" />
-              </Link>
+              </Link>  */}
+              
             </Box>
             <Close onClick={toggleDrawer} style={{ transform: 'scale(1.4)', marginRight: '2rem' }} />
           </Toolbar>
