@@ -26,7 +26,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
   const iOS =
     typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
- const MenuBox = styled('div')(({ theme }) => ({
+  const MenuBox = styled('div')(({ theme }) => ({
     margin: 0,
     padding: 0,
     [theme.breakpoints.down('sm')]: {
@@ -35,57 +35,62 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
         textAlign: 'left',
         paddingBottom: '1.2rem'
       },
-      h3: { fontSize: '1.2rem', textAlign: 'center', }
+      h3: { fontSize: '1.45rem', paddingBottom: '1.2rem' }
     },
     [theme.breakpoints.between('sm', 'md')]: {
       h2: {
         fontSize: '2.5rem',
         textAlign: 'left',
         paddingBottom: '1.2rem'
-      }
+      },
+      h3: { fontSize: '1.45rem' }
     },
     [theme.breakpoints.between('md', 'lg')]: {
       h2: {
         fontSize: '2.8rem',
         paddingBottom: '1.2rem'
-      }
+      },
+      h3: { fontSize: '2rem' }
     },
     [theme.breakpoints.up('lg')]: {
       h2: {
         fontSize: '3.5rem',
         paddingBottom: '1.2rem'
-      }
+      },
+      h3: { fontSize: '2.5rem' }
     },
- }));
+  }));
 
   const ItemsBox = styled('div')(({ theme }) => ({
     marginTop: '10rem',
   }));
 
   const BottomBox = styled('div')(({ theme }) => ({
-    margin: '2rem auto 0',
+    margin: '3rem auto 0',
     padding: 0,
     display: 'flex',
-    flexDirection: 'row',  
-    width: '100%',  
-    //height: 'fit-content',
-    //justifyContent: 'space-around',
+    
+    width: '100%',
     [theme.breakpoints.down('sm')]: {
       justifyContent: 'center',
-      
+      alignContent: 'center',
+      flexDirection:'column',
+      textAlign: 'center'
     },
     [theme.breakpoints.between('sm', 'md')]: {
-      justifyContent: 'center',
-      h3: { fontSize: '1.45rem' }
+      justifyContent: 'end',
+      alignContent: 'flex-end',  
+      flexDirection:'row'   
     },
     [theme.breakpoints.between('md', 'lg')]: {
       justifyContent: 'end',
       alignContent: 'flex-end',
-      h3: { fontSize: '2rem' }
+      flexDirection: 'row'
     },
     [theme.breakpoints.up('lg')]: {
       justifyContent: 'end',
-      h3: { fontSize: '2.5rem' }
+      alignContent: 'flex-end',
+      flexDirection: 'row'
     },
   }));
 
@@ -174,6 +179,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                   sx={{
                     margin: 0,
                     color: "#FAFAFA",
+                    fontSize: '1rem'
                   }}
                 >
                   @kampanos 2021
@@ -368,48 +374,45 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
               </Grid>
 
               {/* Let's work together */}
-              
-                <Grid container
-                  sx={{
-                    bottom: 0,
-                    // alignContent: 'end',
-                    // justifyContent: "right",
-                    // alignItems: "bottom",
-                    paddingRight: '1rem'
-                  }}
+
+              <Grid container
+                sx={{
+                  bottom: 0,
+                  paddingRight: '1rem'
+                }}
+              >
+
+                <Grid item
+                  xs={12}
+                  sm={12}
+                  md={12}
+                  lg={12}
                 >
-                  <BottomBox
-              style={{width:'100%'}}>
-                  <Grid item
-                    xs={12}
-                    sm={12}
-                    md={12}
-                    lg={12}
-                  >
-                    <Grid container
-                      alignItems="flex-end"
-                      spacing={3}
-                    >
-                      <Grid item>
+                 
+                    <Grid container>
+                    <BottomBox>
+                      <Grid item
+                      sx={{alignSelf: 'center'}}
+                      >
                         <Typography
-                        variant="h3"
-                        color="#FAFAFA">
+                          variant="h3"
+                          color="#FAFAFA">
                           Let’s work together!
-                          </Typography>
+                        </Typography>
                       </Grid>
                       <Grid item
-                      display={{ xs: 'none', sm: 'block', md: 'block' }}
+                        display={{ xs: 'none', sm: 'block', md: 'block' }}
                       >
                         <Divider
-                        variant='middle'
-                        flexItem
-                        sx={{
-                          color: '#fff',
-                          backgroundColor: '#fff',
-                          border: '2px solid #fff',
-                          height: '4rem'
+                          variant='middle'
+                          flexItem
+                          sx={{
+                            color: '#fff',
+                            backgroundColor: '#fff',
+                            border: '2px solid #fff',
+                            height: '4rem'
                           }}
-                          />
+                        />
                       </Grid>
                       <Grid item>
                         <Button
@@ -419,7 +422,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                           sx={{
                             color: '#fff',
                             backgroundColor:
-                            '#0D3475',
+                              '#0D3475',
                             padding: '.7rem 2rem',
                             fontWeight: 'bold',
                             fontSize: '1.2rem'
@@ -428,11 +431,13 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                           Work with us
                         </Button>
                       </Grid>
+                      </BottomBox>
                     </Grid>
-                  </Grid>
-                  </BottomBox>
+                  
                 </Grid>
-             
+
+              </Grid>
+
             </Grid>
 
           </Grid>
