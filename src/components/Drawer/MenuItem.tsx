@@ -25,7 +25,6 @@ export const MenuItem: FC<MenuItemProps> = ({
   return (
     <StyleLink>
       <Link
-        className='link'
         href={href}
         title={label}
         target={target}
@@ -38,7 +37,7 @@ export const MenuItem: FC<MenuItemProps> = ({
 };
 
 export type MenuItemProps = {
-  label: string;
+  label: string | '';
   target: string;
   href: string;
   title: string;

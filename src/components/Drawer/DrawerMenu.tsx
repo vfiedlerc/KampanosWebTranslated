@@ -31,33 +31,49 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
     padding: 0,
     [theme.breakpoints.down('sm')]: {
       h2: {
-        fontSize: '1.5rem',
-        textAlign: 'left',
-        paddingBottom: '1.2rem'
-      },
-      h3: { fontSize: '1rem' }
-    },
-    [theme.breakpoints.between('sm', 'md')]: {
-      h2: {
         fontSize: '2rem',
         textAlign: 'left',
         paddingBottom: '1.2rem'
       },
-      h3: { fontSize: '1.2rem' }
+      h3: {
+        fontSize: '1.3rem',
+        justifyContent: 'center',
+        marginTop: '2rem'
+      }
+    },
+    [theme.breakpoints.between('sm', 'md')]: {
+      h2: {
+        fontSize: '2.5rem',
+        textAlign: 'left',
+        paddingBottom: '1.2rem'
+      },
+      h3: {
+        fontSize: '1.5rem',
+        justifyContent: 'center',
+        marginTop: '2rem'
+      }
     },
     [theme.breakpoints.between('md', 'lg')]: {
       h2: {
         fontSize: '2.8rem',
         paddingBottom: '1.2rem'
       },
-      h3: { fontSize: '1.45rem' }
+      h3: {
+        fontSize: '1.8rem',
+        justifyContent: 'left',
+        marginTop: '2rem'
+      }
     },
     [theme.breakpoints.up('lg')]: {
       h2: {
         fontSize: '3.5rem',
         paddingBottom: '1.2rem'
       },
-      h3: { fontSize: '3.5rem' }
+      h3: {
+        fontSize: '2rem',
+        justifyContent: 'left',
+        marginTop: '2rem'
+      }
     },
   }));
 
@@ -158,6 +174,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
               sm={2}
               md={2}
               lg={2}
+              display={{ xs: 'none', sm: 'none', md: 'block' }}
               sx={{
                 justifyContent: 'left',
                 width: '100%',
@@ -172,7 +189,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                   alignItems: 'center'
                 }}>
                 <Typography
-                variant='caption'
+                  variant='caption'
                   sx={{
                     margin: 0,
                     color: "#FAFAFA",
@@ -264,7 +281,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                   alignContent: 'center',
                   justifyContent: "left",
                   alignItems: "center",
-                  marginLeft: '1rem'
+                  //marginLeft: '1rem'
                 }}
               >
                 <Grid item >
@@ -371,10 +388,8 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
 
               {/* Let's work together */}
               <Grid container
-                // direction="row"
                 sx={{
                   bottom: 0,
-                  // minHeight: '150px',
                   alignContent: 'end',
                   justifyContent: "right",
                   alignItems: "bottom",
@@ -396,19 +411,20 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                     <Grid item>
                       <Typography variant="h3" color="#FAFAFA">Let’s work together!</Typography>
                     </Grid>
-                    <Grid item display={{ xs: 'none', sm: 'none', md: 'block' }}>
-                      <img src={rectangleMenu} alt="Facebook" title="Facebook" />
-                      {/* <Divider variant='middle' flexItem sx={{ color: '#fff', border: '4px solid #fff', height: '80px' }} /> */}
+                    <Grid item display={{ xs: 'none', sm: 'block', md: 'block' }}>
+                      {/* <img src={rectangleMenu} alt="Facebook" title="Facebook" /> */}
+                      <Divider variant='middle' flexItem sx={{ color: '#fff', backgroundColor: '#fff', border: '2px solid #fff', height: '3rem' }} />
                     </Grid>
                     <Grid item>
-                      {/* <Button
-                          href="#"
-                          variant="contained"
-                          sx={{ color: '#fff', backgroundColor: '#0D3475', padding: '1.25rem 1.5rem', fontWeight: 'bold', fontSize: '1.6rem' }}
-                        >
-                          Work with us
-                        </Button> */}
-                      <img src={workMenuButton} alt="Facebook" title="Facebook" />
+                      <Button
+                        href="https://www.kampanos.pt"
+                        target='_blank'
+                        variant="contained"
+                        sx={{ color: '#fff', backgroundColor: '#0D3475', fontWeight: 'bold', fontSize: '1.2rem' }}
+                      >
+                        Work with us
+                      </Button>
+                      {/* <img src={workMenuButton} alt="Facebook" title="Facebook" /> */}
                     </Grid>
                   </Grid>
                 </Grid>
