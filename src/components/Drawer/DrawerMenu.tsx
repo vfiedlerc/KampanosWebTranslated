@@ -3,7 +3,7 @@ import { FC } from "react";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import Button from "@mui/material/Button";
 import { MenuItem, MenuItemProps } from "./MenuItem";
-import { AppBar, Box, Divider, Grid, makeStyles, styled, Toolbar, Typography, } from "@mui/material";
+import { AppBar, Box, Divider, Grid, styled, Toolbar, Typography, } from "@mui/material";
 import Close from "@material-ui/icons/Close";
 import MenuIcon from "@material-ui/icons/Menu";
 import menuLogo from "../../assets/KampanosBrandMenu.svg";
@@ -69,18 +69,18 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
     margin: '3rem auto 0',
     padding: 0,
     display: 'flex',
-    
+
     width: '100%',
     [theme.breakpoints.down('sm')]: {
       justifyContent: 'center',
       alignContent: 'center',
-      flexDirection:'column',
+      flexDirection: 'column',
       textAlign: 'center'
     },
     [theme.breakpoints.between('sm', 'md')]: {
       justifyContent: 'end',
-      alignContent: 'flex-end',  
-      flexDirection:'row'   
+      alignContent: 'flex-end',
+      flexDirection: 'row'
     },
     [theme.breakpoints.between('md', 'lg')]: {
       justifyContent: 'end',
@@ -120,15 +120,14 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
             boxShadow: "none",
             paddingTop: '2%',
             paddingLeft: '5%',
-            paddingRight: '5%',
-            width: '100%'
+            paddingRight: '5%'
           }}
         >
-          <Toolbar>
+          <Toolbar >
             <Box sx={{ flexGrow: 1 }}>
-              <Link href="http://www.kampanos.pt/">
+              <Button href="http://www.kampanos.pt/">
                 <img src={menuLogo} alt="KampanosLogo" title="KampanosLogo" />
-              </Link>
+              </Button>
             </Box>
             <Close onClick={toggleDrawer} style={{ transform: 'scale(1.4)', marginRight: '2rem' }} />
           </Toolbar>
@@ -257,6 +256,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
               md={10}
               lg={10}>
 
+              {/* Menu */}
               <Grid container
                 spacing={2}
                 xs={12}
@@ -374,7 +374,6 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
               </Grid>
 
               {/* Let's work together */}
-
               <Grid container
                 sx={{
                   bottom: 0,
@@ -388,11 +387,11 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                   md={12}
                   lg={12}
                 >
-                 
-                    <Grid container>
+
+                  <Grid container>
                     <BottomBox>
                       <Grid item
-                      sx={{alignSelf: 'center'}}
+                        sx={{ alignSelf: 'center' }}
                       >
                         <Typography
                           variant="h3"
@@ -431,9 +430,9 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                           Work with us
                         </Button>
                       </Grid>
-                      </BottomBox>
-                    </Grid>
-                  
+                    </BottomBox>
+                  </Grid>
+
                 </Grid>
 
               </Grid>
