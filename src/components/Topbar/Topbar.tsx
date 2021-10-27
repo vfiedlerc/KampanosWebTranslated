@@ -32,16 +32,17 @@ export default function Topbar() {
         backgroundColor: "#fff",
         color: "#0D3475",
         boxShadow: "none",
+        paddingTop: '2%',
         paddingLeft: '5%',
         paddingRight: '5%',
+        width: '100%'
       }}
     >
-      <Toolbar>
-        <Box sx={{ flexGrow: 1 }}>
-          
+      <Toolbar sx={{ width: '100%'}}>
+        <Box sx={{ flexGrow: 1 }}>          
           <Link href="http://www.kampanos.pt/">{<img src={menuLogo} alt="KampanosLogo" title="KampanosLogo" />}</Link>
         </Box>
-        <DrawerMenu menuItems={menuItems} />
+        <DrawerMenu menuItems={menuItems}/>
       </Toolbar>
     </AppBar>
   );
