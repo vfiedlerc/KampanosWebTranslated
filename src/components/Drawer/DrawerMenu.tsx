@@ -14,6 +14,8 @@ import workMenuButton from "../../assets/workMenuButton.svg";
 import rectangleMenu from "../../assets/rectangleMenu.svg";
 import { Link } from "@mui/material";
 
+
+
 export const DrawerMenu: FC<DrawerMenuProps> = ({
   menuItems,
 }: DrawerMenuProps) => {
@@ -249,13 +251,11 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                 </Grid>
               </ItemsBox>
             </Grid>
-
             <Grid item
               xs={10}
               sm={10}
               md={10}
               lg={10}>
-
               {/* Menu */}
               <Grid container
                 spacing={2}
@@ -380,14 +380,12 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                   paddingRight: '1rem'
                 }}
               >
-
                 <Grid item
                   xs={12}
                   sm={12}
                   md={12}
                   lg={12}
                 >
-
                   <Grid container>
                     <BottomBox>
                       <Grid item
@@ -432,13 +430,9 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                       </Grid>
                     </BottomBox>
                   </Grid>
-
                 </Grid>
-
               </Grid>
-
             </Grid>
-
           </Grid>
         </MenuBox>
       </SwipeableDrawer>
