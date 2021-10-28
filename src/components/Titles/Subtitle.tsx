@@ -13,13 +13,13 @@ export const Subtitle: FC<SubtitleProps> = ({
   label,
   color,
   stroke,
-  direction
+  direction,
 }: SubtitleProps) => {
   return (
     <SubtitleBox>
       <Marquee
         direction={direction}
-        speed={40}
+        speed={20}
         gradient={false}
         delay= {0}
       >
@@ -31,7 +31,7 @@ export const Subtitle: FC<SubtitleProps> = ({
             WebkitTextStrokeWidth: `${stroke}`,
             WebkitTextStrokeColor: `${color}`,
             fontWeight: 'bold',
-            paddingRight: '5px'
+            paddingRight: '5px',
           }}
         > {label}
         </Typography>

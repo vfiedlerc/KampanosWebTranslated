@@ -6,7 +6,7 @@ import about1 from "../../assets/About1.svg";
 import about2 from "../../assets/About2.svg";
 import about3 from "../../assets/About3.svg";
 import about4 from "../../assets/About4.svg";
-import TimeToFly from "../../assets/TimeToFly.svg";
+import TimeToFly from "../../assets/TimeToFly.png";
 
 const FontsBox = styled("div")(({ theme }) => ({
   margin: 0,
@@ -96,14 +96,15 @@ const FontsBox = styled("div")(({ theme }) => ({
 
 export const About: FC<AboutProps> = ({ props }: AboutProps) => {
   return (
-    <FontsBox sx={{ margin: '4rem 1rem' }}>
-      <Grid container id="about"
+    <FontsBox sx={{ margin: "4rem 1rem" }}>
+      <Grid
+        container
+        id="about"
         sx={{
           backgroundColor: "#FFF",
-          mt: 30
+          mt: 20,
         }}
       >
-
         <Grid
           container
           spacing={2}
@@ -114,7 +115,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
             display: "flex",
             justifyContent: "center",
             flexGrow: 1,
-            
+
             width: "100%",
           }}
         >
@@ -133,8 +134,9 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
             <Title color="#D46918" label="ABOUT US" />
           </Grid> */}
 
-          <Grid item
-            direction='column'
+          <Grid
+            item
+            direction="column"
             xs={12}
             sm={12}
             md={3}
@@ -142,12 +144,13 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
               padding: 0,
               flexGrow: 0,
               margin: 0,
-              width: '100%',
-              backgroundColor: '#fff',
-              alignSelf: 'start'
+              width: "100%",
+              backgroundColor: "#fff",
+              alignSelf: "start",
             }}
           >
-            <Title color='#D46918' label='ABOUT US' />
+            {/* @ts-ignore */}
+            <Title color="#D46918" toFill="#000000" label="ABOUT US" />
           </Grid>
 
           <Grid item xs={12} sm={12} md={9}>
@@ -172,7 +175,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                   sx={{
                     color: "#0D3475",
                     wordBreak: "break-word",
-                    fontWeight: 'bold',
+                    fontWeight: "bold",
                   }}
                 >
                   Kampanos is a fully remote IT and tech solutions company...
@@ -183,7 +186,6 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                       wordBreak: "break-word",
                       fontSize: "3.75rem",
                       letterSpacing: 0,
-
                     }}
                   >
                     {" "}
@@ -284,13 +286,13 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                 <Grid
                   container
                   sx={{
-                    textAlign: "right",
+                    textAlign: "left",
                     alignItems: "top",
                   }}
                 >
                   <Box
                     sx={{
-                      alignItems: "right",
+                      alignItems: "left",
                     }}
                   >
                     <Typography
@@ -298,7 +300,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                       sx={{
                         color: "#0D3475",
                         wordBreak: "break-word",
-                        fontWeight: 'bold',
+                        fontWeight: "bold",
                       }}
                     >
                       Success comes from passion and motivation...
@@ -312,8 +314,11 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                         }}
                       >
                         {" "}
-                        the love for being part of something that makes a difference in the world, that drives people, companies and projects
-                        Grabbing our digital construction tools from home allows us to build amazing things in this incredible and ever-growing digital world.
+                        the love for being part of something that makes a
+                        difference in the world, that drives people, companies
+                        and projects Grabbing our digital construction tools
+                        from home allows us to build amazing things in this
+                        incredible and ever-growing digital world.
                       </Typography>
                     </Typography>
                   </Box>
@@ -330,8 +335,6 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
           backgroundColor: "#FFF",
         }}
       >
-
-
         <Grid
           container
           spacing={2}
@@ -359,8 +362,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
               margin: 0,
               backgroundColor: "#FFFFFF",
             }}
-          >
-          </Grid>
+          ></Grid>
 
           <Grid item xs={12} sm={12} md={9}>
             <Grid
@@ -384,7 +386,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                   sx={{
                     color: "#0D3475",
                     wordBreak: "break-word",
-                    fontWeight: 'bold',
+                    fontWeight: "bold",
                   }}
                 >
                   We celebrate loyalty and achievements.
@@ -398,12 +400,11 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                     }}
                   >
                     {" "}
-                    We want to help you achieve your goals and your dreams.
-                    We want to help you achieve your goals and your dreams.
-                    We want to help you achieve your goals and your dreams.
-                    We want to help you achieve your goals and your dreams.
-                    We want to help you achieve your goals and your dreams.
-
+                    We want to help you achieve your goals and your dreams. We
+                    want to help you achieve your goals and your dreams. We want
+                    to help you achieve your goals and your dreams. We want to
+                    help you achieve your goals and your dreams. We want to help
+                    you achieve your goals and your dreams.
                   </Typography>
                 </Typography>
               </Grid>
@@ -430,20 +431,16 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                 <Grid
                   container
                   sx={{
-                    textAlign: "right",
+                    textAlign: "left",
                     alignItems: "top",
                   }}
                 >
                   <Box
                     sx={{
-                      alignItems: "right",
+                      alignItems: "left",
                     }}
                   >
-                    <img
-                      src={about3}
-                      alt="cheering"
-                      title="cheering"
-                    />
+                    <img src={about3} alt="cheering" title="cheering" />
                   </Box>
                 </Grid>
               </Grid>
@@ -496,13 +493,13 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                 <Grid
                   container
                   sx={{
-                    textAlign: "right",
+                    textAlign: "left",
                     alignItems: "top",
                   }}
                 >
                   <Box
                     sx={{
-                      alignItems: "right",
+                      alignItems: "left",
                     }}
                   >
                     <Typography
@@ -510,7 +507,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                       sx={{
                         color: "#0D3475",
                         wordBreak: "break-word",
-                        fontWeight: 'bold',
+                        fontWeight: "bold",
                       }}
                     >
                       We offer a slate of services regarding IT...
@@ -524,7 +521,9 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                         }}
                       >
                         {" "}
-                        and Technology aswell as App Design and Development, Web Design solutions, Marketing and Social Media, Branding, Graphic Design, Programming and more.
+                        and Technology aswell as App Design and Development, Web
+                        Design solutions, Marketing and Social Media, Branding,
+                        Graphic Design, Programming and more.
                       </Typography>
                     </Typography>
                   </Box>
@@ -534,7 +533,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
           </Grid>
           <Grid
             item
-            md={3}
+            md={5}
             sx={{
               padding: 0,
             }}
@@ -548,7 +547,6 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
             </Box>
           </Grid>
         </Grid>
-
       </Grid>
     </FontsBox>
   );
@@ -556,4 +554,3 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
 export type AboutProps = {
   props: any;
 };
-

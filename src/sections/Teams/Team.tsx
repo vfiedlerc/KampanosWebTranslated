@@ -110,11 +110,11 @@ export const Team: FC<TeamProps> = ({
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
-        zIndex: 900 
+        zIndex: 2 
       }} >
         <Grid item xs={12} md={4} lg={4}sx={{
           alignSelf: 'start',
-          zIndex: 900
+          zIndex: 2
         }}>
           <Title color="#D46918" label="OUR TEAM" />
         </Grid>
@@ -150,7 +150,7 @@ export const Team: FC<TeamProps> = ({
             </Grid>
 
             <Grid item  >
-              <Grid container spacing={2} sx={{ textAlign: 'center', }}>
+              <Grid container spacing={2} sx={{ textAlign: 'center', zIndex: 9 }}>
                 <Grid item>
                   <MediaCard image={vinicius} title='Vinícius Fiedler' text='  Full-Stack Developer' />
                 </Grid>
@@ -172,7 +172,7 @@ export const Team: FC<TeamProps> = ({
           whiteSpace: 'nowrap',
           overflow: 'hidden',
           transform: 'rotate(-20deg)',
-          zIndex: -9999,
+          zIndex: -1,
           marginTop: '-528px', 
           height: '80vh',         
           alignSelf: 'center',

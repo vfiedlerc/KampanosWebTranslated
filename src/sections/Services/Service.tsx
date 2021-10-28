@@ -172,7 +172,7 @@ const SubtitleBox = styled('div')(({ theme }) => ({
     span: { fontSize: '1.8rem' }
   },
   [theme.breakpoints.up('lg')]: {
-    span: { fontSize: '2rem' }
+    span: { fontSize: '2.5rem' }
   }
 }));
 
@@ -235,9 +235,12 @@ export const Service: FC<ServiceProps> = ({
             <SubtitleBox
               sx={{
                 whiteSpace: 'nowrap',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                // fontWeight: '500',
+                opacity: .8,
+               
               }}
-            > <Subtitle color='#D46918' label=' high technology ' stroke='1.5px' direction='right' />
+            > <Subtitle color='#D46918' label=' high technology ' stroke='.9px' direction='right' />
             </SubtitleBox>
           </Grid>
         </Grid>

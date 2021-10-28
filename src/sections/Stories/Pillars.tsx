@@ -250,7 +250,7 @@ export const Pillars = () => {
                                                     color: '#0D3475',
                                                     //fontSize: '2rem',
                                                     fontWeight: 'bold',
-                                                    fontSize: '1.5rem'
+                                                    fontSize: '2rem'
                                                 }}
                                             >
                                                 Our pillars are
@@ -260,7 +260,7 @@ export const Pillars = () => {
                                                 sx={{
                                                     color: '#D46918',
                                                     fontWeight: 'bold',
-                                                    fontSize: '1.5rem'
+                                                    fontSize: '2rem'
                                                 }}
                                             > strong
                                             </Typography>
@@ -271,7 +271,7 @@ export const Pillars = () => {
                                                     color: '#0D3475',
                                                     //fontSize: '2rem',
                                                     fontWeight: 'bold',
-                                                    fontSize: '1.5rem'
+                                                    fontSize: '2rem'
                                                 }}
                                             > and our foundations are
                                             </Typography>
@@ -281,7 +281,7 @@ export const Pillars = () => {
                                                     color: '#D46918',
                                                     //fontSize: '2rem',
                                                     fontWeight: 'bold',
-                                                    fontSize: '1.5rem'
+                                                    fontSize: '2rem'
                                                 }}
                                             > solid.
                                             </Typography>
