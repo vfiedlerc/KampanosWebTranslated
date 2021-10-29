@@ -104,25 +104,25 @@ export const Team: FC<TeamProps> = ({
   props
 }: TeamProps) => {
   return (
-    <FontsBox sx={{overflow: 'hidden'}}>      
+    <FontsBox sx={{ overflow: 'hidden' }}>
       <Grid container id="team" spacing={2} sx={{
         width: '100%',
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
-        zIndex: 2 
+        zIndex: 2
       }} >
-        <Grid item xs={12} md={4} lg={4}sx={{
+        <Grid item xs={12} md={4} lg={4} sx={{
           alignSelf: 'start',
           zIndex: 2
         }}>
           <Title color="#D46918" label="OUR TEAM" />
         </Grid>
 
-        <Grid item xs={6} md={8} lg={8}>
-          <Grid container spacing={2} columns={3} rowSpacing={6} sx={{ textAlign: 'center', }}>
-            <Grid item sx={{ textAlign: 'center', }}>
-              <Grid container spacing={2} sx={{ textAlign: 'center', }}>
+        <Grid item xs={12} sm={6} md={8} lg={8} >
+          <Grid container spacing={{xs: 0, sm: 2, md: 2, lg: 2}} columnSpacing={3} rowSpacing={6} sx={{ textAlign: 'center'}}>
+            <Grid item sx={{ textAlign: 'center'}}>
+              <Grid container spacing={2} sx={{ textAlign: 'center', justifyContent:'space-around' }}>
                 <Grid item>
                   <MediaCard image={andreas} title='Andreas Thomae' text='CEO & Chief of Development' />
                 </Grid>
@@ -135,8 +135,8 @@ export const Team: FC<TeamProps> = ({
               </Grid>
             </Grid>
 
-            <Grid item  sx={{ textAlign: 'center', }}>
-              <Grid container spacing={2} sx={{ textAlign: 'center', }}>
+            <Grid item sx={{ textAlign: 'center', }}>
+              <Grid container spacing={2} sx={{ textAlign: 'center', justifyContent:'space-around'}}>
                 <Grid item>
                   <MediaCard image={eva} title='Eva Dias' text='UX/UI & Visual Designer' />
                 </Grid>
@@ -150,7 +150,7 @@ export const Team: FC<TeamProps> = ({
             </Grid>
 
             <Grid item  >
-              <Grid container spacing={2} sx={{ textAlign: 'center', zIndex: 9 }}>
+              <Grid container spacing={2} sx={{ textAlign: 'center', zIndex: 9, justifyContent:'space-around' }}>
                 <Grid item>
                   <MediaCard image={vinicius} title='Vinícius Fiedler' text='  Full-Stack Developer' />
                 </Grid>
@@ -173,8 +173,8 @@ export const Team: FC<TeamProps> = ({
           overflow: 'hidden',
           transform: 'rotate(-20deg)',
           zIndex: -1,
-          marginTop: '-528px', 
-          height: '80vh',         
+          marginTop: '-528px',
+          height: '80vh',
           alignSelf: 'center',
           position: 'relative'
         }}
