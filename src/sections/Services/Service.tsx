@@ -7,6 +7,7 @@ import serviceImg2 from '../../assets/service2.png'
 import uxDesign from '../../assets/UxUiDesign.png'
 import frontDesign from '../../assets/FrontEnd.png'
 import { Subtitle } from '../../components/Titles/Subtitle'
+import { lineHeight } from '@mui/system'
 
 const FontsBox = styled('div')(({ theme }) => ({
   margin: 0,
@@ -229,7 +230,7 @@ export const Service: FC<ServiceProps> = ({
             xs={12}
             sx={{
               width: '100%',
-              marginBottom: '6%'
+              marginBottom: '10%'
             }}
           >
             <SubtitleBox
@@ -239,8 +240,9 @@ export const Service: FC<ServiceProps> = ({
                 // fontWeight: '500',
                 opacity: .8,
                
+               
               }}
-            > <Subtitle color='#D46918' label=' high technology ' stroke='.9px' direction='right' />
+            > <Subtitle color='#D46918' fillColor='#D46918' label=' high technology ' stroke='.9px' direction='right' />
             </SubtitleBox>
           </Grid>
         </Grid>
@@ -266,23 +268,30 @@ export const Service: FC<ServiceProps> = ({
             sx={{
               padding: 0,
               flexGrow: 0,
-              margin: 0,
+              marginBottom: '10%',
               width: '100%',
-              backgroundColor: '#0D3475',
               alignSelf: 'center'
             }}
           >
             <Title color='#FAFAFA' label='OUR SERVICE' />
           </Grid>
-          <Grid item
+          <Grid container
+          justifyContent="flex-start"
             xs={12}
             sm={12}
             md={9}
+            sx={{
+             
+              alignItems: "flex-start",
+              paddingRight: '14%',
+            }}
           >
             <Grid container
               spacing={2}
+              justifyContent="flex-start"
               sx={{
-                paddingBottom: '4rem'
+                paddingBottom: '12%',
+                
               }}
             >
               <Grid item
@@ -298,7 +307,7 @@ export const Service: FC<ServiceProps> = ({
                     padding: 0
                   }}
                 >
-                  <img src={serviceImg1} alt='Software Development' title='Software Development' width='250px' />
+                  <img src={serviceImg1} alt='Software Development' title='Software Development' width='400px' />
                 </ImgBox>
               </Grid>
               <Grid item
@@ -325,7 +334,7 @@ export const Service: FC<ServiceProps> = ({
                     }}
                   >
                     <ImgBox>
-                      <img src={uxDesign} alt='UI/UX Design' title='UI/UX Design' width='200px' />
+                      <img src={uxDesign} alt='UI/UX Design' title='UI/UX Design' width='260px' />
                     </ImgBox>
                   </Grid>
                   <TextBox>
@@ -340,46 +349,56 @@ export const Service: FC<ServiceProps> = ({
                       }}
                     >
                       <Typography
-                        variant="body2"
+                        
                         sx={{
                           color: '#fff',
-                          alignItems: 'left'
+                          alignItems: 'left',
+                          lineHeight: '27px',
+                          fontSize: '1rem',
                         }}
                       >
                         Mobile & Web Design
                       </Typography>
                       <Typography
-                        variant="body2"
+                       
                         sx={{
                           color: '#fff',
-                          alignItems: 'left'
+                          alignItems: 'left',
+                          fontSize: '1rem',
+                          lineHeight: '27px',
                         }}
                       >
                         Visual Design
                       </Typography>
                       <Typography
-                        variant="body2"
+                        
                         sx={{
                           color: '#fff',
-                          alignItems: 'left'
+                          alignItems: 'left',
+                          lineHeight: '27px',
+                          fontSize: '1rem',
                         }}
                       >
                         User testing
                       </Typography>
                       <Typography
-                        variant="body2"
+                       
                         sx={{
                           color: '#fff',
-                          alignItems: 'left'
+                          alignItems: 'left',
+                          lineHeight: '27px',
+                          fontSize: '1rem',
                         }}
                       >
                         Prototype
                       </Typography>
                       <Typography
-                        variant="body2"
+                        
                         sx={{
                           color: '#fff',
-                          alignItems: 'left'
+                          alignItems: 'left',
+                          lineHeight: '27px',
+                          fontSize: '1rem',
                         }}
                       >
                         Presentations
@@ -401,11 +420,12 @@ export const Service: FC<ServiceProps> = ({
                 sm={12}
                 md={4}
                 sx={{
-                  padding: 0
+                  padding: 0,
+                  paddingBottom: '10%',
                 }}
               >
                 <ImgBox>
-                  <img src={serviceImg2} alt='Software Development' title='Software Development' width='250px' />
+                  <img src={serviceImg2} alt='Software Development' title='Software Development' width='400px' />
                 </ImgBox>
               </Grid>
               <Grid item
@@ -432,7 +452,7 @@ export const Service: FC<ServiceProps> = ({
                     }}
                   >
                     <ImgBox>
-                      <img src={frontDesign} alt='Front-end Design' title='Front-end Design' width='150px' />
+                      <img src={frontDesign} alt='Front-end Design' title='Front-end Design' width='170px' />
                     </ImgBox>
                   </Grid>
                   <Text2Box>
@@ -443,68 +463,83 @@ export const Service: FC<ServiceProps> = ({
                       sx={{
                         justifyContent: 'center',
                         alignSelf: 'center',
+                       
                         //paddingTop: '1rem'
                       }}
                     >
                       <Typography
-                        variant="body2"
+                        
                         sx={{
                           color: '#fff',
-                          alignItems: 'left'
+                          alignItems: 'left',
+                          lineHeight: '27px',
+                          fontSize: '1rem',
                         }}
                       >
                         Component based Front-End
                       </Typography>
                       <Typography
-                        variant="body2"
+                      
                         sx={{
                           color: '#fff',
-                          alignItems: 'left'
+                          alignItems: 'left',
+                          lineHeight: '27px',
+                          fontSize: '1rem',
                         }}
                       >
                         Web & Mobile
                       </Typography>
                       <Typography
-                        variant="body2"
+                    
                         sx={{
                           color: '#fff',
-                          alignItems: 'left'
+                          alignItems: 'left',
+                          lineHeight: '27px',
+                          fontSize: '1rem',
                         }}
                       >
                         Native apps
                       </Typography>
                       <Typography
-                        variant="body2"
+                      
                         sx={{
                           color: '#fff',
-                          alignItems: 'left'
+                          alignItems: 'left',
+                          lineHeight: '27px',
+                          fontSize: '1rem',
                         }}
                       >
                         API Connections
                       </Typography>
                       <Typography
-                        variant="body2"
+                        
                         sx={{
                           color: '#fff',
-                          alignItems: 'left'
+                          alignItems: 'left',
+                          lineHeight: '27px',
+                          fontSize: '1rem',
                         }}
                       >
                         React Native
                       </Typography>
                       <Typography
-                        variant="body2"
+                       
                         sx={{
                           color: '#fff',
-                          alignItems: 'left'
+                          alignItems: 'left',
+                          lineHeight: '27px',
+                          fontSize: '1rem',
                         }}
                       >
                         Fast Development
                       </Typography>
                       <Typography
-                        variant="body2"
+                       
                         sx={{
                           color: '#fff',
-                          alignItems: 'left'
+                          alignItems: 'left',
+                          lineHeight: '27px',
+                          fontSize: '1rem',
                         }}
                       >
                         Trustable & Fast Delivery

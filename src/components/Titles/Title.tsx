@@ -1,6 +1,7 @@
 import * as React from "react";
 import { FC } from "react";
 import { Box, styled, Typography } from "@mui/material";
+import '@fontsource/roboto/500.css';
 
 const TitleBox = styled("div")(({ theme }) => ({
   margin: 0,
@@ -36,7 +37,9 @@ const TitleBox = styled("div")(({ theme }) => ({
   [theme.breakpoints.up("lg")]: {
     h1: {
       transform: "rotate(-90deg)",
-      fontSize: "5rem",
+      fontSize: "6rem",
+      paddingTop: 30,
+      
     },
   },
 }));
@@ -49,9 +52,10 @@ export const Title: FC<TitleProps> = ({ label, color, toFill }: TitleProps) => {
         variant="h2"
         sx={{
           "&": {
-            fontWeight: "bold",
+            // letterSpacing: ''
+            fontWeight: "500",
             whiteSpace: "nowrap",
-            WebkitTextStrokeWidth: "0.5px",
+            WebkitTextStrokeWidth: "1px",
             WebkitTextStrokeColor: `${color}`,
             color: "transparent",
             WebkitTransition: 'all .75s ease-out',
@@ -59,6 +63,7 @@ export const Title: FC<TitleProps> = ({ label, color, toFill }: TitleProps) => {
             msTransition: 'all .75s ease-out',
             OTransition: 'all .75s ease-out',
             transition: "all .75s ease-out",
+            opacity: '1'
           },
 
           "&:hover": {

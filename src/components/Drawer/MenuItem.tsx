@@ -1,7 +1,6 @@
 import * as React from "react";
 import { FC } from "react";
 import { Link, Grid, styled } from "@mui/material";
-import { HashLink } from 'react-router-hash-link';
 
 export const MenuItem: FC<MenuItemProps> = ({
   label,

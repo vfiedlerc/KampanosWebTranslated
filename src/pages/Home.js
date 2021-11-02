@@ -6,6 +6,8 @@ import { Team } from '../sections/Teams/Team'
 import Footer from '../sections/Footer/Footer.js'
 import { Box } from '@mui/material';
 import { About } from '../sections/About/About';
+import '@fontsource/roboto/400.css';
+
 
 function Home() {
     return (
