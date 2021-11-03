@@ -41,7 +41,7 @@ function Budget() {
     };
     const handleClickNext = () => {
         setBudget(budget)
-        history.push("/contact/project");
+        history.push("/contact/details");
     };
 
     useEffect(() => {

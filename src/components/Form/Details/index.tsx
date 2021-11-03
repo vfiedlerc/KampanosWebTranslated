@@ -12,7 +12,7 @@ function Details() {
     const handleClickNext = () => {
         setEmail(email)
         setPhone(phone)
-        history.push("/home");
+        history.push("/");
     };
 
     useEffect(() => {
