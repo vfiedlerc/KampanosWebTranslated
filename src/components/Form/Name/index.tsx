@@ -7,6 +7,7 @@ export const Name: FC<NameProps> = ({ }: NameProps) => {
     return (
         <Box
             sx={{
+               
                 justifyContent: 'center',
                 alignSelf: 'center',
                 WebkitAlignSelf: 'center',

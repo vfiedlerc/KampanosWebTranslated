@@ -7,40 +7,71 @@ import { Work } from './Work'
 import { Box, Grid, styled, Typography } from "@mui/material";
 
 const FormBox = styled('div')(({ theme }) => ({
-    position: 'relative',
-    zIndex: 1000,
-    maxWidth: '1100px',
-    margin: '80px auto 0',
-    padding: 'auto',
-    backgroundColor: '#FFFFFF',
-    boxShadow: '0px 8px 45px rgba(56, 31, 115, 0.05)',
-    borderRadius: '8px',
-    minHeight: '600px',
-    justifyContent: 'center',
-    WebkitAlignSelf: 'center',
     display: 'flex',
-    
+    justifyContent: 'center',  
+    minHeight: '620px',
+    height: '100%',
     [theme.breakpoints.down("sm")]: {
-        marginTop: '0px'
+        margin: '80px auto 0',
+        padding: '1rem',
+        justifyContent: 'center',
+        flexWrap: 'wrap'
     }
 }));
 
 export const Form: FC<FormProps> = ({ props }: FormProps) => {
     return (
         <FormBox>
-            <Box
+            <Grid container
                 sx={{
                     justifyItems: 'center',
                     WebkitAlignSelf: 'center',
-                    alignSelf: 'center'
+                    alignContent: 'center',
+                    flexBasis: 'content',
+                    textAlign: 'left'
                 }}
             >
-                <Name />
-                {/* <Work />
-                <Project />
-                <Budget />
-                <Details /> */}
-            </Box>
+                <Grid item
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
+                >
+                    <Name />
+                </Grid>
+                <Grid item
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
+                >
+                    {/* <Work /> */}
+                </Grid>
+                <Grid item
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
+                >
+                    {/* <Project /> */}
+                </Grid>
+                <Grid item
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
+                >
+                    {/* <Details /> */}
+                </Grid>
+                <Grid item
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
+                >
+                    {/* <Budget /> */}
+                </Grid>
+            </Grid>
         </FormBox>
     );
 };
