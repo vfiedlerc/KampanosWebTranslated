@@ -33,7 +33,8 @@ function Contact() {
                         sx={{
                             WebkitWritingMode: 'vertical-lr',
                             transform: 'rotate(-180deg)',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            marginTop: '80%'
                         }}
                     >
                         <Typography
