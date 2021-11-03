@@ -29,6 +29,7 @@ function Work() {
                 WebkitAlignSelf: 'center',
                 margin: 'auto',
                 '& > :not(style)': { m: 1.5, width: '30ch' },
+                '& .MuiInputBase-root:before': { color: '#ED6C02', borderBottom: '1px solid #ED6C02' },
                 '& .MuiInputBase-root:hover:not(disabled):before': { color: '#ED6C02', borderBottom: '1px solid #ED6C02' }
             }}>
             <Typography
