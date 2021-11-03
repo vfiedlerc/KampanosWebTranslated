@@ -7,17 +7,12 @@ export const Name: FC<NameProps> = ({ }: NameProps) => {
     return (
         <Box
             sx={{
-               
                 justifyContent: 'center',
                 alignSelf: 'center',
                 WebkitAlignSelf: 'center',
                 margin: 'auto',
                 '& > :not(style)': { m: 1.5, width: '30ch' },
-                input: {    
-                    color: '#D46918',                
-                    '&:hover:not(disabled):not(focused):not(error)': { color: '#D46918' },
-                    '&notchedOutline': { color: '#D46918' },
-                },
+                '& .MuiInputBase-root:hover:not(disabled):before': { color: '#ED6C02', borderBottom: '1px solid #ED6C02' }
             }}
         >
             <Typography
@@ -38,7 +33,12 @@ export const Name: FC<NameProps> = ({ }: NameProps) => {
             >
                 Hi there, what's your name?
             </Typography>
-            <TextField name="first_name" label="first name" variant="standard" color="warning"/>
+            <TextField
+            name="first_name"
+            label="first name"
+            variant="standard"
+            color="warning"
+            />
             <TextField name="last_name" label="last name" variant="standard" color="warning" />
             <Box
                 sx={{

@@ -7,11 +7,12 @@ export const Project: FC<ProjectProps> = ({ }: ProjectProps) => {
     return (
         <Box
             sx={{
-                '& > :not(style)': { m: 1.5, width: '50ch' },
                 justifyContent: 'center',
                 alignSelf: 'center',
                 WebkitAlignSelf: 'center',
-                margin: 'auto'
+                margin: 'auto',
+                '& > :not(style)': { m: 1.5, width: '50ch' },
+                '& .MuiInputBase-root:hover:not(disabled):before': { color: '#ED6C02', borderBottom: '1px solid #ED6C02' }
             }}>
             <Typography
                 variant='body2'
