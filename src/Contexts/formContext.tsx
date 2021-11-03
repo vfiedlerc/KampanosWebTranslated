@@ -6,19 +6,19 @@ import { api } from "../service/index";
 interface FormContextData {
   sendFormData:  () => Promise<Response>
   setFirstName: React.Dispatch<React.SetStateAction<string>>
-  setName: React.Dispatch<React.SetStateAction<string>>  
+  setLastName: React.Dispatch<React.SetStateAction<string>>  
   setCompany: React.Dispatch<React.SetStateAction<string>>
   setProject: React.Dispatch<React.SetStateAction<string>>
   setBudget: React.Dispatch<React.SetStateAction<string>>
-  setContactMail: React.Dispatch<React.SetStateAction<string>>
+  setEmail: React.Dispatch<React.SetStateAction<string>>
   setPhone: React.Dispatch<React.SetStateAction<string>>
   setPageNumber: React.Dispatch<React.SetStateAction<number | undefined>>
   firstName: string
-  name: string
+  lastName: string
   company: string
   project: string
   budget: string
-  contactMail: string
+  email: string
   phone: string
   pageNumber: number | undefined
 }
@@ -37,11 +37,11 @@ export const formContext = createContext({} as FormContextData)
 export function FormProvider({ children }: FormProviderProps) {
   // form fields
   const [firstName, setFirstName] = useState("")
-  const [name, setName] = useState("")
+  const [lastName, setLastName] = useState("")
   const [company, setCompany] = useState("")
   const [project, setProject] = useState("")
   const [budget, setBudget] = useState("")
-  const [contactMail, setContactMail] = useState("")
+  const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
 
   const [pageNumber, setPageNumber] = useState<number>()
@@ -50,11 +50,11 @@ export function FormProvider({ children }: FormProviderProps) {
   const sendFormData = async () => {
     const formData = [
       { name: "first_name", value: firstName },
-      { name: "name", value: name },     
+      { name: "last_name", value: lastName },     
       { name: "company", value: company },
       { name: "project", value: project },
       { name: "budget", value: budget },
-      { name: "contact_mail", value: contactMail },
+      { name: "email", value: email },
       { name: "phone", value: phone }
     ]
 
@@ -73,20 +73,20 @@ export function FormProvider({ children }: FormProviderProps) {
       value={{
         sendFormData,        
         setFirstName,
-        setName,
+        setLastName,
         setCompany,
         setProject,
         setBudget,
-        setContactMail,
+        setEmail,
         setPhone,
         setPageNumber,       
         pageNumber,
         firstName,
-        name,
+        lastName,
         company,
         project,
         budget,
-        contactMail,       
+        email,       
         phone
       }}>
       {children}

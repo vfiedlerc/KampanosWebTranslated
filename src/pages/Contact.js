@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Topbar from '../components/Topbar/Topbar'
-import { Form } from '../components/Form'
+import Form  from '../components/Form/Form'
 import Footer from '../sections/Footer/Footer.js'
 import { Box, Grid, Typography, Link, styled } from '@mui/material'
 import FaceIcon from "../assets/FacebookIcon.svg";

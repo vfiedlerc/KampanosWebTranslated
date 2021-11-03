@@ -1,9 +1,26 @@
-import React, { FC, useContext, useEffect, useState } from 'react'
-//import { useHistory } from "react-router-dom"
+import React, { useContext, useEffect, useState } from 'react'
+import { useHistory } from "react-router"
 import { formContext } from "../../../Contexts/formContext"
-import { Box, Button, TextField, Typography } from '@mui/material'
+import { Box, TextField, Typography } from '@mui/material'
+import NextButton from '../../Button/NextButton';
 
-export const Project: FC<ProjectProps> = ({ }: ProjectProps) => {
+function Project() {
+    const history = useHistory();
+
+    const { setProject, project } = useContext(formContext);   
+
+    const handleClickNext = () => {
+        setProject(project)
+        history.push("/contact/budget");
+    };
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
     return (
         <Box
             sx={{
@@ -32,54 +49,16 @@ export const Project: FC<ProjectProps> = ({ }: ProjectProps) => {
             >
                 Tell us about __________ project
             </Typography>
-            <TextField
-                name="project"
+            <TextField name="project"
                 label="project"
                 variant="standard"
                 color="warning"
                 multiline
             />
-            <Box
-                sx={{
-                    paddingTop: '2rem'
-                }}
-            >
-                <Button
-                    variant="contained"
-                    sx={{
-                        backgroundColor: '#0D3475',
-                        color: '#fff',
-                        fontWeight: 'light',
-                        textTransform: 'lowercase',
-                        fontSize: '1.2rem',
-                        padding: '0.5rem 1.5rem'
-                    }}
-                >
-                    next
-                </Button>
-                <Typography
-                    variant='caption'
-                    sx={{
-                        color: '#0D3475',
-                        margin: 'auto 2rem 0',
-                        fontSize: '1rem'
-                    }}
-                >press
-
-                    <Typography
-                        variant='caption'
-                        sx={{
-                            color: '#0D3475',
-                            fontWeight: 'bold',
-                            margin: 'auto',
-                            fontSize: '1.05rem'
-                        }}
-                    > ENTER
-                    </Typography>
-                </Typography>
-            </Box>
+           
+           <NextButton onClick={handleClickNext} />
         </Box>
     );
 };
 
-export type ProjectProps = {};
+export default Project

@@ -1,7 +1,8 @@
-import React, { FC, useContext, useEffect, useState } from 'react'
-//import { useHistory } from "react-router-dom"
+import React, { useContext, useEffect, useState } from 'react'
+import { Box, MenuItem, TextField, Typography } from '@mui/material'
+import { useHistory } from 'react-router'
 import { formContext } from "../../../Contexts/formContext"
-import { Box, Button, MenuItem, TextField, Typography } from '@mui/material'
+import NextButton from '../../Button/NextButton';
 
 const currencies = [
     {
@@ -30,12 +31,26 @@ const currencies = [
     }
 ];
 
-export const Budget: FC<BudgetProps> = ({ }: BudgetProps) => {
-    const [currency, setCurrency] = React.useState('0');
+function Budget() {
 
+    const history = useHistory();
+    const [currency, setCurrency] = React.useState('0'); 
+    const { setBudget, budget } = useContext(formContext); 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setCurrency(event.target.value);
     };
+    const handleClickNext = () => {
+        setBudget(budget)
+        history.push("/contact/project");
+    };
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
     return (
         <Box
             sx={{
@@ -85,47 +100,10 @@ export const Budget: FC<BudgetProps> = ({ }: BudgetProps) => {
                     </MenuItem>
                 ))}
             </TextField>
-            <Box
-                sx={{
-                    paddingTop: '2rem'
-                }}
-            >
-                <Button
-                    variant="contained"
-                    sx={{
-                        backgroundColor: '#0D3475',
-                        color: '#fff',
-                        fontWeight: 'light',
-                        textTransform: 'lowercase',
-                        fontSize: '1.2rem',
-                        padding: '0.5rem 1.5rem'
-                    }}
-                >
-                    next
-                </Button>
-                <Typography
-                    variant='caption'
-                    sx={{
-                        color: '#0D3475',
-                        margin: 'auto 2rem 0',
-                        fontSize: '1rem'
-                    }}
-                >press
-
-                    <Typography
-                        variant='caption'
-                        sx={{
-                            color: '#0D3475',
-                            fontWeight: 'bold',
-                            margin: 'auto',
-                            fontSize: '1.05rem'
-                        }}
-                    > ENTER
-                    </Typography>
-                </Typography>
-            </Box>
+           
+            <NextButton onClick={handleClickNext} />
         </Box>
     );
 };
 
-export type BudgetProps = {};
+export default Budget

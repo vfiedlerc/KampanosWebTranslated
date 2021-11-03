@@ -1,9 +1,27 @@
 import React, { FC, useContext, useEffect, useState } from 'react'
-//import { useHistory } from "react-router-dom"
 import { formContext } from "../../../Contexts/formContext"
 import { Box, Button, TextField, Typography } from '@mui/material'
+import { useHistory } from 'react-router'
+import NextButton from '../../Button/NextButton';
 
-export const Details: FC<DetailsProps> = ({ }: DetailsProps) => {
+function Details() {
+    const { setEmail, setPhone, email, phone } = useContext(formContext);
+
+    const history = useHistory();
+
+    const handleClickNext = () => {
+        setEmail(email)
+        setPhone(phone)
+        history.push("/home");
+    };
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
     return (
         <Box
             sx={{
@@ -32,49 +50,20 @@ export const Details: FC<DetailsProps> = ({ }: DetailsProps) => {
             >
                 Can we have your details?
             </Typography>
-            <TextField name="email" label="email adress" variant="standard" color="warning" />
-            <TextField name="phone" label="phone" variant="standard" color="warning" />
-            <Box
-                sx={{
-                    paddingTop: '2rem'
-                }}
-            >
-                <Button
-                    variant="contained"
-                    sx={{
-                        backgroundColor: '#0D3475',
-                        color: '#fff',
-                        fontWeight: 'light',
-                        textTransform: 'lowercase',
-                        fontSize: '1.2rem',
-                        padding: '0.5rem 1.5rem'
-                    }}
-                >
-                    next
-                </Button>
-                <Typography
-                    variant='caption'
-                    sx={{
-                        color: '#0D3475',
-                        margin: 'auto 2rem 0',
-                        fontSize: '1rem'
-                    }}
-                >press
+            <TextField name="email"
+                label="email adress"
+                variant="standard"
+                color="warning"
+            />
+            <TextField name="phone"
+                label="phone"
+                variant="standard"
+                color="warning"
+            />
 
-                    <Typography
-                        variant='caption'
-                        sx={{
-                            color: '#0D3475',
-                            fontWeight: 'bold',
-                            margin: 'auto',
-                            fontSize: '1.05rem'
-                        }}
-                    > ENTER
-                    </Typography>
-                </Typography>
-            </Box>
+            <NextButton onClick={handleClickNext} />
         </Box>
     );
 };
 
-export type DetailsProps = {};
+export default Details
