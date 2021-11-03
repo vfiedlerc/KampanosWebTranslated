@@ -6,11 +6,12 @@ import NextButton from '../../Button/NextButton';
 
 function Work() {
     const history = useHistory();
-
-    const { setCompany, company } = useContext(formContext);   
+    const [company, setCompanyInput] = useState("")
+    const { setCompany } = useContext(formContext);   
 
     const handleClickNext = () => {
         setCompany(company)
+        console.log(company)
         history.push("/contact/project");
     };
 
@@ -54,6 +55,8 @@ function Work() {
             label="company"
             variant="standard"
             color="warning"
+            value={company}
+            onChange={(e) => setCompanyInput(e.target.value)}
             />
 
             <NextButton onClick={handleClickNext} />

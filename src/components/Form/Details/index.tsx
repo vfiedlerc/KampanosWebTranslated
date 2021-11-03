@@ -3,16 +3,33 @@ import { formContext } from "../../../Contexts/formContext"
 import { Box, Button, TextField, Typography } from '@mui/material'
 import { useHistory } from 'react-router'
 import NextButton from '../../Button/NextButton';
+import validator from 'validator'
 
 function Details() {
-    const { setEmail, setPhone, email, phone } = useContext(formContext);
+    const [email, setEmailInput] = useState("")
+    const [phone, setPhoneInput] = useState("")
+    const [isEmailValid, setIsEmailValid] = useState(true);
+    const { setEmail, setPhone } = useContext(formContext);
+
+    const emailRegex = /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i;
+
+    const testEmail = emailRegex.test(email)
+    const validateEmail = validator.isEmail(email)    
+   
 
     const history = useHistory();
 
     const handleClickNext = () => {
-        setEmail(email)
-        setPhone(phone)
-        history.push("/");
+        if (testEmail === true && validateEmail === true) {
+            setIsEmailValid(true)  
+            setEmail(email)
+            setPhone(phone)
+            console.log(email)
+            console.log(phone)
+            history.push("/contact/name");    
+        } else {
+            setIsEmailValid(false)
+        }
     };
 
     useEffect(() => {
@@ -55,11 +72,15 @@ function Details() {
                 label="email adress"
                 variant="standard"
                 color="warning"
+                value={email}
+                onChange={(e) => setEmailInput(e.target.value)}
             />
             <TextField name="phone"
                 label="phone"
                 variant="standard"
                 color="warning"
+                value={phone}
+                onChange={(e) => setPhoneInput(e.target.value)}
             />
 
             <NextButton onClick={handleClickNext} />

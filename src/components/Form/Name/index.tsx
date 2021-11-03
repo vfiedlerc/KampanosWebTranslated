@@ -6,12 +6,15 @@ import NextButton from '../../Button/NextButton';
 
 function Name() {
     const history = useHistory();
-
-    const { setFirstName, setLastName, firstName, lastName } = useContext(formContext);   
+    const [firstName, setFirstNameInput] = useState("")
+    const [lastName, setLastNameInput] = useState("")
+    const { setFirstName, setLastName} = useContext(formContext);   
 
     const handleClickNext = () => {
         setFirstName(firstName)
         setLastName(lastName)
+        console.log(firstName)
+        console.log(lastName)
         history.push("/contact/work");
     };
 
@@ -54,13 +57,17 @@ function Name() {
             </Typography>
             <TextField name="first_name"
                 label="first name"
+                value={firstName}
                 variant="standard"
-                color="warning"
+                color="warning"      
+                onChange={(e) => setFirstNameInput(e.target.value)}         
             />
             <TextField name="last_name"
                 label="last name"
                 variant="standard"
                 color="warning"
+                value={lastName}
+                onChange={(e) => setLastNameInput(e.target.value)}  
             />
 
             <NextButton onClick={handleClickNext} />

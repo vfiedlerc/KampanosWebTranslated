@@ -6,11 +6,12 @@ import NextButton from '../../Button/NextButton';
 
 function Project() {
     const history = useHistory();
-
-    const { setProject, project } = useContext(formContext);   
+    const [project, setProjectInput] = useState("")
+    const { setProject } = useContext(formContext);   
 
     const handleClickNext = () => {
         setProject(project)
+        console.log(project)
         history.push("/contact/budget");
     };
 
@@ -55,6 +56,8 @@ function Project() {
                 variant="standard"
                 color="warning"
                 multiline
+                value={project}
+                onChange={(e) => setProjectInput(e.target.value)}
             />
            
            <NextButton onClick={handleClickNext} />

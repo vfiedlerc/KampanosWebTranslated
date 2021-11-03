@@ -6,10 +6,6 @@ import NextButton from '../../Button/NextButton';
 
 const currencies = [
     {
-        value: '0',
-        label: 'Please select',
-    },
-    {
         value: '5k_10k',
         label: '€5k - 10k',
     },
@@ -32,15 +28,13 @@ const currencies = [
 ];
 
 function Budget() {
-
     const history = useHistory();
-    const [currency, setCurrency] = React.useState('0'); 
-    const { setBudget, budget } = useContext(formContext); 
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setCurrency(event.target.value);
-    };
+    const [budget, setBudgetInput] = useState(''); 
+    const { setBudget } = useContext(formContext); 
+  
     const handleClickNext = () => {
         setBudget(budget)
+        console.log(budget)
         history.push("/contact/details");
     };
 
@@ -86,15 +80,15 @@ function Budget() {
                 placeholder="Please select your budget"
                 variant="standard"
                 color="warning"
-                value={currency}
-                onChange={handleChange}
+                value={budget}
+                onChange={(e) => setBudgetInput(e.target.value)}
             >
                 {currencies.map((option) => (
                     <MenuItem                   
                     key={option.value}
                     value={option.value}
                     sx={{
-                        color: "#252525"
+                        color: "#ED6C02"
                     }}
                     >
                         {option.label}

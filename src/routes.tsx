@@ -7,9 +7,11 @@ import Work from './components/Form/Work'
 import Project from './components/Form/Project'
 import Budget from './components/Form/Budget'
 import Details from './components/Form/Details'
+import { Fade } from '@mui/material';
 
 const Routes = () => (
     <Router>
+      <Fade>
         <Switch>
           <Route exact path='/'                 component={ Home } />
           <Route exact path='/contact'          component={ Contact } />
@@ -19,6 +21,7 @@ const Routes = () => (
           <Route exact path='/contact/budget'   component={ Budget } />
           <Route exact path='/contact/details'  component={ Details } />
         </Switch>
+        </Fade>
     </Router>
   )
 
