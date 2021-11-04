@@ -58,6 +58,7 @@ function Project() {
                 multiline
                 value={project}
                 onChange={(e) => setProjectInput(e.target.value)}
+                type='text'
             />
            
            <NextButton onClick={handleClickNext} />

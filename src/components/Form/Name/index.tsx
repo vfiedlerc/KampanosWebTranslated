@@ -60,7 +60,8 @@ function Name() {
                 value={firstName}
                 variant="standard"
                 color="warning"      
-                onChange={(e) => setFirstNameInput(e.target.value)}         
+                onChange={(e) => setFirstNameInput(e.target.value)}    
+                type='text'     
             />
             <TextField name="last_name"
                 label="last name"
@@ -68,6 +69,7 @@ function Name() {
                 color="warning"
                 value={lastName}
                 onChange={(e) => setLastNameInput(e.target.value)}  
+                type='text'
             />
 
             <NextButton onClick={handleClickNext} />

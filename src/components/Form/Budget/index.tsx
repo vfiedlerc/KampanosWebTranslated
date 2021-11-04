@@ -22,7 +22,7 @@ const currencies = [
         label: '€30k +',
     },
     {
-        value: 'none',
+        value: 'Not sure',
         label: 'I\'m not sure',
     }
 ];
@@ -88,7 +88,9 @@ function Budget() {
                     key={option.value}
                     value={option.value}
                     sx={{
-                        color: "#ED6C02"
+                        color: "#ED6C02",
+                        fontSize: '1.3rem',
+                        justifyContent: 'center'
                     }}
                     >
                         {option.label}

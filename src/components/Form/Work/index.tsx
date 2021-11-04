@@ -57,6 +57,7 @@ function Work() {
             color="warning"
             value={company}
             onChange={(e) => setCompanyInput(e.target.value)}
+            type='text'
             />
 
             <NextButton onClick={handleClickNext} />
