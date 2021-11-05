@@ -3,6 +3,7 @@ import { Box, Grid, Link, Typography, Icon, styled } from '@mui/material';
 import { ReactComponent as FacebookIcon } from '../../assets/FacebookIcon.svg';
 import { ReactComponent as LinkedinIcon } from '../../assets/LinkedinIcon.svg';
 import { ReactComponent as InstagramIcon } from '../../assets/InstagramIcon.svg';
+import { Cookies, PrivacyPolicy, TermsService } from '../../components/Modals';
 
 const Terms = styled('div')(({ theme }) => ({
   padding: 0,
@@ -51,66 +52,59 @@ const Footer = () => {
             color="white" variant="h4"
           >kampanos.</Typography>
         </Grid>
-
-        <Grid item
-          // xs={12}
-          // sm={12}
-          // md={12}
-          // lg={12}
-        >
+        <Grid item>
           <Grid container
             spacing={2}
             sx={{
               justifyContent: 'center',
               textAlign: 'center'
             }}
-            
-            >
+          >
             <Grid item
-            xs={12}
-            sm={12}
-            md={1.5}
-            lg={1}
+              xs={12}
+              sm={12}
+              md={1.5}
+              lg={1}
             >
               <Link href="#header" underline="hover" color="#FAFAFA" >Home</Link>
             </Grid>
             <Grid item
-             xs={12}
-             sm={12}
-             md={1.5}
-             lg={1}
+              xs={12}
+              sm={12}
+              md={1.5}
+              lg={1}
             >
               <Link href="#about" underline="hover" color="#FAFAFA" >About us</Link>
             </Grid>
             <Grid item
-             xs={12}
-             sm={12}
-             md={1.5}
-             lg={1}
+              xs={12}
+              sm={12}
+              md={1.5}
+              lg={1}
             >
               <Link href="#service" underline="hover" color="#FAFAFA" >Our service</Link>
             </Grid>
             <Grid item
-             xs={12}
-             sm={12}
-             md={1.5}
-             lg={1}
+              xs={12}
+              sm={12}
+              md={1.5}
+              lg={1}
             >
               <Link href="#story" underline="hover" color="#FAFAFA" >Our story</Link>
             </Grid>
             <Grid item
-             xs={12}
-             sm={12}
-             md={1.5}
-             lg={1}
+              xs={12}
+              sm={12}
+              md={1.5}
+              lg={1}
             >
               <Link href="#team" underline="hover" color="#FAFAFA"  >Our team</Link>
             </Grid>
             <Grid item
-             xs={12}
-             sm={12}
-             md={1.5}
-             lg={1}
+              xs={12}
+              sm={12}
+              md={1.5}
+              lg={1}
             >
               <Link href="https://www.linkedin.com/company/kampanos/" underline="hover" color="#FAFAFA"
               >Jobs offer</Link>
@@ -144,20 +138,26 @@ const Footer = () => {
               <Grid item xs={12}
                 sm={12}
                 md={1.5}
-                lg={1} >
-                <Link underline="hover" color="#FCEDD0" href="#">Terms of use</Link>
+                lg={1}
+              >
+                <TermsService />
+                {/* <Link underline="hover" color="#FCEDD0" href="#">Terms of use</Link> */}
               </Grid>
               <Grid item xs={12}
                 sm={12}
                 md={1.5}
-                lg={1}>
-                <Link underline="hover" color="#FCEDD0" href="#">Privacy Policy</Link>
+                lg={1}
+              >
+                <PrivacyPolicy />
+                {/* <Link underline="hover" color="#FCEDD0" href="#">Privacy Policy</Link> */}
               </Grid>
               <Grid item xs={12}
                 sm={12}
                 md={1.5}
-                lg={1}>
-                <Link underline="hover" color="#FCEDD0" href="#">Cookie Policy</Link>
+                lg={1}
+              >
+                <Cookies />
+                {/* <Link underline="hover" color="#FCEDD0" href="#">Cookie Policy</Link> */}
               </Grid>
             </Grid>
           </Grid>
