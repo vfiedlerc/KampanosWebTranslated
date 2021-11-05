@@ -239,10 +239,8 @@ export const Service: FC<ServiceProps> = ({
                 overflow: 'hidden',
                 // fontWeight: '500',
                 opacity: .8,
-               
-               
               }}
-            > <Subtitle color='#D46918' fillColor='#D46918' label=' high technology ' stroke='.9px' direction='right' />
+            > <Subtitle color='#D46918' fillColor='#D46918' label=' high technology   UX/UI   Development   Web & Mobile' stroke='.9px' direction='right' />
             </SubtitleBox>
           </Grid>
         </Grid>
@@ -357,6 +355,17 @@ export const Service: FC<ServiceProps> = ({
                           fontSize: '1rem',
                         }}
                       >
+                        Branding & Graphic Design
+                      </Typography>
+                      <Typography
+                        
+                        sx={{
+                          color: '#fff',
+                          alignItems: 'left',
+                          lineHeight: '27px',
+                          fontSize: '1rem',
+                        }}
+                      >
                         Mobile & Web Design
                       </Typography>
                       <Typography
@@ -390,7 +399,7 @@ export const Service: FC<ServiceProps> = ({
                           fontSize: '1rem',
                         }}
                       >
-                        Prototype
+                        Prototypes
                       </Typography>
                       <Typography
                         

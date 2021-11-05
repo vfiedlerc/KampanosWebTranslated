@@ -151,6 +151,26 @@ const Header = () => {
             </Grid>
 
             <ItemsBox>
+              <Grid container sx={{ justifyContent: 'center' }}>
+                <Typography
+                  sx={{
+                    margin: 0,
+                    height: 'fit-content'
+                  }}
+                  color=' #0D3475'
+                >
+                  <Link
+                    href='https://www.linkedin.com/company/kampanos/'
+                    sx={{
+                      margin: 0,
+                      padding: 0,
+                      justifyContent: 'center'
+                    }}
+                  >
+                    <img src={LinkIcon} alt='Linkedin' title='Linkedin' />
+                  </Link>
+                </Typography>
+              </Grid>
               <Grid
                 container
                 sx={{ justifyContent: 'center', minHeight: 'max-content' }}
@@ -171,27 +191,6 @@ const Header = () => {
                     }}
                   >
                     <img src={FaceIcon} alt='Facebook' title='Facebook' />
-                  </Link>
-                </Typography>
-              </Grid>
-
-              <Grid container sx={{ justifyContent: 'center' }}>
-                <Typography
-                  sx={{
-                    margin: 0,
-                    height: 'fit-content'
-                  }}
-                  color=' #0D3475'
-                >
-                  <Link
-                    href='https://www.linkedin.com/company/kampanos/'
-                    sx={{
-                      margin: 0,
-                      padding: 0,
-                      justifyContent: 'center'
-                    }}
-                  >
-                    <img src={LinkIcon} alt='Linkedin' title='Linkedin' />
                   </Link>
                 </Typography>
               </Grid>

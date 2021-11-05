@@ -187,28 +187,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                 </Typography>
               </Grid>
 
-              <ItemsBox>
-                <Grid container sx={{ justifyContent: 'center', minHeight: 'max-content' }}>
-                  <Typography
-                    sx={{
-                      margin: 0,
-                      height: 'fit-content'
-                    }}
-                    color=" #FAFAFA"
-                  >
-                    <Link
-                      href="https://www.facebook.com"
-                      sx={{
-                        margin: 0,
-                        padding: 0,
-                        justifyContent: 'center'
-                      }}
-                    >
-                      <img src={FaceIcon} alt="Facebook" title="Facebook" />
-                    </Link>
-                  </Typography>
-                </Grid>
-
+              <ItemsBox>  
                 <Grid container sx={{ justifyContent: 'center' }}>
                   <Typography
                     sx={{
@@ -226,6 +205,26 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                       }}
                     >
                       <img src={LinkIcon} alt="Linkedin" title="Linkedin" />
+                    </Link>
+                  </Typography>
+                </Grid>
+                <Grid container sx={{ justifyContent: 'center', minHeight: 'max-content' }}>
+                  <Typography
+                    sx={{
+                      margin: 0,
+                      height: 'fit-content'
+                    }}
+                    color=" #FAFAFA"
+                  >
+                    <Link
+                      href="https://www.facebook.com"
+                      sx={{
+                        margin: 0,
+                        padding: 0,
+                        justifyContent: 'center'
+                      }}
+                    >
+                      <img src={FaceIcon} alt="Facebook" title="Facebook" />
                     </Link>
                   </Typography>
                 </Grid>

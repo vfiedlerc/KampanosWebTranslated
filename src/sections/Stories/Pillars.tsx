@@ -350,7 +350,7 @@ export const Pillars = () => {
                             overflow: 'hidden'
                         }}
                     >
-                        <Subtitle color='#134487' label=' our pillars ' stroke='1px' direction='right' />
+                        <Subtitle color='#134487' label=' our pillars foundations celebrate skills' stroke='1px' direction='right' />
                     </SubtitleBox>
                 </Grid>
             </Grid>

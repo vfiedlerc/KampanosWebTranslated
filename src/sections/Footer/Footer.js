@@ -115,12 +115,12 @@ const Footer = () => {
           <Grid container sx={{
             justifyContent: 'center'
           }}>
-            <Grid item>
-              <Link href="#"><FacebookIcon /> </Link>
-            </Grid>
-            <Grid item>
+             <Grid item>
               <Link href="https://www.linkedin.com/company/kampanos/" ><LinkedinIcon /> </Link>
             </Grid>
+            <Grid item>
+              <Link href="#"><FacebookIcon /> </Link>
+            </Grid>           
             <Grid item>
               <Link href="https://www.instagram.com/kampanos.pt/" ><InstagramIcon /> </Link>
             </Grid>

@@ -77,7 +77,7 @@ export const Countries = () => {
                                 letterSpacing: 0,
                                 fontWeight: 'bold'
                             }}
-                        > developers
+                        > developers and designers
                         </Typography>    
                         <Typography
                             variant='caption'

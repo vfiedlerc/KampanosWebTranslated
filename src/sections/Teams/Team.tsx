@@ -5,11 +5,11 @@ import andreas from '../../assets/andreas.png';
 import rafael from '../../assets/rafael.png';
 import michael from '../../assets/michael.png';
 import vinicius from '../../assets/vinicius.png';
-import guilherme from '../../assets/guilherme.png';
+import guilherme from '../../assets/GuiLemos.png';
 import joao from '../../assets/joao.png';
 import eva from '../../assets/eva.png';
 import aline from '../../assets/aline.png';
-import bruno from '../../assets/bruno.png';
+import bruno from '../../assets/BrunoB.png';
 import { Title } from '../../components/Titles/Title';
 import { Subtitle } from '../../components/Titles/Subtitle';
 
@@ -127,21 +127,21 @@ export const Team: FC<TeamProps> = ({
                   <MediaCard image={andreas} title='Andreas Thomae' text='CEO & Chief of Development' />
                 </Grid>
                 <Grid item>
-                  <MediaCard image={rafael} title='Rafael Facadas' text='UX/UI & Visual Designer' />
+                  <MediaCard image={guilherme} title='Guilherme Lemos' text='UX/UI & Visual Designer' />
                 </Grid>
                 <Grid item>
-                  <MediaCard image={michael} title='Michael Wiederkehr' text='Key-Account Manager' />
+                  <MediaCard image={bruno} title='Bruno Buss' text='Web & Front-end Developer' />
                 </Grid>
               </Grid>
             </Grid>
 
             <Grid item sx={{ textAlign: 'center', }}>
               <Grid container spacing={2} sx={{ textAlign: 'center', justifyContent:'space-around'}}>
-                <Grid item>
-                  <MediaCard image={eva} title='Eva Dias' text='UX/UI & Visual Designer' />
+              <Grid item>
+                  <MediaCard image={rafael} title='Rafael Facadas' text='UX/UI & Visual Designer' />
                 </Grid>
                 <Grid item>
-                  <MediaCard image={guilherme} title='Guilherme Lemos' text='UX/UI & Visual Designer' />
+                  <MediaCard image={vinicius} title='Vinícius Fiedler' text='  Full-Stack Developer' />
                 </Grid>
                 <Grid item>
                   <MediaCard image={aline} title='Aline Souza' text='Software Developer' />
@@ -150,15 +150,15 @@ export const Team: FC<TeamProps> = ({
             </Grid>
 
             <Grid item  >
-              <Grid container spacing={2} sx={{ textAlign: 'center', zIndex: 9, justifyContent:'space-around' }}>
-                <Grid item>
-                  <MediaCard image={vinicius} title='Vinícius Fiedler' text='  Full-Stack Developer' />
-                </Grid>
-                <Grid item>
-                  <MediaCard image={bruno} title='Bruno Buss' text='Web & Front-end Developer' />
-                </Grid>
+              <Grid container spacing={2} sx={{ textAlign: 'center', zIndex: 9, justifyContent:'space-around' }}> 
                 <Grid item>
                   <MediaCard image={joao} title='João Bugarin' text='Software Developer' />
+                </Grid>
+                <Grid item>
+                  <MediaCard image={eva} title='Eva Dias' text='UX/UI & Visual Designer' />
+                </Grid>
+                <Grid item>
+                  <MediaCard image={michael} title='Michael Wiederkehr' text='Key-Account Manager' />
                 </Grid>
               </Grid>
             </Grid>
@@ -190,19 +190,3 @@ export const Team: FC<TeamProps> = ({
 export type TeamProps = {
   props: any
 }
-
-{/*   <SubtitleBox
-        sx={{
-          whiteSpace: 'nowrap',
-          overflow: 'hidden',
-          transform: 'rotate(-20deg)',
-          zIndex: -999,
-          height: '100%',
-          alignSelf: 'center',
-          position: 'relative'
-        }}
-      >
-        <Subtitle color='#6AA2DB' label="WE'RE PEOPLE. WE'RE TEAM. WE'RE REMOTE COMPANY. WE'RE PASSION. " stroke='2px' direction='right' />
-        <Subtitle color='#D46918' label="WE'RE PEOPLE. WE'RE TEAM. WE'RE REMOTE COMPANY. WE'RE PASSION. " stroke='2px' direction='left' />
-        <Subtitle color='#6AA2DB' label="WE'RE PEOPLE. WE'RE TEAM. WE'RE REMOTE COMPANY. WE'RE PASSION. " stroke='2px' direction='right' />
-      </SubtitleBox> */}
