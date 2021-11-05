@@ -240,7 +240,7 @@ export const Service: FC<ServiceProps> = ({
                 // fontWeight: '500',
                 opacity: .8,
               }}
-            > <Subtitle color='#D46918' fillColor='#D46918' label=' high technology   UX/UI   Development   Web & Mobile' stroke='.9px' direction='right' />
+            > <Subtitle color='#D46918' fillColor='#D46918' label=' High Technology - UX/UI - Development - Web & Mobile - ' stroke='.9px' direction='right' />
             </SubtitleBox>
           </Grid>
         </Grid>

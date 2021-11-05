@@ -59,15 +59,18 @@ const ImgBox = styled('div')(({ theme }) => ({
     },
     [theme.breakpoints.between('sm', 'md')]: {
         textAlign: '-webkit-right',
-        alignContent: 'right'
+        alignContent: 'right',
+        marginLeft: 0
     },
     [theme.breakpoints.between('md', 'lg')]: {
         textAlign: '-webkit-right',
-        alignContent: 'right'
+        alignContent: 'right',
+        marginLeft: 0
     },
     [theme.breakpoints.up('lg')]: {
         textAlign: '-webkit-right',
-        alignContent: 'right'
+        alignContent: 'right',
+        marginLeft: 0
     }
 }));
 
@@ -132,7 +135,7 @@ const SubtitleBox = styled('div')(({ theme }) => ({
 
 export const Pillars = () => {
     return (
-        <PillarsBox sx={{ width: '100%' }}>
+        <PillarsBox sx={{ width: '100%', margin: 0 }}>
             <Grid container
                 spacing={2}
                 xs={12}
@@ -150,6 +153,7 @@ export const Pillars = () => {
                         alignItems: 'left',
                         justifyContent: 'left',
                         alignSelf: 'left',
+                        margin: 0
                     }}
                 >
                     <Grid item
@@ -158,6 +162,7 @@ export const Pillars = () => {
                         md={12}
                         sx={{
                             padding: 0,
+                            marginLeft: 0,
                             textAlign: 'left',
                             alignItems: 'left',
                             justifyContent: 'left',
@@ -168,11 +173,12 @@ export const Pillars = () => {
                         <ImgBox
                             sx={{
                                 padding: 0,
+                                marginLeft: 0,
                                 textAlign: 'left',
                                 justifyContent: 'left'
                             }}
                         >
-                            <img src={orangeBox} alt='Orange  Box' title='Orange Box' width='600px' />
+                            <img src={orangeBox} alt='Orange  Box' title='Orange Box' style={{width: '100%', maxWidth:'618px',padding:0, margin:0}} />
                         </ImgBox>
                     </Grid>
                 </Grid>
@@ -341,16 +347,20 @@ export const Pillars = () => {
                     sx={{
                         width: '100%',
                         zIndex: -100,
-                        marginTop: -8
+                        marginTop: -8,
+                        marginLeft: 0,
+                        padding: 0
                     }}
                 >
                     <SubtitleBox
                         sx={{
                             whiteSpace: 'nowrap',
-                            overflow: 'hidden'
+                            overflow: 'hidden',
+                            margin: 0,
+                            padding: 0
                         }}
                     >
-                        <Subtitle color='#134487' label=' our pillars foundations celebrate skills' stroke='1px' direction='right' />
+                        <Subtitle color='#134487' label=' our pillars - foundations - celebrate - skills - ' stroke='1px' direction='right' />
                     </SubtitleBox>
                 </Grid>
             </Grid>
