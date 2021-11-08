@@ -3,7 +3,7 @@ import { Box, Grid, Link, Typography, Icon, styled } from '@mui/material';
 import { ReactComponent as FacebookIcon } from '../../assets/FacebookIcon.svg';
 import { ReactComponent as LinkedinIcon } from '../../assets/LinkedinIcon.svg';
 import { ReactComponent as InstagramIcon } from '../../assets/InstagramIcon.svg';
-import { Cookies, PrivacyPolicy, TermsService } from '../../components/Modals';
+import { Cookies, Impressum, PrivacyPolicy, TermsService } from '../../components/Modals';
 
 const Terms = styled('div')(({ theme }) => ({
   padding: 0,
@@ -134,30 +134,38 @@ const Footer = () => {
 
         <Terms>
           <Grid item  >
-            <Grid container sx={{ justifyContent: "flex-end" }} spacing={2} >
+            <Grid container sx={{ justifyContent: "flex-end" }} spacing={0} >
               <Grid item
                 xs={12}
                 sm={12}
-                md={1.6}
-                lg={1.3}
+                md={1.35}
+                lg={1}
               >
                 <TermsService />
               </Grid>
               <Grid item
                 xs={12}
                 sm={12}
-                md={1.7}
-                lg={1.3}
+                md={1.35}
+                lg={1}
               >
                 <PrivacyPolicy />
               </Grid>
               <Grid item
                 xs={12}
                 sm={12}
-                md={1.6}
-                lg={1.2}
+                md={1}
+                lg={1}
               >
                 <Cookies />
+              </Grid>
+              <Grid item
+                xs={12}
+                sm={12}
+                md={1}
+                lg={1}
+              >
+                <Impressum />
               </Grid>
             </Grid>
           </Grid>
