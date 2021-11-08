@@ -243,13 +243,11 @@ const Header = () => {
                   textAlign: 'center'
                 }}
               >
-                <Button href='http://www.kampanos.pt/'>
                   <img
                     src={centerLogo}
                     alt='KampanosLogo'
                     title='KampanosLogo'
                   />
-                </Button>
               </Grid>
             </Grid>
           </Grid>

@@ -35,7 +35,7 @@ const Footer = () => {
         md={12}
         lg={12}
         direction='column'
-        rowSpacing={3}
+        rowSpacing={2.5}
         sx={{
           display: 'flex',
           justifyContent: 'center',
@@ -115,12 +115,12 @@ const Footer = () => {
           <Grid container sx={{
             justifyContent: 'center'
           }}>
-             <Grid item>
+            <Grid item>
               <Link href="https://www.linkedin.com/company/kampanos/" ><LinkedinIcon /> </Link>
             </Grid>
             <Grid item>
               <Link href="#"><FacebookIcon /> </Link>
-            </Grid>           
+            </Grid>
             <Grid item>
               <Link href="https://www.instagram.com/kampanos.pt/" ><InstagramIcon /> </Link>
             </Grid>
@@ -135,29 +135,29 @@ const Footer = () => {
         <Terms>
           <Grid item  >
             <Grid container sx={{ justifyContent: "flex-end" }} spacing={2} >
-              <Grid item xs={12}
+              <Grid item
+                xs={12}
                 sm={12}
-                md={1.5}
-                lg={1}
+                md={1.6}
+                lg={1.3}
               >
                 <TermsService />
-                {/* <Link underline="hover" color="#FCEDD0" href="#">Terms of use</Link> */}
               </Grid>
-              <Grid item xs={12}
+              <Grid item
+                xs={12}
                 sm={12}
-                md={1.5}
-                lg={1}
+                md={1.7}
+                lg={1.3}
               >
                 <PrivacyPolicy />
-                {/* <Link underline="hover" color="#FCEDD0" href="#">Privacy Policy</Link> */}
               </Grid>
-              <Grid item xs={12}
+              <Grid item
+                xs={12}
                 sm={12}
-                md={1.5}
-                lg={1}
+                md={1.6}
+                lg={1.2}
               >
                 <Cookies />
-                {/* <Link underline="hover" color="#FCEDD0" href="#">Cookie Policy</Link> */}
               </Grid>
             </Grid>
           </Grid>
