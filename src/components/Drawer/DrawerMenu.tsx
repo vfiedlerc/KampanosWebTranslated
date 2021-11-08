@@ -14,8 +14,6 @@ import workMenuButton from "../../assets/workMenuButton.svg";
 import rectangleMenu from "../../assets/rectangleMenu.svg";
 import { Link } from "@mui/material";
 
-
-
 export const DrawerMenu: FC<DrawerMenuProps> = ({
   menuItems,
 }: DrawerMenuProps) => {
@@ -412,7 +410,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                       </Grid>
                       <Grid item>
                         <Button
-                          href="https://www.kampanos.pt"
+                          href="mailto:service@kampanos.pt"
                           target='_blank'
                           variant="contained"
                           sx={{
