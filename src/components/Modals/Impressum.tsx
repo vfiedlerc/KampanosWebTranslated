@@ -59,7 +59,7 @@ export const Impressum: FC<ImpressumProps> = ({
                     <Typography>Andreas Thomä</Typography>
 
                     <Box sx={{ paddingTop: '2rem' }}>
-                        <Typography sx={{ paddingBottom: '.3rem' }}>Sales tax identification number: 515736554</Typography>
+                        <Typography sx={{ paddingBottom: '.3rem' }}>VAT number: 515736554</Typography>
                     </Box>
 
                     <Typography variant="h6" sx={{ paddingTop: '1rem', textAlign: 'left' }}>Online dispute resolution</Typography>
