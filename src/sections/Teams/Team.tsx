@@ -7,11 +7,13 @@ import michael from '../../assets/michael.png';
 import vinicius from '../../assets/vinicius.png';
 import guilherme from '../../assets/GuiLemos.png';
 import joao from '../../assets/joao.png';
-import eva from '../../assets/eva.png';
+import eva from '../../assets/Eva.png';
 import aline from '../../assets/aline.png';
 import bruno from '../../assets/BrunoB.png';
 import { Title } from '../../components/Titles/Title';
 import { Subtitle } from '../../components/Titles/Subtitle';
+
+
 
 const FontsBox = styled("div")(({ theme }) => ({
   margin: 0,

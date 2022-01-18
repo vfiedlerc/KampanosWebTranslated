@@ -13,11 +13,15 @@ import InstaIcon from "../../assets/InstaIcon.svg";
 import workMenuButton from "../../assets/workMenuButton.svg";
 import rectangleMenu from "../../assets/rectangleMenu.svg";
 import { Link } from "@mui/material";
+import { AnyTypeAnnotation } from "@babel/types";
 
 export const DrawerMenu: FC<DrawerMenuProps> = ({
   menuItems,
 }: DrawerMenuProps) => {
   const [state, setState] = React.useState(false);
+
+  
+
 
   const toggleDrawer = () => {
     setState(!state);
@@ -185,7 +189,7 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                 </Typography>
               </Grid>
 
-              <ItemsBox>  
+              <ItemsBox>
                 <Grid container sx={{ justifyContent: 'center' }}>
                   <Typography
                     sx={{
@@ -363,6 +367,13 @@ export const DrawerMenu: FC<DrawerMenuProps> = ({
                             target='_self'
                             color="#6AA2DB"
                           />
+
+
+                          
+                            <button  value="en-US">EN</button>
+                            <button  value="de-DE">GR</button>
+                          
+
                         </Typography>
                       </Box>
                     </Grid>

@@ -8,6 +8,11 @@ import about3 from "../../assets/About3.svg";
 import about4 from "../../assets/About4.svg";
 import TimeToFly from "../../assets/TimeToFly.png";
 
+
+import {useTranslation} from 'react-i18next';
+
+
+
 const FontsBox = styled("div")(({ theme }) => ({
   margin: 0,
   padding: 0,
@@ -94,7 +99,13 @@ const FontsBox = styled("div")(({ theme }) => ({
   },
 }));
 
+
+
 export const About: FC<AboutProps> = ({ props }: AboutProps) => {
+
+  const { t } = useTranslation();
+
+  
   return (
     <FontsBox sx={{ margin: "4rem 1rem" }}>
       <Grid
@@ -178,7 +189,7 @@ export const About: FC<AboutProps> = ({ props }: AboutProps) => {
                     fontWeight: "bold",
                   }}
                 >
-                  Kampanos is a fully remote IT and tech solutions company...
+                  {t('Kampanos is a fully remote IT and tech solutions company...')}
                   <Typography
                     variant="h5"
                     sx={{
